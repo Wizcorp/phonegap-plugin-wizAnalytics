@@ -9,6 +9,7 @@
 
 #import "ModuleFlurry.h"
 #import "FlurryAnalytics.h"
+#import "WizDebugLog.h"
 
 @implementation ModuleFlurry
 
@@ -25,13 +26,13 @@
 
 - (void)startSession 
 {
-    NSLog(@"FLURRY START SESSION %@", _flurryAPIKey);
+    WizLog(@"FLURRY START SESSION %@", _flurryAPIKey);
     [FlurryAnalytics startSession:_flurryAPIKey];
 }
 
 - (void)logEvent:(NSString *)eventName withExtraMetadata:(NSDictionary *)extraMetadata
 {
-    NSLog(@"FLURRY LOG EVENT %@ DATA %@", eventName, extraMetadata);
+    WizLog(@"FLURRY LOG EVENT %@ DATA %@", eventName, extraMetadata);
     [FlurryAnalytics logEvent:eventName withParameters:extraMetadata];
 }
 

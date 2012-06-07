@@ -9,6 +9,7 @@
 
 #import "ModuleLocalytics.h"
 #import "LocalyticsSession.h"
+#import "WizDebugLog.h"
 
 @implementation ModuleLocalytics
 
@@ -25,7 +26,7 @@
 
 - (void)startSession 
 {
-    NSLog(@"LOCALYTICS START SESSION %@", _localyticsAPIKey);
+    WizLog(@"LOCALYTICS START SESSION %@", _localyticsAPIKey);
     [[LocalyticsSession sharedLocalyticsSession] startSession:_localyticsAPIKey];
 }
 
@@ -43,7 +44,7 @@
 
 - (void)logEvent:(NSString *)eventName withExtraMetadata:(NSDictionary *)extraMetadata
 {
-    NSLog(@"LOCALYTICS LOG EVENT %@ DATA %@", eventName, extraMetadata);
+    WizLog(@"LOCALYTICS LOG EVENT %@ DATA %@", eventName, extraMetadata);
     [[LocalyticsSession sharedLocalyticsSession] tagEvent:eventName attributes:extraMetadata];
 }
 

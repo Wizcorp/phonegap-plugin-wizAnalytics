@@ -13,9 +13,13 @@
 @implementation WizAnalytics
 
 // synthesize modules
+@synthesize moduleKontagent     = _ModuleKontagent;
 @synthesize moduleFlurry        = _ModuleFlurry;
 @synthesize moduleLocalytics    = _ModuleLocalytics;
-
+@synthesize moduleAdmob         = _ModuleAdmob;
+@synthesize moduleInMobi        = _ModuleInMobi;
+@synthesize moduleMillenium     = _ModuleMillenium;
+@synthesize moduleSmaato        = _ModuleSmaato;
 
 
 static WizAnalytics *sharedInstance = nil;
@@ -39,10 +43,13 @@ static WizAnalytics *sharedInstance = nil;
          */
         
         NSLog(@"options here %@", options);
+        _ModuleKontagent = [[ModuleKontagent alloc] initWithOptions:options];
         _ModuleFlurry = [[ModuleFlurry alloc] initWithOptions:options];
         _ModuleLocalytics = [[ModuleLocalytics alloc] initWithOptions:options];
-        
-        
+        _ModuleAdmob = [[ModuleAdmob alloc] initWithOptions:options];
+        _ModuleInMobi = [[ModuleInMobi alloc] initWithOptions:options];
+        _ModuleMillenium = [[ModuleMillenium alloc] initWithOptions:options];
+        _ModuleSmaato = [[ModuleSmaato alloc] initWithOptions:options];
     }    
 
 
@@ -56,10 +63,13 @@ static WizAnalytics *sharedInstance = nil;
     
     
     
-    
+    self.moduleKontagent = nil;
     self.moduleFlurry = nil;
     self.moduleLocalytics = nil;
-    
+    self.moduleAdmob = nil;
+    self.moduleInMobi = nil;
+    self.moduleMillenium = nil;
+    self.moduleSmaato = nil;
     
     
     [super dealloc];
@@ -95,27 +105,18 @@ static WizAnalytics *sharedInstance = nil;
 
 
 /*
- * Accessor methods
- * 
- */
-+ (void)analyticsEvent:(NSString *)eventName withExtraMetadata:(NSDictionary *)extraMetadata
-{
-    
-    NSLog(@"do something %@ - extraMetadata %@", eventName, extraMetadata);
-
-}
-
-
-
-
-/*
  * Session Events add/remove as needed
  */
 
 - (void)startAnalyticsSession {
     
+    [_ModuleKontagent startSession];
     [_ModuleFlurry startSession];
     [_ModuleLocalytics startSession];
+    [_ModuleAdmob startSession];
+    [_ModuleInMobi startSession];
+    [_ModuleSmaato startTracking]; 
+    
     
 }
 
@@ -128,6 +129,8 @@ static WizAnalytics *sharedInstance = nil;
 - (void)endAnalyticsSession {
     
     [_ModuleLocalytics stopSession];
+    [_ModuleInMobi stopSession];
+    [_ModuleKontagent stopSession];
     
 }
 
@@ -135,7 +138,13 @@ static WizAnalytics *sharedInstance = nil;
     
     [_ModuleLocalytics logEvent:eventName withExtraMetadata:extraMetadata];
     [_ModuleFlurry logEvent:eventName withExtraMetadata:extraMetadata];
+    [_ModuleKontagent logEvent:eventName withExtraMetadata:extraMetadata];
 }
 
+- (void)handleOpenURL:(NSURL *)url
+{
+    [_ModuleMillenium handleOpenURL:url];
+    [_ModuleInMobi handleOpenURL:url];
+}
 
 @end
