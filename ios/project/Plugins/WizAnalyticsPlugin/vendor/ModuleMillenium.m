@@ -9,7 +9,6 @@
 
 #import "ModuleMillenium.h"
 #import "MMAdvertiser.h"
-#import "WizDebugLog.h"
 
 @implementation ModuleMillenium
 
