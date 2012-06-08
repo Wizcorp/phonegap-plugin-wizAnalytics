@@ -23,7 +23,7 @@
 @implementation AppDelegate
 
 @synthesize window, viewController;
-@synthesize analConfig;
+@synthesize analyticsConfig;
 
 
 
