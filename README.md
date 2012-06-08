@@ -1,6 +1,5 @@
 
 
-
 # PLUGIN: 
 
 phonegap-plugin-wizClipboard
