@@ -9,7 +9,6 @@
 
 #import "ModuleAdmob.h"
 #import <CommonCrypto/CommonDigest.h>
-#import "WizDebugLog.h"
 
 @implementation ModuleAdmob
 
@@ -26,7 +25,7 @@
 
 - (void)startSession 
 {
-    WizLog(@"ADMOB START SESSION %@", _admobAPIKey);
+    NSLog(@"ADMOB START SESSION %@", _admobAPIKey);
     
     [self performSelectorInBackground:@selector(reportAppOpenToAdMob) withObject:nil];
     
@@ -58,9 +57,9 @@
         NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
         if((!error) && ([(NSHTTPURLResponse *)response statusCode] == 200) && ([responseData length] > 0)) {
             [fileManager createFileAtPath:appOpenPath contents:nil attributes:nil]; // successful report, mark it as such
-            WizLog(@"App download successfully reported.");
+            NSLog(@"App download successfully reported.");
         } else {
-            WizLog(@"WARNING: App download not successfully reported. %@", [NSString stringWithData:responseData encoding:NSUTF8StringEncoding]);
+            NSLog(@"WARNING: App download not successfully reported. %@", [NSString stringWithData:responseData encoding:NSUTF8StringEncoding]);
         }
     }
     [pool release];
