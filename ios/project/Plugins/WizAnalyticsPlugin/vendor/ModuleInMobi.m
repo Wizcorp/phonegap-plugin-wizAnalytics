@@ -10,7 +10,6 @@
 #import "ModuleInMobi.h"
 #import "IMAdTrackerAnalytics.h"
 #import "IMAdTrackerUtil.h"
-#import "WizDebugLog.h"
 
 
 @implementation ModuleInMobi
@@ -29,7 +28,7 @@
 - (void)startSession
 {
     
-    WizLog(@"InMobi START SESSION %@", _inMobiAPIKey);
+    NSLog(@"InMobi START SESSION %@", _inMobiAPIKey);
     [[IMAdTrackerAnalytics imAnalytics] startSession:_inMobiAPIKey];
     // [[IMAdTrackerAnalytics imAnalytics] reportInstallGoal];
 
