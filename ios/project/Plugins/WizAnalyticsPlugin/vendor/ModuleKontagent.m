@@ -9,7 +9,6 @@
 
 #import "ModuleKontagent.h"
 #import <Kontagent/Kontagent.h>
-#import "WizDebugLog.h"
 
 @implementation ModuleKontagent
 
@@ -26,7 +25,7 @@
 
 - (void)startSession
 {
-    WizLog(@"KONTAGENT START TRACKING %@", _kontagentAPIKey);
+    NSLog(@"KONTAGENT START TRACKING %@", _kontagentAPIKey);
     
     [Kontagent startSession:_kontagentAPIKey mode:kKontagentSDKMode_PRODUCTION];
     // [Kontagent startSession:_kontagentAPIKey mode:kKontagentSDKMode_TEST];
@@ -46,7 +45,7 @@
 
 - (void)logEvent:(NSString *)eventName withExtraMetadata:(NSDictionary *)extraMetadata
 {
-    WizLog(@"KONTAGENT LOG EVENT %@ DATA %@", eventName, extraMetadata);
+    NSLog(@"KONTAGENT LOG EVENT %@ DATA %@", eventName, extraMetadata);
     [Kontagent customEvent:eventName optionalParams:extraMetadata];
     //[Kontagent pageRequest:<#(KTParamMap *)#>];
     //funnel
