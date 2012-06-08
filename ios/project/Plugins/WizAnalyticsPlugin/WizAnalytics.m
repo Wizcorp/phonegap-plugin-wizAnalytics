@@ -8,7 +8,7 @@
  */
 
 #import "WizAnalytics.h"
-#import "WizDebugLog.h"
+
 
 
 @implementation WizAnalytics
@@ -43,14 +43,13 @@ static WizAnalytics *sharedInstance = nil;
          *
          */
         
-        WizLog(@"Analytics config %@", options);
+        NSLog(@"Analytics config %@", options);
         if ([options valueForKey:@"KontagentKey"]) {
             _ModuleKontagent = [[ModuleKontagent alloc] initWithOptions:options];
         } else {
             _ModuleKontagent = nil;
         }
         if ([options valueForKey:@"FlurryKey"]) {
-            WizLog(@"yes");
             _ModuleFlurry = [[ModuleFlurry alloc] initWithOptions:options];
         } else {
             _ModuleFlurry = nil;
