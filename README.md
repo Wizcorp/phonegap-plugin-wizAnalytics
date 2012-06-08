@@ -1,7 +1,6 @@
-
 # PLUGIN: 
 PhoneGap v1.7
-phonegap-plugin-wizClipboard
+phonegap-plugin-wizAnalytics
 
 
 # DESCRIPTION :
