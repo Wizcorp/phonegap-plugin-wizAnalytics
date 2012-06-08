@@ -8,6 +8,7 @@
  */
 
 #import "WizAnalytics.h"
+#import "WizDebugLog.h"
 
 
 @implementation WizAnalytics
@@ -42,14 +43,48 @@ static WizAnalytics *sharedInstance = nil;
          *
          */
         
-        NSLog(@"options here %@", options);
-        _ModuleKontagent = [[ModuleKontagent alloc] initWithOptions:options];
-        _ModuleFlurry = [[ModuleFlurry alloc] initWithOptions:options];
-        _ModuleLocalytics = [[ModuleLocalytics alloc] initWithOptions:options];
-        _ModuleAdmob = [[ModuleAdmob alloc] initWithOptions:options];
-        _ModuleInMobi = [[ModuleInMobi alloc] initWithOptions:options];
-        _ModuleMillenium = [[ModuleMillenium alloc] initWithOptions:options];
-        _ModuleSmaato = [[ModuleSmaato alloc] initWithOptions:options];
+        WizLog(@"Analytics config %@", options);
+        if ([options valueForKey:@"KontagentKey"]) {
+            _ModuleKontagent = [[ModuleKontagent alloc] initWithOptions:options];
+        } else {
+            _ModuleKontagent = nil;
+        }
+        if ([options valueForKey:@"FlurryKey"]) {
+            WizLog(@"yes");
+            _ModuleFlurry = [[ModuleFlurry alloc] initWithOptions:options];
+        } else {
+            _ModuleFlurry = nil;
+        }
+        if ([options valueForKey:@"LocalyticsKey"]) {
+            _ModuleLocalytics = [[ModuleLocalytics alloc] initWithOptions:options];
+        } else {
+            _ModuleLocalytics = nil;
+        }
+        if ([options valueForKey:@"AdmobKey"]) {
+            _ModuleAdmob = [[ModuleAdmob alloc] initWithOptions:options];
+        } else {
+            _ModuleAdmob = nil;
+        }
+        if ([options valueForKey:@"InMobiKey"]) {
+            _ModuleInMobi = [[ModuleInMobi alloc] initWithOptions:options];
+        } else {
+            _ModuleInMobi = nil;
+        }
+        if ([options valueForKey:@"MilleniumKey"]) {
+            _ModuleMillenium = [[ModuleMillenium alloc] initWithOptions:options];
+        } else {
+            _ModuleMillenium = nil;
+        }
+        if ([options valueForKey:@"SmaatoKey"]) {
+            _ModuleSmaato = [[ModuleSmaato alloc] initWithOptions:options];
+        } else {
+            _ModuleSmaato = nil;
+        }
+        
+        
+        
+        
+        
     }    
 
 
