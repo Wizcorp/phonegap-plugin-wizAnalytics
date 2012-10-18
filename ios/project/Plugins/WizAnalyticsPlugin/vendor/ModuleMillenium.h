@@ -7,14 +7,7 @@
  *
  */
 
-#import <Foundation/Foundation.h>
+#import "WizAnalyticsVendorModule.h"
 
-@interface ModuleMillenium : NSObject {
-    NSString *_milleniumAPIKey;
-}
-
-@property (nonatomic, retain) NSString *milleniumAPIKey;
-
-- (id)initWithOptions:(NSDictionary *)options;
-- (void)handleOpenURL:(NSURL *)url;
+@interface ModuleMillenium : NSObject <WizAnalyticsVendorModule>
 @end

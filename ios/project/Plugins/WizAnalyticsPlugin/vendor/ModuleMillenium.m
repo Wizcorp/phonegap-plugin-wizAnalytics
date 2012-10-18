@@ -10,9 +10,19 @@
 #import "ModuleMillenium.h"
 #import "MMAdvertiser.h"
 
+@interface ModuleMillenium ()
+@property (nonatomic, retain) NSString *milleniumAPIKey;
+@end
+
 @implementation ModuleMillenium
 
-@synthesize milleniumAPIKey = _milleniumAPIKey;
+- (void)dealloc
+{
+    self.milleniumAPIKey = nil;
+    [super dealloc];
+}
+
+#pragma mark - Required WizAnalyticsVendorModule protocol methods
 
 - (id)initWithOptions:(NSDictionary *)options
 {
@@ -22,6 +32,11 @@
     return self;
 }
 
+- (void)startSession
+{
+}
+
+#pragma mark - Optional WizAnalyticsVendorModule protocol methods
 
 - (void)handleOpenURL:(NSURL *)url
 {
@@ -33,14 +48,5 @@
     // parameters will contain the parse URL query string key/value pairs
     NSDictionary *parameters = [[MMAdvertiser sharedSDK] parseURL:url];
 }
-
-- (void)dealloc 
-{
-    self.milleniumAPIKey = nil;
-    [super dealloc];
-}
-
-
-
 
 @end

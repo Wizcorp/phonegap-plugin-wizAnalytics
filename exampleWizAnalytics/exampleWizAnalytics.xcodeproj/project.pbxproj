@@ -1,0 +1,1053 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F6D8074916313728005EF20E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8074816313728005EF20E /* Foundation.framework */; };
+		F6D8074B16313728005EF20E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8074A16313728005EF20E /* UIKit.framework */; };
+		F6D8074D16313728005EF20E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8074C16313728005EF20E /* CoreGraphics.framework */; };
+		F6D8074F16313728005EF20E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8074E16313728005EF20E /* AddressBook.framework */; };
+		F6D8075116313728005EF20E /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8075016313728005EF20E /* AddressBookUI.framework */; };
+		F6D8075316313728005EF20E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8075216313728005EF20E /* AudioToolbox.framework */; };
+		F6D8075516313728005EF20E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8075416313728005EF20E /* AVFoundation.framework */; };
+		F6D8075716313728005EF20E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8075616313728005EF20E /* CoreLocation.framework */; };
+		F6D8075916313728005EF20E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8075816313728005EF20E /* MediaPlayer.framework */; };
+		F6D8075B16313728005EF20E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8075A16313728005EF20E /* QuartzCore.framework */; };
+		F6D8075D16313728005EF20E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8075C16313728005EF20E /* SystemConfiguration.framework */; };
+		F6D8075F16313728005EF20E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8075E16313728005EF20E /* MobileCoreServices.framework */; };
+		F6D8076116313728005EF20E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8076016313728005EF20E /* CoreMedia.framework */; };
+		F6D8076716313728005EF20E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6D8076516313728005EF20E /* InfoPlist.strings */; };
+		F6D8076916313728005EF20E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8076816313728005EF20E /* main.m */; };
+		F6D8076C16313728005EF20E /* Cordova.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8076B16313728005EF20E /* Cordova.framework */; };
+		F6D8077116313728005EF20E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6D8076F16313728005EF20E /* Localizable.strings */; };
+		F6D8077516313728005EF20E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6D8077316313728005EF20E /* Localizable.strings */; };
+		F6D8077916313728005EF20E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6D8077716313728005EF20E /* Localizable.strings */; };
+		F6D8077D16313728005EF20E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6D8077B16313728005EF20E /* Localizable.strings */; };
+		F6D8078016313728005EF20E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D8077F16313728005EF20E /* icon.png */; };
+		F6D8078216313728005EF20E /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D8078116313728005EF20E /* icon@2x.png */; };
+		F6D8078416313728005EF20E /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D8078316313728005EF20E /* icon-72.png */; };
+		F6D8078716313728005EF20E /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D8078616313728005EF20E /* Default~iphone.png */; };
+		F6D8078916313728005EF20E /* Default@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D8078816313728005EF20E /* Default@2x~iphone.png */; };
+		F6D8078B16313728005EF20E /* Capture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F6D8078A16313728005EF20E /* Capture.bundle */; };
+		F6D8078D16313728005EF20E /* Cordova.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6D8078C16313728005EF20E /* Cordova.plist */; };
+		F6D8079116313728005EF20E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8079016313728005EF20E /* AppDelegate.m */; };
+		F6D8079416313728005EF20E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8079316313728005EF20E /* MainViewController.m */; };
+		F6D8079616313728005EF20E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D8079516313728005EF20E /* MainViewController.xib */; };
+		F6D807A0163137C4005EF20E /* www in Resources */ = {isa = PBXBuildFile; fileRef = F6D8079F163137C4005EF20E /* www */; };
+		F6D8095316315840005EF20E /* libChartboost.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D808E616315840005EF20E /* libChartboost.a */; };
+		F6D8095416315840005EF20E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F6D808E716315840005EF20E /* README.md */; };
+		F6D8095516315840005EF20E /* libFlurryAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D808EB16315840005EF20E /* libFlurryAnalytics.a */; };
+		F6D8095616315840005EF20E /* libFlurryAppCircle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D808F016315840005EF20E /* libFlurryAppCircle.a */; };
+		F6D8095716315840005EF20E /* ProjectApiKey.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6D808F116315840005EF20E /* ProjectApiKey.txt */; };
+		F6D8095816315840005EF20E /* RELEASE_NOTES.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6D808F216315840005EF20E /* RELEASE_NOTES.txt */; };
+		F6D8095916315840005EF20E /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D808FD16315840005EF20E /* libGoogleAdMobAds.a */; };
+		F6D8095A16315840005EF20E /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6D8090516315840005EF20E /* README.txt */; };
+		F6D8095B16315840005EF20E /* libInMobiAdTracker_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8090A16315840005EF20E /* libInMobiAdTracker_iOS.a */; };
+		F6D8095C16315840005EF20E /* MyTestApp-all-target-headers.hmap in Resources */ = {isa = PBXBuildFile; fileRef = F6D8091016315840005EF20E /* MyTestApp-all-target-headers.hmap */; };
+		F6D8095D16315840005EF20E /* MyTestApp-generated-files.hmap in Resources */ = {isa = PBXBuildFile; fileRef = F6D8091116315840005EF20E /* MyTestApp-generated-files.hmap */; };
+		F6D8095E16315840005EF20E /* MyTestApp-own-target-headers.hmap in Resources */ = {isa = PBXBuildFile; fileRef = F6D8091216315840005EF20E /* MyTestApp-own-target-headers.hmap */; };
+		F6D8095F16315840005EF20E /* MyTestApp-project-headers.hmap in Resources */ = {isa = PBXBuildFile; fileRef = F6D8091316315840005EF20E /* MyTestApp-project-headers.hmap */; };
+		F6D8096016315840005EF20E /* MyTestApp.hmap in Resources */ = {isa = PBXBuildFile; fileRef = F6D8091416315840005EF20E /* MyTestApp.hmap */; };
+		F6D8096116315840005EF20E /* JumpTapAppReport.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8091816315840005EF20E /* JumpTapAppReport.m */; };
+		F6D8096216315840005EF20E /* Kontagent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8091A16315840005EF20E /* Kontagent.framework */; };
+		F6D8096316315840005EF20E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F6D8091C16315840005EF20E /* LICENSE */; };
+		F6D8096416315840005EF20E /* LocalyticsDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8091F16315840005EF20E /* LocalyticsDatabase.m */; };
+		F6D8096516315840005EF20E /* LocalyticsSession.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8092116315840005EF20E /* LocalyticsSession.m */; };
+		F6D8096616315840005EF20E /* LocalyticsUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8092316315840005EF20E /* LocalyticsUploader.m */; };
+		F6D8096716315840005EF20E /* Changelog in Resources */ = {isa = PBXBuildFile; fileRef = F6D8092616315840005EF20E /* Changelog */; };
+		F6D8096816315840005EF20E /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6D8092716315840005EF20E /* LICENSE.txt */; };
+		F6D8096916315840005EF20E /* libMMAdvertiser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8092916315840005EF20E /* libMMAdvertiser.a */; };
+		F6D8096A16315840005EF20E /* README.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F6D8092B16315840005EF20E /* README.pdf */; };
+		F6D8096B16315840005EF20E /* ModuleAdfonic.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8092D16315840005EF20E /* ModuleAdfonic.m */; };
+		F6D8096C16315840005EF20E /* ModuleAdmob.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8092F16315840005EF20E /* ModuleAdmob.m */; };
+		F6D8096D16315840005EF20E /* ModuleChartboost.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8093116315840005EF20E /* ModuleChartboost.m */; };
+		F6D8096E16315840005EF20E /* ModuleFlurry.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8093316315840005EF20E /* ModuleFlurry.m */; };
+		F6D8096F16315840005EF20E /* ModuleInMobi.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8093516315840005EF20E /* ModuleInMobi.m */; };
+		F6D8097016315840005EF20E /* ModuleJumpTap.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8093716315840005EF20E /* ModuleJumpTap.m */; };
+		F6D8097116315840005EF20E /* ModuleKontagent.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8093916315840005EF20E /* ModuleKontagent.m */; };
+		F6D8097216315840005EF20E /* ModuleLeadbolt.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8093B16315840005EF20E /* ModuleLeadbolt.m */; };
+		F6D8097316315840005EF20E /* ModuleLocalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8093D16315840005EF20E /* ModuleLocalytics.m */; };
+		F6D8097416315840005EF20E /* ModuleMdotM.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8093F16315840005EF20E /* ModuleMdotM.m */; };
+		F6D8097516315840005EF20E /* ModuleMillenium.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8094116315840005EF20E /* ModuleMillenium.m */; };
+		F6D8097616315840005EF20E /* ModuleSmaato.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8094316315840005EF20E /* ModuleSmaato.m */; };
+		F6D8097716315840005EF20E /* android_tracking.java in Sources */ = {isa = PBXBuildFile; fileRef = F6D8094516315840005EF20E /* android_tracking.java */; };
+		F6D8097816315840005EF20E /* ODIN.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8094716315840005EF20E /* ODIN.m */; };
+		F6D8097916315840005EF20E /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8094916315840005EF20E /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		F6D8097A16315840005EF20E /* Smaato CPD Tracking v1.4.1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F6D8094A16315840005EF20E /* Smaato CPD Tracking v1.4.1.pdf */; };
+		F6D8097B16315840005EF20E /* SOMADownloadTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8094C16315840005EF20E /* SOMADownloadTrack.m */; };
+		F6D8097C16315840005EF20E /* WizAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8094E16315840005EF20E /* WizAnalytics.m */; };
+		F6D8097D16315840005EF20E /* WizAnalyticsPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8095016315840005EF20E /* WizAnalyticsPlugin.m */; };
+		F6D8097F16315A76005EF20E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8097E16315A76005EF20E /* CoreData.framework */; };
+		F6D8098116315B3C005EF20E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8098016315B3C005EF20E /* CoreTelephony.framework */; };
+		F6D8098316315B7A005EF20E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8098216315B7A005EF20E /* libsqlite3.dylib */; };
+		F6D8098516315BB0005EF20E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8098416315BB0005EF20E /* libz.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F6D8074416313728005EF20E /* exampleWizAnalytics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = exampleWizAnalytics.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6D8074816313728005EF20E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F6D8074A16313728005EF20E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F6D8074C16313728005EF20E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F6D8074E16313728005EF20E /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		F6D8075016313728005EF20E /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		F6D8075216313728005EF20E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F6D8075416313728005EF20E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F6D8075616313728005EF20E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F6D8075816313728005EF20E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		F6D8075A16313728005EF20E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F6D8075C16313728005EF20E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F6D8075E16313728005EF20E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F6D8076016313728005EF20E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		F6D8076416313728005EF20E /* exampleWizAnalytics-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "exampleWizAnalytics-Info.plist"; sourceTree = "<group>"; };
+		F6D8076616313728005EF20E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F6D8076816313728005EF20E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F6D8076A16313728005EF20E /* exampleWizAnalytics-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "exampleWizAnalytics-Prefix.pch"; sourceTree = "<group>"; };
+		F6D8076B16313728005EF20E /* Cordova.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cordova.framework; path = /Users/Shared/Cordova/Frameworks/Cordova.framework; sourceTree = "<absolute>"; };
+		F6D8077016313728005EF20E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F6D8077416313728005EF20E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F6D8077816313728005EF20E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F6D8077C16313728005EF20E /* se */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = se; path = Resources/se.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F6D8077F16313728005EF20E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Resources/icons/icon.png; sourceTree = "<group>"; };
+		F6D8078116313728005EF20E /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "Resources/icons/icon@2x.png"; sourceTree = "<group>"; };
+		F6D8078316313728005EF20E /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-72.png"; path = "Resources/icons/icon-72.png"; sourceTree = "<group>"; };
+		F6D8078616313728005EF20E /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default~iphone.png"; path = "Resources/splash/Default~iphone.png"; sourceTree = "<group>"; };
+		F6D8078816313728005EF20E /* Default@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x~iphone.png"; path = "Resources/splash/Default@2x~iphone.png"; sourceTree = "<group>"; };
+		F6D8078A16313728005EF20E /* Capture.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Capture.bundle; path = Resources/Capture.bundle; sourceTree = "<group>"; };
+		F6D8078C16313728005EF20E /* Cordova.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Cordova.plist; sourceTree = "<group>"; };
+		F6D8078F16313728005EF20E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		F6D8079016313728005EF20E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
+		F6D8079216313728005EF20E /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Classes/MainViewController.h; sourceTree = "<group>"; };
+		F6D8079316313728005EF20E /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Classes/MainViewController.m; sourceTree = "<group>"; };
+		F6D8079516313728005EF20E /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainViewController.xib; path = Classes/MainViewController.xib; sourceTree = "<group>"; };
+		F6D8079816313728005EF20E /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
+		F6D8079916313728005EF20E /* verify.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = verify.sh; sourceTree = "<group>"; };
+		F6D8079F163137C4005EF20E /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		F6D808E416315840005EF20E /* CBAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAnalytics.h; sourceTree = "<group>"; };
+		F6D808E516315840005EF20E /* Chartboost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chartboost.h; sourceTree = "<group>"; };
+		F6D808E616315840005EF20E /* libChartboost.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libChartboost.a; sourceTree = "<group>"; };
+		F6D808E716315840005EF20E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		F6D808EA16315840005EF20E /* FlurryAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAnalytics.h; sourceTree = "<group>"; };
+		F6D808EB16315840005EF20E /* libFlurryAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryAnalytics.a; sourceTree = "<group>"; };
+		F6D808ED16315840005EF20E /* FlurryAdDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAdDelegate.h; sourceTree = "<group>"; };
+		F6D808EE16315840005EF20E /* FlurryAppCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAppCircle.h; sourceTree = "<group>"; };
+		F6D808EF16315840005EF20E /* FlurryOffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryOffer.h; sourceTree = "<group>"; };
+		F6D808F016315840005EF20E /* libFlurryAppCircle.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryAppCircle.a; sourceTree = "<group>"; };
+		F6D808F116315840005EF20E /* ProjectApiKey.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ProjectApiKey.txt; sourceTree = "<group>"; };
+		F6D808F216315840005EF20E /* RELEASE_NOTES.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RELEASE_NOTES.txt; sourceTree = "<group>"; };
+		F6D808F416315840005EF20E /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
+		F6D808F516315840005EF20E /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
+		F6D808F616315840005EF20E /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
+		F6D808F716315840005EF20E /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
+		F6D808F816315840005EF20E /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
+		F6D808F916315840005EF20E /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
+		F6D808FA16315840005EF20E /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
+		F6D808FB16315840005EF20E /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
+		F6D808FC16315840005EF20E /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
+		F6D808FD16315840005EF20E /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
+		F6D808FF16315840005EF20E /* GADCustomEventBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventBanner.h; sourceTree = "<group>"; };
+		F6D8090016315840005EF20E /* GADCustomEventBannerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventBannerDelegate.h; sourceTree = "<group>"; };
+		F6D8090116315840005EF20E /* GADCustomEventExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventExtras.h; sourceTree = "<group>"; };
+		F6D8090216315840005EF20E /* GADCustomEventInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventInterstitial.h; sourceTree = "<group>"; };
+		F6D8090316315840005EF20E /* GADCustomEventInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventInterstitialDelegate.h; sourceTree = "<group>"; };
+		F6D8090416315840005EF20E /* GADCustomEventRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventRequest.h; sourceTree = "<group>"; };
+		F6D8090516315840005EF20E /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		F6D8090816315840005EF20E /* IMAdTrackerAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAdTrackerAnalytics.h; sourceTree = "<group>"; };
+		F6D8090916315840005EF20E /* IMAdTrackerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAdTrackerUtil.h; sourceTree = "<group>"; };
+		F6D8090A16315840005EF20E /* libInMobiAdTracker_iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libInMobiAdTracker_iOS.a; sourceTree = "<group>"; };
+		F6D8091016315840005EF20E /* MyTestApp-all-target-headers.hmap */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyTestApp-all-target-headers.hmap"; sourceTree = "<group>"; };
+		F6D8091116315840005EF20E /* MyTestApp-generated-files.hmap */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyTestApp-generated-files.hmap"; sourceTree = "<group>"; };
+		F6D8091216315840005EF20E /* MyTestApp-own-target-headers.hmap */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyTestApp-own-target-headers.hmap"; sourceTree = "<group>"; };
+		F6D8091316315840005EF20E /* MyTestApp-project-headers.hmap */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyTestApp-project-headers.hmap"; sourceTree = "<group>"; };
+		F6D8091416315840005EF20E /* MyTestApp.hmap */ = {isa = PBXFileReference; lastKnownFileType = file; path = MyTestApp.hmap; sourceTree = "<group>"; };
+		F6D8091716315840005EF20E /* JumpTapAppReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumpTapAppReport.h; sourceTree = "<group>"; };
+		F6D8091816315840005EF20E /* JumpTapAppReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpTapAppReport.m; sourceTree = "<group>"; };
+		F6D8091A16315840005EF20E /* Kontagent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kontagent.framework; sourceTree = "<group>"; };
+		F6D8091C16315840005EF20E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F6D8091E16315840005EF20E /* LocalyticsDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalyticsDatabase.h; sourceTree = "<group>"; };
+		F6D8091F16315840005EF20E /* LocalyticsDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalyticsDatabase.m; sourceTree = "<group>"; };
+		F6D8092016315840005EF20E /* LocalyticsSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalyticsSession.h; sourceTree = "<group>"; };
+		F6D8092116315840005EF20E /* LocalyticsSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalyticsSession.m; sourceTree = "<group>"; };
+		F6D8092216315840005EF20E /* LocalyticsUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalyticsUploader.h; sourceTree = "<group>"; };
+		F6D8092316315840005EF20E /* LocalyticsUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalyticsUploader.m; sourceTree = "<group>"; };
+		F6D8092416315840005EF20E /* WebserviceConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebserviceConstants.h; sourceTree = "<group>"; };
+		F6D8092616315840005EF20E /* Changelog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Changelog; sourceTree = "<group>"; };
+		F6D8092716315840005EF20E /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		F6D8092916315840005EF20E /* libMMAdvertiser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMMAdvertiser.a; sourceTree = "<group>"; };
+		F6D8092A16315840005EF20E /* MMAdvertiser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMAdvertiser.h; sourceTree = "<group>"; };
+		F6D8092B16315840005EF20E /* README.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = README.pdf; sourceTree = "<group>"; };
+		F6D8092C16315840005EF20E /* ModuleAdfonic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleAdfonic.h; sourceTree = "<group>"; };
+		F6D8092D16315840005EF20E /* ModuleAdfonic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleAdfonic.m; sourceTree = "<group>"; };
+		F6D8092E16315840005EF20E /* ModuleAdmob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleAdmob.h; sourceTree = "<group>"; };
+		F6D8092F16315840005EF20E /* ModuleAdmob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleAdmob.m; sourceTree = "<group>"; };
+		F6D8093016315840005EF20E /* ModuleChartboost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleChartboost.h; sourceTree = "<group>"; };
+		F6D8093116315840005EF20E /* ModuleChartboost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleChartboost.m; sourceTree = "<group>"; };
+		F6D8093216315840005EF20E /* ModuleFlurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleFlurry.h; sourceTree = "<group>"; };
+		F6D8093316315840005EF20E /* ModuleFlurry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleFlurry.m; sourceTree = "<group>"; };
+		F6D8093416315840005EF20E /* ModuleInMobi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleInMobi.h; sourceTree = "<group>"; };
+		F6D8093516315840005EF20E /* ModuleInMobi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleInMobi.m; sourceTree = "<group>"; };
+		F6D8093616315840005EF20E /* ModuleJumpTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleJumpTap.h; sourceTree = "<group>"; };
+		F6D8093716315840005EF20E /* ModuleJumpTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleJumpTap.m; sourceTree = "<group>"; };
+		F6D8093816315840005EF20E /* ModuleKontagent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleKontagent.h; sourceTree = "<group>"; };
+		F6D8093916315840005EF20E /* ModuleKontagent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleKontagent.m; sourceTree = "<group>"; };
+		F6D8093A16315840005EF20E /* ModuleLeadbolt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleLeadbolt.h; sourceTree = "<group>"; };
+		F6D8093B16315840005EF20E /* ModuleLeadbolt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleLeadbolt.m; sourceTree = "<group>"; };
+		F6D8093C16315840005EF20E /* ModuleLocalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleLocalytics.h; sourceTree = "<group>"; };
+		F6D8093D16315840005EF20E /* ModuleLocalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleLocalytics.m; sourceTree = "<group>"; };
+		F6D8093E16315840005EF20E /* ModuleMdotM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleMdotM.h; sourceTree = "<group>"; };
+		F6D8093F16315840005EF20E /* ModuleMdotM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleMdotM.m; sourceTree = "<group>"; };
+		F6D8094016315840005EF20E /* ModuleMillenium.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleMillenium.h; sourceTree = "<group>"; };
+		F6D8094116315840005EF20E /* ModuleMillenium.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleMillenium.m; sourceTree = "<group>"; };
+		F6D8094216315840005EF20E /* ModuleSmaato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleSmaato.h; sourceTree = "<group>"; };
+		F6D8094316315840005EF20E /* ModuleSmaato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleSmaato.m; sourceTree = "<group>"; };
+		F6D8094516315840005EF20E /* android_tracking.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = android_tracking.java; sourceTree = "<group>"; };
+		F6D8094616315840005EF20E /* ODIN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODIN.h; sourceTree = "<group>"; };
+		F6D8094716315840005EF20E /* ODIN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODIN.m; sourceTree = "<group>"; };
+		F6D8094816315840005EF20E /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
+		F6D8094916315840005EF20E /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
+		F6D8094A16315840005EF20E /* Smaato CPD Tracking v1.4.1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Smaato CPD Tracking v1.4.1.pdf"; sourceTree = "<group>"; };
+		F6D8094B16315840005EF20E /* SOMADownloadTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOMADownloadTrack.h; sourceTree = "<group>"; };
+		F6D8094C16315840005EF20E /* SOMADownloadTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOMADownloadTrack.m; sourceTree = "<group>"; };
+		F6D8094D16315840005EF20E /* WizAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WizAnalytics.h; sourceTree = "<group>"; };
+		F6D8094E16315840005EF20E /* WizAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WizAnalytics.m; sourceTree = "<group>"; };
+		F6D8094F16315840005EF20E /* WizAnalyticsPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WizAnalyticsPlugin.h; sourceTree = "<group>"; };
+		F6D8095016315840005EF20E /* WizAnalyticsPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WizAnalyticsPlugin.m; sourceTree = "<group>"; };
+		F6D8095116315840005EF20E /* WizAnalyticsVendorModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WizAnalyticsVendorModule.h; sourceTree = "<group>"; };
+		F6D8095216315840005EF20E /* WizDebugLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WizDebugLog.h; sourceTree = "<group>"; };
+		F6D8097E16315A76005EF20E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F6D8098016315B3C005EF20E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		F6D8098216315B7A005EF20E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		F6D8098416315BB0005EF20E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F6D8073E16313728005EF20E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6D8098516315BB0005EF20E /* libz.dylib in Frameworks */,
+				F6D8098316315B7A005EF20E /* libsqlite3.dylib in Frameworks */,
+				F6D8098116315B3C005EF20E /* CoreTelephony.framework in Frameworks */,
+				F6D8097F16315A76005EF20E /* CoreData.framework in Frameworks */,
+				F6D8074916313728005EF20E /* Foundation.framework in Frameworks */,
+				F6D8074B16313728005EF20E /* UIKit.framework in Frameworks */,
+				F6D8074D16313728005EF20E /* CoreGraphics.framework in Frameworks */,
+				F6D8074F16313728005EF20E /* AddressBook.framework in Frameworks */,
+				F6D8075116313728005EF20E /* AddressBookUI.framework in Frameworks */,
+				F6D8075316313728005EF20E /* AudioToolbox.framework in Frameworks */,
+				F6D8075516313728005EF20E /* AVFoundation.framework in Frameworks */,
+				F6D8075716313728005EF20E /* CoreLocation.framework in Frameworks */,
+				F6D8075916313728005EF20E /* MediaPlayer.framework in Frameworks */,
+				F6D8075B16313728005EF20E /* QuartzCore.framework in Frameworks */,
+				F6D8075D16313728005EF20E /* SystemConfiguration.framework in Frameworks */,
+				F6D8075F16313728005EF20E /* MobileCoreServices.framework in Frameworks */,
+				F6D8076116313728005EF20E /* CoreMedia.framework in Frameworks */,
+				F6D8076C16313728005EF20E /* Cordova.framework in Frameworks */,
+				F6D8095316315840005EF20E /* libChartboost.a in Frameworks */,
+				F6D8095516315840005EF20E /* libFlurryAnalytics.a in Frameworks */,
+				F6D8095616315840005EF20E /* libFlurryAppCircle.a in Frameworks */,
+				F6D8095916315840005EF20E /* libGoogleAdMobAds.a in Frameworks */,
+				F6D8095B16315840005EF20E /* libInMobiAdTracker_iOS.a in Frameworks */,
+				F6D8096216315840005EF20E /* Kontagent.framework in Frameworks */,
+				F6D8096916315840005EF20E /* libMMAdvertiser.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6D8074116313728005EF20E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F6D8073616313728005EF20E = {
+			isa = PBXGroup;
+			children = (
+				F6D8098416315BB0005EF20E /* libz.dylib */,
+				F6D8098216315B7A005EF20E /* libsqlite3.dylib */,
+				F6D8098016315B3C005EF20E /* CoreTelephony.framework */,
+				F6D8097E16315A76005EF20E /* CoreData.framework */,
+				F6D8079F163137C4005EF20E /* www */,
+				F6D8076216313728005EF20E /* exampleWizAnalytics */,
+				F6D8074716313728005EF20E /* Frameworks */,
+				F6D8074516313728005EF20E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F6D8074516313728005EF20E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8074416313728005EF20E /* exampleWizAnalytics.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6D8074716313728005EF20E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8074816313728005EF20E /* Foundation.framework */,
+				F6D8074A16313728005EF20E /* UIKit.framework */,
+				F6D8074C16313728005EF20E /* CoreGraphics.framework */,
+				F6D8074E16313728005EF20E /* AddressBook.framework */,
+				F6D8075016313728005EF20E /* AddressBookUI.framework */,
+				F6D8075216313728005EF20E /* AudioToolbox.framework */,
+				F6D8075416313728005EF20E /* AVFoundation.framework */,
+				F6D8075616313728005EF20E /* CoreLocation.framework */,
+				F6D8075816313728005EF20E /* MediaPlayer.framework */,
+				F6D8075A16313728005EF20E /* QuartzCore.framework */,
+				F6D8075C16313728005EF20E /* SystemConfiguration.framework */,
+				F6D8075E16313728005EF20E /* MobileCoreServices.framework */,
+				F6D8076016313728005EF20E /* CoreMedia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6D8076216313728005EF20E /* exampleWizAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8076B16313728005EF20E /* Cordova.framework */,
+				F6D8076D16313728005EF20E /* Resources */,
+				F6D8078E16313728005EF20E /* Classes */,
+				F6D8079716313728005EF20E /* Plugins */,
+				F6D8076316313728005EF20E /* Supporting Files */,
+			);
+			path = exampleWizAnalytics;
+			sourceTree = "<group>";
+		};
+		F6D8076316313728005EF20E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8076416313728005EF20E /* exampleWizAnalytics-Info.plist */,
+				F6D8076516313728005EF20E /* InfoPlist.strings */,
+				F6D8076816313728005EF20E /* main.m */,
+				F6D8076A16313728005EF20E /* exampleWizAnalytics-Prefix.pch */,
+				F6D8078C16313728005EF20E /* Cordova.plist */,
+				F6D8079516313728005EF20E /* MainViewController.xib */,
+				F6D8079916313728005EF20E /* verify.sh */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F6D8076D16313728005EF20E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8078A16313728005EF20E /* Capture.bundle */,
+				F6D8076E16313728005EF20E /* en.lproj */,
+				F6D8077216313728005EF20E /* es.lproj */,
+				F6D8077616313728005EF20E /* de.lproj */,
+				F6D8077A16313728005EF20E /* se.lproj */,
+				F6D8077E16313728005EF20E /* icons */,
+				F6D8078516313728005EF20E /* splash */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F6D8076E16313728005EF20E /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8076F16313728005EF20E /* Localizable.strings */,
+			);
+			name = en.lproj;
+			sourceTree = "<group>";
+		};
+		F6D8077216313728005EF20E /* es.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8077316313728005EF20E /* Localizable.strings */,
+			);
+			name = es.lproj;
+			sourceTree = "<group>";
+		};
+		F6D8077616313728005EF20E /* de.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8077716313728005EF20E /* Localizable.strings */,
+			);
+			name = de.lproj;
+			sourceTree = "<group>";
+		};
+		F6D8077A16313728005EF20E /* se.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8077B16313728005EF20E /* Localizable.strings */,
+			);
+			name = se.lproj;
+			sourceTree = "<group>";
+		};
+		F6D8077E16313728005EF20E /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8077F16313728005EF20E /* icon.png */,
+				F6D8078116313728005EF20E /* icon@2x.png */,
+				F6D8078316313728005EF20E /* icon-72.png */,
+			);
+			name = icons;
+			sourceTree = "<group>";
+		};
+		F6D8078516313728005EF20E /* splash */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8078616313728005EF20E /* Default~iphone.png */,
+				F6D8078816313728005EF20E /* Default@2x~iphone.png */,
+			);
+			name = splash;
+			sourceTree = "<group>";
+		};
+		F6D8078E16313728005EF20E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8078F16313728005EF20E /* AppDelegate.h */,
+				F6D8079016313728005EF20E /* AppDelegate.m */,
+				F6D8079216313728005EF20E /* MainViewController.h */,
+				F6D8079316313728005EF20E /* MainViewController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		F6D8079716313728005EF20E /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				F6D808E116315840005EF20E /* WizAnalyticsPlugin */,
+				F6D8079816313728005EF20E /* README */,
+			);
+			name = Plugins;
+			sourceTree = "<group>";
+		};
+		F6D808E116315840005EF20E /* WizAnalyticsPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				F6D808E216315840005EF20E /* vendor */,
+				F6D8094D16315840005EF20E /* WizAnalytics.h */,
+				F6D8094E16315840005EF20E /* WizAnalytics.m */,
+				F6D8094F16315840005EF20E /* WizAnalyticsPlugin.h */,
+				F6D8095016315840005EF20E /* WizAnalyticsPlugin.m */,
+				F6D8095116315840005EF20E /* WizAnalyticsVendorModule.h */,
+				F6D8095216315840005EF20E /* WizDebugLog.h */,
+			);
+			name = WizAnalyticsPlugin;
+			path = ../../ios/project/Plugins/WizAnalyticsPlugin;
+			sourceTree = "<group>";
+		};
+		F6D808E216315840005EF20E /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				F6D808E316315840005EF20E /* Chartboost */,
+				F6D808E816315840005EF20E /* Flurry iPhone SDK v3.0.9 */,
+				F6D808F316315840005EF20E /* GoogleAdMobAdsSDK */,
+				F6D8090616315840005EF20E /* InMobiAdTracker_iOS_SDK_v1.0.1 */,
+				F6D8091616315840005EF20E /* JumpTapAppReport */,
+				F6D8091916315840005EF20E /* Kontagent */,
+				F6D8091B16315840005EF20E /* Localytics-iOS-client-2.6.source */,
+				F6D8092516315840005EF20E /* MilleniumMedia_AppleSDK */,
+				F6D8092C16315840005EF20E /* ModuleAdfonic.h */,
+				F6D8092D16315840005EF20E /* ModuleAdfonic.m */,
+				F6D8092E16315840005EF20E /* ModuleAdmob.h */,
+				F6D8092F16315840005EF20E /* ModuleAdmob.m */,
+				F6D8093016315840005EF20E /* ModuleChartboost.h */,
+				F6D8093116315840005EF20E /* ModuleChartboost.m */,
+				F6D8093216315840005EF20E /* ModuleFlurry.h */,
+				F6D8093316315840005EF20E /* ModuleFlurry.m */,
+				F6D8093416315840005EF20E /* ModuleInMobi.h */,
+				F6D8093516315840005EF20E /* ModuleInMobi.m */,
+				F6D8093616315840005EF20E /* ModuleJumpTap.h */,
+				F6D8093716315840005EF20E /* ModuleJumpTap.m */,
+				F6D8093816315840005EF20E /* ModuleKontagent.h */,
+				F6D8093916315840005EF20E /* ModuleKontagent.m */,
+				F6D8093A16315840005EF20E /* ModuleLeadbolt.h */,
+				F6D8093B16315840005EF20E /* ModuleLeadbolt.m */,
+				F6D8093C16315840005EF20E /* ModuleLocalytics.h */,
+				F6D8093D16315840005EF20E /* ModuleLocalytics.m */,
+				F6D8093E16315840005EF20E /* ModuleMdotM.h */,
+				F6D8093F16315840005EF20E /* ModuleMdotM.m */,
+				F6D8094016315840005EF20E /* ModuleMillenium.h */,
+				F6D8094116315840005EF20E /* ModuleMillenium.m */,
+				F6D8094216315840005EF20E /* ModuleSmaato.h */,
+				F6D8094316315840005EF20E /* ModuleSmaato.m */,
+				F6D8094416315840005EF20E /* smaato_SDK */,
+			);
+			path = vendor;
+			sourceTree = "<group>";
+		};
+		F6D808E316315840005EF20E /* Chartboost */ = {
+			isa = PBXGroup;
+			children = (
+				F6D808E416315840005EF20E /* CBAnalytics.h */,
+				F6D808E516315840005EF20E /* Chartboost.h */,
+				F6D808E616315840005EF20E /* libChartboost.a */,
+				F6D808E716315840005EF20E /* README.md */,
+			);
+			path = Chartboost;
+			sourceTree = "<group>";
+		};
+		F6D808E816315840005EF20E /* Flurry iPhone SDK v3.0.9 */ = {
+			isa = PBXGroup;
+			children = (
+				F6D808E916315840005EF20E /* FlurryAnalytics */,
+				F6D808EC16315840005EF20E /* FlurryAppCircle */,
+				F6D808F116315840005EF20E /* ProjectApiKey.txt */,
+				F6D808F216315840005EF20E /* RELEASE_NOTES.txt */,
+			);
+			path = "Flurry iPhone SDK v3.0.9";
+			sourceTree = "<group>";
+		};
+		F6D808E916315840005EF20E /* FlurryAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				F6D808EA16315840005EF20E /* FlurryAnalytics.h */,
+				F6D808EB16315840005EF20E /* libFlurryAnalytics.a */,
+			);
+			path = FlurryAnalytics;
+			sourceTree = "<group>";
+		};
+		F6D808EC16315840005EF20E /* FlurryAppCircle */ = {
+			isa = PBXGroup;
+			children = (
+				F6D808ED16315840005EF20E /* FlurryAdDelegate.h */,
+				F6D808EE16315840005EF20E /* FlurryAppCircle.h */,
+				F6D808EF16315840005EF20E /* FlurryOffer.h */,
+				F6D808F016315840005EF20E /* libFlurryAppCircle.a */,
+			);
+			path = FlurryAppCircle;
+			sourceTree = "<group>";
+		};
+		F6D808F316315840005EF20E /* GoogleAdMobAdsSDK */ = {
+			isa = PBXGroup;
+			children = (
+				F6D808F416315840005EF20E /* GADAdMobExtras.h */,
+				F6D808F516315840005EF20E /* GADAdNetworkExtras.h */,
+				F6D808F616315840005EF20E /* GADAdSize.h */,
+				F6D808F716315840005EF20E /* GADBannerView.h */,
+				F6D808F816315840005EF20E /* GADBannerViewDelegate.h */,
+				F6D808F916315840005EF20E /* GADInterstitial.h */,
+				F6D808FA16315840005EF20E /* GADInterstitialDelegate.h */,
+				F6D808FB16315840005EF20E /* GADRequest.h */,
+				F6D808FC16315840005EF20E /* GADRequestError.h */,
+				F6D808FD16315840005EF20E /* libGoogleAdMobAds.a */,
+				F6D808FE16315840005EF20E /* Mediation */,
+				F6D8090516315840005EF20E /* README.txt */,
+			);
+			path = GoogleAdMobAdsSDK;
+			sourceTree = "<group>";
+		};
+		F6D808FE16315840005EF20E /* Mediation */ = {
+			isa = PBXGroup;
+			children = (
+				F6D808FF16315840005EF20E /* GADCustomEventBanner.h */,
+				F6D8090016315840005EF20E /* GADCustomEventBannerDelegate.h */,
+				F6D8090116315840005EF20E /* GADCustomEventExtras.h */,
+				F6D8090216315840005EF20E /* GADCustomEventInterstitial.h */,
+				F6D8090316315840005EF20E /* GADCustomEventInterstitialDelegate.h */,
+				F6D8090416315840005EF20E /* GADCustomEventRequest.h */,
+			);
+			path = Mediation;
+			sourceTree = "<group>";
+		};
+		F6D8090616315840005EF20E /* InMobiAdTracker_iOS_SDK_v1.0.1 */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8090716315840005EF20E /* Lib */,
+				F6D8090B16315840005EF20E /* TestApp */,
+			);
+			path = InMobiAdTracker_iOS_SDK_v1.0.1;
+			sourceTree = "<group>";
+		};
+		F6D8090716315840005EF20E /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8090816315840005EF20E /* IMAdTrackerAnalytics.h */,
+				F6D8090916315840005EF20E /* IMAdTrackerUtil.h */,
+				F6D8090A16315840005EF20E /* libInMobiAdTracker_iOS.a */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		F6D8090B16315840005EF20E /* TestApp */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8090C16315840005EF20E /* build */,
+				F6D8091516315840005EF20E /* TestApp */,
+			);
+			path = TestApp;
+			sourceTree = "<group>";
+		};
+		F6D8090C16315840005EF20E /* build */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8090D16315840005EF20E /* TestApp.build */,
+			);
+			path = build;
+			sourceTree = "<group>";
+		};
+		F6D8090D16315840005EF20E /* TestApp.build */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8090E16315840005EF20E /* Debug-iphoneos */,
+			);
+			path = TestApp.build;
+			sourceTree = "<group>";
+		};
+		F6D8090E16315840005EF20E /* Debug-iphoneos */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8090F16315840005EF20E /* MyTestApp.build */,
+			);
+			path = "Debug-iphoneos";
+			sourceTree = "<group>";
+		};
+		F6D8090F16315840005EF20E /* MyTestApp.build */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8091016315840005EF20E /* MyTestApp-all-target-headers.hmap */,
+				F6D8091116315840005EF20E /* MyTestApp-generated-files.hmap */,
+				F6D8091216315840005EF20E /* MyTestApp-own-target-headers.hmap */,
+				F6D8091316315840005EF20E /* MyTestApp-project-headers.hmap */,
+				F6D8091416315840005EF20E /* MyTestApp.hmap */,
+			);
+			path = MyTestApp.build;
+			sourceTree = "<group>";
+		};
+		F6D8091516315840005EF20E /* TestApp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TestApp;
+			sourceTree = "<group>";
+		};
+		F6D8091616315840005EF20E /* JumpTapAppReport */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8091716315840005EF20E /* JumpTapAppReport.h */,
+				F6D8091816315840005EF20E /* JumpTapAppReport.m */,
+			);
+			path = JumpTapAppReport;
+			sourceTree = "<group>";
+		};
+		F6D8091916315840005EF20E /* Kontagent */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8091A16315840005EF20E /* Kontagent.framework */,
+			);
+			path = Kontagent;
+			sourceTree = "<group>";
+		};
+		F6D8091B16315840005EF20E /* Localytics-iOS-client-2.6.source */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8091C16315840005EF20E /* LICENSE */,
+				F6D8091D16315840005EF20E /* src */,
+			);
+			path = "Localytics-iOS-client-2.6.source";
+			sourceTree = "<group>";
+		};
+		F6D8091D16315840005EF20E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8091E16315840005EF20E /* LocalyticsDatabase.h */,
+				F6D8091F16315840005EF20E /* LocalyticsDatabase.m */,
+				F6D8092016315840005EF20E /* LocalyticsSession.h */,
+				F6D8092116315840005EF20E /* LocalyticsSession.m */,
+				F6D8092216315840005EF20E /* LocalyticsUploader.h */,
+				F6D8092316315840005EF20E /* LocalyticsUploader.m */,
+				F6D8092416315840005EF20E /* WebserviceConstants.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		F6D8092516315840005EF20E /* MilleniumMedia_AppleSDK */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8092616315840005EF20E /* Changelog */,
+				F6D8092716315840005EF20E /* LICENSE.txt */,
+				F6D8092816315840005EF20E /* MMAdvertiser */,
+				F6D8092B16315840005EF20E /* README.pdf */,
+			);
+			path = MilleniumMedia_AppleSDK;
+			sourceTree = "<group>";
+		};
+		F6D8092816315840005EF20E /* MMAdvertiser */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8092916315840005EF20E /* libMMAdvertiser.a */,
+				F6D8092A16315840005EF20E /* MMAdvertiser.h */,
+			);
+			path = MMAdvertiser;
+			sourceTree = "<group>";
+		};
+		F6D8094416315840005EF20E /* smaato_SDK */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8094516315840005EF20E /* android_tracking.java */,
+				F6D8094616315840005EF20E /* ODIN.h */,
+				F6D8094716315840005EF20E /* ODIN.m */,
+				F6D8094816315840005EF20E /* OpenUDID.h */,
+				F6D8094916315840005EF20E /* OpenUDID.m */,
+				F6D8094A16315840005EF20E /* Smaato CPD Tracking v1.4.1.pdf */,
+				F6D8094B16315840005EF20E /* SOMADownloadTrack.h */,
+				F6D8094C16315840005EF20E /* SOMADownloadTrack.m */,
+			);
+			path = smaato_SDK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F6D8074316313728005EF20E /* exampleWizAnalytics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6D8079C16313728005EF20E /* Build configuration list for PBXNativeTarget "exampleWizAnalytics" */;
+			buildPhases = (
+				F6D8073D16313728005EF20E /* Sources */,
+				F6D8073E16313728005EF20E /* Frameworks */,
+				F6D8073F16313728005EF20E /* Resources */,
+				F6D8074016313728005EF20E /* Sources */,
+				F6D8074116313728005EF20E /* Frameworks */,
+				F6D8074216313728005EF20E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = exampleWizAnalytics;
+			productName = exampleWizAnalytics;
+			productReference = F6D8074416313728005EF20E /* exampleWizAnalytics.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F6D8073816313728005EF20E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = Wizcorp;
+			};
+			buildConfigurationList = F6D8073B16313728005EF20E /* Build configuration list for PBXProject "exampleWizAnalytics" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				es,
+				de,
+				se,
+			);
+			mainGroup = F6D8073616313728005EF20E;
+			productRefGroup = F6D8074516313728005EF20E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F6D8074316313728005EF20E /* exampleWizAnalytics */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F6D8073F16313728005EF20E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6D8076716313728005EF20E /* InfoPlist.strings in Resources */,
+				F6D8077116313728005EF20E /* Localizable.strings in Resources */,
+				F6D8077516313728005EF20E /* Localizable.strings in Resources */,
+				F6D8077916313728005EF20E /* Localizable.strings in Resources */,
+				F6D8077D16313728005EF20E /* Localizable.strings in Resources */,
+				F6D8078016313728005EF20E /* icon.png in Resources */,
+				F6D8078216313728005EF20E /* icon@2x.png in Resources */,
+				F6D8078416313728005EF20E /* icon-72.png in Resources */,
+				F6D8078716313728005EF20E /* Default~iphone.png in Resources */,
+				F6D8078916313728005EF20E /* Default@2x~iphone.png in Resources */,
+				F6D8078B16313728005EF20E /* Capture.bundle in Resources */,
+				F6D8078D16313728005EF20E /* Cordova.plist in Resources */,
+				F6D8079616313728005EF20E /* MainViewController.xib in Resources */,
+				F6D807A0163137C4005EF20E /* www in Resources */,
+				F6D8095416315840005EF20E /* README.md in Resources */,
+				F6D8095716315840005EF20E /* ProjectApiKey.txt in Resources */,
+				F6D8095816315840005EF20E /* RELEASE_NOTES.txt in Resources */,
+				F6D8095A16315840005EF20E /* README.txt in Resources */,
+				F6D8095C16315840005EF20E /* MyTestApp-all-target-headers.hmap in Resources */,
+				F6D8095D16315840005EF20E /* MyTestApp-generated-files.hmap in Resources */,
+				F6D8095E16315840005EF20E /* MyTestApp-own-target-headers.hmap in Resources */,
+				F6D8095F16315840005EF20E /* MyTestApp-project-headers.hmap in Resources */,
+				F6D8096016315840005EF20E /* MyTestApp.hmap in Resources */,
+				F6D8096316315840005EF20E /* LICENSE in Resources */,
+				F6D8096716315840005EF20E /* Changelog in Resources */,
+				F6D8096816315840005EF20E /* LICENSE.txt in Resources */,
+				F6D8096A16315840005EF20E /* README.pdf in Resources */,
+				F6D8097A16315840005EF20E /* Smaato CPD Tracking v1.4.1.pdf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F6D8074216313728005EF20E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "\n\t\t\t\t\t\t\t\tchmod 755 \"$PROJECT_DIR/$PROJECT_NAME/verify.sh\"\n\t\t\t\t\t\t\t\t\"$PROJECT_DIR/$PROJECT_NAME/verify.sh\"\n\t\t\t\t\t";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F6D8073D16313728005EF20E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6D8076916313728005EF20E /* main.m in Sources */,
+				F6D8079116313728005EF20E /* AppDelegate.m in Sources */,
+				F6D8079416313728005EF20E /* MainViewController.m in Sources */,
+				F6D8096116315840005EF20E /* JumpTapAppReport.m in Sources */,
+				F6D8096416315840005EF20E /* LocalyticsDatabase.m in Sources */,
+				F6D8096516315840005EF20E /* LocalyticsSession.m in Sources */,
+				F6D8096616315840005EF20E /* LocalyticsUploader.m in Sources */,
+				F6D8096B16315840005EF20E /* ModuleAdfonic.m in Sources */,
+				F6D8096C16315840005EF20E /* ModuleAdmob.m in Sources */,
+				F6D8096D16315840005EF20E /* ModuleChartboost.m in Sources */,
+				F6D8096E16315840005EF20E /* ModuleFlurry.m in Sources */,
+				F6D8096F16315840005EF20E /* ModuleInMobi.m in Sources */,
+				F6D8097016315840005EF20E /* ModuleJumpTap.m in Sources */,
+				F6D8097116315840005EF20E /* ModuleKontagent.m in Sources */,
+				F6D8097216315840005EF20E /* ModuleLeadbolt.m in Sources */,
+				F6D8097316315840005EF20E /* ModuleLocalytics.m in Sources */,
+				F6D8097416315840005EF20E /* ModuleMdotM.m in Sources */,
+				F6D8097516315840005EF20E /* ModuleMillenium.m in Sources */,
+				F6D8097616315840005EF20E /* ModuleSmaato.m in Sources */,
+				F6D8097716315840005EF20E /* android_tracking.java in Sources */,
+				F6D8097816315840005EF20E /* ODIN.m in Sources */,
+				F6D8097916315840005EF20E /* OpenUDID.m in Sources */,
+				F6D8097B16315840005EF20E /* SOMADownloadTrack.m in Sources */,
+				F6D8097C16315840005EF20E /* WizAnalytics.m in Sources */,
+				F6D8097D16315840005EF20E /* WizAnalyticsPlugin.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6D8074016313728005EF20E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F6D8076516313728005EF20E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6D8076616313728005EF20E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F6D8076F16313728005EF20E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6D8077016313728005EF20E /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		F6D8077316313728005EF20E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6D8077416313728005EF20E /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		F6D8077716313728005EF20E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6D8077816313728005EF20E /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		F6D8077B16313728005EF20E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6D8077C16313728005EF20E /* se */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F6D8079A16313728005EF20E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F6D8079B16313728005EF20E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F6D8079D16313728005EF20E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Users/Shared/Cordova/Frameworks,
+					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/Kontagent\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "exampleWizAnalytics/exampleWizAnalytics-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1,",
+					"CORDOVA_FRAMEWORK=1,",
+					"DEBUGGER=1",
+				);
+				INFOPLIST_FILE = "exampleWizAnalytics/exampleWizAnalytics-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/Chartboost\"",
+					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/Flurry iPhone SDK v3.0.9/FlurryAnalytics\"",
+					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/Flurry iPhone SDK v3.0.9/FlurryAppCircle\"",
+					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/GoogleAdMobAdsSDK\"",
+					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/InMobiAdTracker_iOS_SDK_v1.0.1/Lib\"",
+					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/MilleniumMedia_AppleSDK/MMAdvertiser\"",
+				);
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					UIKit,
+					"-weak_framework",
+					AVFoundation,
+					"-weak_framework",
+					CoreMedia,
+					"-weak-lSystem",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F6D8079E16313728005EF20E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Users/Shared/Cordova/Frameworks,
+					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/Kontagent\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "exampleWizAnalytics/exampleWizAnalytics-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"NDEBUG=1,",
+					"CORDOVA_FRAMEWORK=1",
+				);
+				INFOPLIST_FILE = "exampleWizAnalytics/exampleWizAnalytics-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/Chartboost\"",
+					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/Flurry iPhone SDK v3.0.9/FlurryAnalytics\"",
+					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/Flurry iPhone SDK v3.0.9/FlurryAppCircle\"",
+					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/GoogleAdMobAdsSDK\"",
+					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/InMobiAdTracker_iOS_SDK_v1.0.1/Lib\"",
+					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/MilleniumMedia_AppleSDK/MMAdvertiser\"",
+				);
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					UIKit,
+					"-weak_framework",
+					AVFoundation,
+					"-weak_framework",
+					CoreMedia,
+					"-weak-lSystem",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F6D8073B16313728005EF20E /* Build configuration list for PBXProject "exampleWizAnalytics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6D8079A16313728005EF20E /* Debug */,
+				F6D8079B16313728005EF20E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6D8079C16313728005EF20E /* Build configuration list for PBXNativeTarget "exampleWizAnalytics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6D8079D16313728005EF20E /* Debug */,
+				F6D8079E16313728005EF20E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F6D8073816313728005EF20E /* Project object */;
+}

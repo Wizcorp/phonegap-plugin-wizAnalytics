@@ -20,41 +20,50 @@
 
 @implementation WizAnalyticsPlugin
 
+- (void)launch:(NSArray*)arguments withDict:(NSDictionary*)options
+{
+    // Initialize the singleton (if it doesn't already exist).
+    [WizAnalytics sharedInstance:options];
+}
+
 - (void)startSession:(NSArray*)arguments withDict:(NSDictionary*)options
 {
-    
+    WizAnalytics* sharedSingleton = [WizAnalytics sharedInstance];
+    [sharedSingleton startAnalyticsSession];
+}
+
+- (void)pauseSession:(NSArray*)arguments withDict:(NSDictionary*)options
+{
+    WizAnalytics* sharedSingleton = [WizAnalytics sharedInstance];
+    [sharedSingleton pauseAnalyticsSession];
 }
 
 - (void)endSession:(NSArray*)arguments withDict:(NSDictionary*)options
 {
-    
+    WizAnalytics* sharedSingleton = [WizAnalytics sharedInstance];
+    [sharedSingleton endAnalyticsSession];
 }
 
 - (void)restartSession:(NSArray*)arguments withDict:(NSDictionary*)options
 {
-    
+    WizAnalytics* sharedSingleton = [WizAnalytics sharedInstance];
+    [sharedSingleton restartAnalyticsSession];
 }
 
 - (void)logEvent:(NSArray*)arguments withDict:(NSDictionary*)options
 {
-    // Callback
-    // NSString *callbackId = [arguments objectAtIndex:0];
     NSString *eventName = [arguments objectAtIndex:1];
     
     WizAnalytics* sharedSingleton = [WizAnalytics sharedInstance];
+    [sharedSingleton analyticsEvent:eventName withExtraMetadata:options];
+}
 
-    if (options) {
-        
-        [sharedSingleton analyticsEvent:eventName withExtraMetadata:options];
-        
-	} else {
-        
-        [sharedSingleton analyticsEvent:eventName withExtraMetadata:nil];
-        
-        
-    }
+- (void)logScreen:(NSArray*)arguments withDict:(NSDictionary*)options
+{
+    NSString *eventName = [arguments objectAtIndex:1];
     
-    
+    WizAnalytics* sharedSingleton = [WizAnalytics sharedInstance];
+    [sharedSingleton analyticsScreenEvent:eventName withExtraMetadata:options];
 }
 
 @end

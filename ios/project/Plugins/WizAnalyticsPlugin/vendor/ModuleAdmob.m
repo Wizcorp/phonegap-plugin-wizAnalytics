@@ -10,9 +10,19 @@
 #import "ModuleAdmob.h"
 #import <CommonCrypto/CommonDigest.h>
 
+@interface ModuleAdmob ()
+@property (nonatomic, retain) NSString *admobAPIKey;
+@end
+
 @implementation ModuleAdmob
 
-@synthesize admobAPIKey = _admobAPIKey;
+- (void)dealloc
+{
+    self.admobAPIKey = nil;
+    [super dealloc];
+}
+
+#pragma mark - Required WizAnalyticsVendorModule protocol methods
 
 - (id)initWithOptions:(NSDictionary *)options
 {
@@ -22,7 +32,6 @@
     return self;
 }
 
-
 - (void)startSession 
 {
     NSLog(@"ADMOB START SESSION %@", _admobAPIKey);
@@ -31,14 +40,7 @@
     
 }
 
-
-
-- (void)dealloc 
-{
-    self.admobAPIKey = nil;
-    [super dealloc];
-}
-
+#pragma mark - Private methods
 
 - (void)reportAppOpenToAdMob {
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init]; // we're in a new thread here, so we need our own autorelease pool

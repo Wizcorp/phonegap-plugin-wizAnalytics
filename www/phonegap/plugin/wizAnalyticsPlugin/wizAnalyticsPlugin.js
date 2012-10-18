@@ -10,34 +10,46 @@
 
 var wizAnalytics = {
 
-    launch: function(s, f) {
-        return cordova.exec(s, f, "WizAnalyticsPlugin", "launch", []);                      
+    launch: function() {
+        return cordova.exec(null, null, "WizAnalyticsPlugin", "launch", []);
     },
     
     session : {
-        start : function (options, s, f) {
-            cordova.exec(s, f, "WizAnalyticsPlugin", "startSession", [options]);
+        start : function (options) {
+            cordova.exec(null, null, "WizAnalyticsPlugin", "startSession", [options]);
             
         },
         
-        end : function (options, s, f) {
-            cordova.exec(s, f, "WizAnalyticsPlugin", "endSession", [options]);
+        end : function (options) {
+            cordova.exec(null, null, "WizAnalyticsPlugin", "endSession", [options]);
             
         },
         
-        restart : function (options, s, f) {
-            cordova.exec(s, f, "WizAnalyticsPlugin", "restartSession", [options]);
+        restart : function (options) {
+            cordova.exec(null, null, "WizAnalyticsPlugin", "restartSession", [options]);
             
         }
         
     },
     
     event : {
-        log : function (eventName, options, s, f) {
+        log : function (eventName, options) {
             if(typeof(options) == "undefined") {
-		 		cordova.exec(s, f, "WizAnalyticsPlugin", "logEvent", [eventName, options]);	
+		 		cordova.exec(null, null, "WizAnalyticsPlugin", "logEvent", [eventName, options]);
 			} else {
-				cordova.exec(s, f, "WizAnalyticsPlugin", "logEvent", [eventName, options]);
+				cordova.exec(null, null, "WizAnalyticsPlugin", "logEvent", [eventName, options]);
+			}
+            
+            
+        }
+    },
+    
+    screen  : {
+        log : function (screenName, options) {
+            if(typeof(options) == "undefined") {
+		 		cordova.exec(null, null, "WizAnalyticsPlugin", "logScreen", [screenName, options]);
+			} else {
+				cordova.exec(null, null, "WizAnalyticsPlugin", "logScreen", [screenName, options]);
 			}
             
             

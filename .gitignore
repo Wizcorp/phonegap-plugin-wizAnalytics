@@ -1,1 +1,4 @@
 .DS_Store
+exampleWizAnalytics/www/phonegap/*
+exampleWizAnalytics/exampleWizAnalytics.xcodeproj/xcuserdata/*
+exampleWizAnalytics/exampleWizAnalytics.xcodeproj/project.xcworkspace/*

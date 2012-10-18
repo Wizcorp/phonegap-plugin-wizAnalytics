@@ -11,10 +11,19 @@
 #import "IMAdTrackerAnalytics.h"
 #import "IMAdTrackerUtil.h"
 
+@interface ModuleInMobi ()
+@property (nonatomic, retain) NSString *inMobiAPIKey;
+@end
 
 @implementation ModuleInMobi
 
-@synthesize inMobiAPIKey = _inMobiAPIKey;
+- (void)dealloc
+{
+    self.inMobiAPIKey = nil;
+    [super dealloc];
+}
+
+#pragma mark - Required WizAnalyticsVendorModule protocol methods
 
 - (id)initWithOptions:(NSDictionary *)options
 {
@@ -33,6 +42,8 @@
     // [[IMAdTrackerAnalytics imAnalytics] reportInstallGoal];
 
 }
+
+#pragma mark - Optional WizAnalyticsVendorModule protocol methods
 
 - (void)stopSession
 {
@@ -56,14 +67,5 @@
     [[IMAdTrackerAnalytics adAnalytics] handleOpenURL:url];
     
 }
-
-- (void)dealloc 
-{
-    self.inMobiAPIKey = nil;
-    [super dealloc];
-}
-
-
-
 
 @end

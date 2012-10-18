@@ -7,15 +7,7 @@
  *
  */
 
-#import <Foundation/Foundation.h>
+#import "WizAnalyticsVendorModule.h"
 
-@interface ModuleFlurry : NSObject {
-    NSString *_flurryAPIKey;
-}
-
-@property (nonatomic, retain) NSString *flurryAPIKey;
-
-- (id)initWithOptions:(NSDictionary *)options;
-- (void)startSession;
-- (void)logEvent:(NSString *)eventName withExtraMetadata:(NSDictionary *)extraMetadata;
+@interface ModuleFlurry : NSObject <WizAnalyticsVendorModule>
 @end
