@@ -46,12 +46,6 @@
 		F6D8095816315840005EF20E /* RELEASE_NOTES.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6D808F216315840005EF20E /* RELEASE_NOTES.txt */; };
 		F6D8095916315840005EF20E /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D808FD16315840005EF20E /* libGoogleAdMobAds.a */; };
 		F6D8095A16315840005EF20E /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6D8090516315840005EF20E /* README.txt */; };
-		F6D8095B16315840005EF20E /* libInMobiAdTracker_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8090A16315840005EF20E /* libInMobiAdTracker_iOS.a */; };
-		F6D8095C16315840005EF20E /* MyTestApp-all-target-headers.hmap in Resources */ = {isa = PBXBuildFile; fileRef = F6D8091016315840005EF20E /* MyTestApp-all-target-headers.hmap */; };
-		F6D8095D16315840005EF20E /* MyTestApp-generated-files.hmap in Resources */ = {isa = PBXBuildFile; fileRef = F6D8091116315840005EF20E /* MyTestApp-generated-files.hmap */; };
-		F6D8095E16315840005EF20E /* MyTestApp-own-target-headers.hmap in Resources */ = {isa = PBXBuildFile; fileRef = F6D8091216315840005EF20E /* MyTestApp-own-target-headers.hmap */; };
-		F6D8095F16315840005EF20E /* MyTestApp-project-headers.hmap in Resources */ = {isa = PBXBuildFile; fileRef = F6D8091316315840005EF20E /* MyTestApp-project-headers.hmap */; };
-		F6D8096016315840005EF20E /* MyTestApp.hmap in Resources */ = {isa = PBXBuildFile; fileRef = F6D8091416315840005EF20E /* MyTestApp.hmap */; };
 		F6D8096116315840005EF20E /* JumpTapAppReport.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8091816315840005EF20E /* JumpTapAppReport.m */; };
 		F6D8096216315840005EF20E /* Kontagent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8091A16315840005EF20E /* Kontagent.framework */; };
 		F6D8096316315840005EF20E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F6D8091C16315840005EF20E /* LICENSE */; };
@@ -84,7 +78,12 @@
 		F6D8098116315B3C005EF20E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8098016315B3C005EF20E /* CoreTelephony.framework */; };
 		F6D8098316315B7A005EF20E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8098216315B7A005EF20E /* libsqlite3.dylib */; };
 		F6D8098516315BB0005EF20E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8098416315BB0005EF20E /* libz.dylib */; };
-		F6D8099616368BB0005EF20E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D8099516368BAF005EF20E /* Default-568h@2x.png */; };
+		F6D809C116369548005EF20E /* ChangeLog.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6D8099816369548005EF20E /* ChangeLog.txt */; };
+		F6D809CD16369548005EF20E /* libInMobiAdTracker-2.5.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D809AB16369548005EF20E /* libInMobiAdTracker-2.5.1.a */; };
+		F6D809CE16369548005EF20E /* libInMobiCommons-3.6.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D809AC16369548005EF20E /* libInMobiCommons-3.6.1.a */; };
+		F6D809DA163699F2005EF20E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D809D9163699F2005EF20E /* Security.framework */; };
+		F6D809DC16369A19005EF20E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D809DB16369A19005EF20E /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		F6D809DD16369BF2005EF20E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D8099516368BAF005EF20E /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,14 +154,6 @@
 		F6D8090316315840005EF20E /* GADCustomEventInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventInterstitialDelegate.h; sourceTree = "<group>"; };
 		F6D8090416315840005EF20E /* GADCustomEventRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventRequest.h; sourceTree = "<group>"; };
 		F6D8090516315840005EF20E /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
-		F6D8090816315840005EF20E /* IMAdTrackerAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAdTrackerAnalytics.h; sourceTree = "<group>"; };
-		F6D8090916315840005EF20E /* IMAdTrackerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAdTrackerUtil.h; sourceTree = "<group>"; };
-		F6D8090A16315840005EF20E /* libInMobiAdTracker_iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libInMobiAdTracker_iOS.a; sourceTree = "<group>"; };
-		F6D8091016315840005EF20E /* MyTestApp-all-target-headers.hmap */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyTestApp-all-target-headers.hmap"; sourceTree = "<group>"; };
-		F6D8091116315840005EF20E /* MyTestApp-generated-files.hmap */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyTestApp-generated-files.hmap"; sourceTree = "<group>"; };
-		F6D8091216315840005EF20E /* MyTestApp-own-target-headers.hmap */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyTestApp-own-target-headers.hmap"; sourceTree = "<group>"; };
-		F6D8091316315840005EF20E /* MyTestApp-project-headers.hmap */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyTestApp-project-headers.hmap"; sourceTree = "<group>"; };
-		F6D8091416315840005EF20E /* MyTestApp.hmap */ = {isa = PBXFileReference; lastKnownFileType = file; path = MyTestApp.hmap; sourceTree = "<group>"; };
 		F6D8091716315840005EF20E /* JumpTapAppReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumpTapAppReport.h; sourceTree = "<group>"; };
 		F6D8091816315840005EF20E /* JumpTapAppReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpTapAppReport.m; sourceTree = "<group>"; };
 		F6D8091A16315840005EF20E /* Kontagent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kontagent.framework; sourceTree = "<group>"; };
@@ -222,6 +213,13 @@
 		F6D8098216315B7A005EF20E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		F6D8098416315BB0005EF20E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		F6D8099516368BAF005EF20E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F6D8099816369548005EF20E /* ChangeLog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChangeLog.txt; sourceTree = "<group>"; };
+		F6D809A916369548005EF20E /* IMAdTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAdTracker.h; sourceTree = "<group>"; };
+		F6D809AA16369548005EF20E /* IMCommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMCommonUtil.h; sourceTree = "<group>"; };
+		F6D809AB16369548005EF20E /* libInMobiAdTracker-2.5.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libInMobiAdTracker-2.5.1.a"; sourceTree = "<group>"; };
+		F6D809AC16369548005EF20E /* libInMobiCommons-3.6.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libInMobiCommons-3.6.1.a"; sourceTree = "<group>"; };
+		F6D809D9163699F2005EF20E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F6D809DB16369A19005EF20E /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +227,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6D809DC16369A19005EF20E /* AdSupport.framework in Frameworks */,
+				F6D809DA163699F2005EF20E /* Security.framework in Frameworks */,
 				F6D8098516315BB0005EF20E /* libz.dylib in Frameworks */,
 				F6D8098316315B7A005EF20E /* libsqlite3.dylib in Frameworks */,
 				F6D8098116315B3C005EF20E /* CoreTelephony.framework in Frameworks */,
@@ -251,9 +251,10 @@
 				F6D8095516315840005EF20E /* libFlurryAnalytics.a in Frameworks */,
 				F6D8095616315840005EF20E /* libFlurryAppCircle.a in Frameworks */,
 				F6D8095916315840005EF20E /* libGoogleAdMobAds.a in Frameworks */,
-				F6D8095B16315840005EF20E /* libInMobiAdTracker_iOS.a in Frameworks */,
 				F6D8096216315840005EF20E /* Kontagent.framework in Frameworks */,
 				F6D8096916315840005EF20E /* libMMAdvertiser.a in Frameworks */,
+				F6D809CD16369548005EF20E /* libInMobiAdTracker-2.5.1.a in Frameworks */,
+				F6D809CE16369548005EF20E /* libInMobiCommons-3.6.1.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,11 +271,6 @@
 		F6D8073616313728005EF20E = {
 			isa = PBXGroup;
 			children = (
-				F6D8099516368BAF005EF20E /* Default-568h@2x.png */,
-				F6D8098416315BB0005EF20E /* libz.dylib */,
-				F6D8098216315B7A005EF20E /* libsqlite3.dylib */,
-				F6D8098016315B3C005EF20E /* CoreTelephony.framework */,
-				F6D8097E16315A76005EF20E /* CoreData.framework */,
 				F6D8079F163137C4005EF20E /* www */,
 				F6D8076216313728005EF20E /* exampleWizAnalytics */,
 				F6D8074716313728005EF20E /* Frameworks */,
@@ -293,6 +289,13 @@
 		F6D8074716313728005EF20E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6D809DB16369A19005EF20E /* AdSupport.framework */,
+				F6D809D9163699F2005EF20E /* Security.framework */,
+				F6D8099516368BAF005EF20E /* Default-568h@2x.png */,
+				F6D8098416315BB0005EF20E /* libz.dylib */,
+				F6D8098216315B7A005EF20E /* libsqlite3.dylib */,
+				F6D8098016315B3C005EF20E /* CoreTelephony.framework */,
+				F6D8097E16315A76005EF20E /* CoreData.framework */,
 				F6D8074816313728005EF20E /* Foundation.framework */,
 				F6D8074A16313728005EF20E /* UIKit.framework */,
 				F6D8074C16313728005EF20E /* CoreGraphics.framework */,
@@ -442,7 +445,7 @@
 				F6D808E316315840005EF20E /* Chartboost */,
 				F6D808E816315840005EF20E /* Flurry iPhone SDK v3.0.9 */,
 				F6D808F316315840005EF20E /* GoogleAdMobAdsSDK */,
-				F6D8090616315840005EF20E /* InMobiAdTracker_iOS_SDK_v1.0.1 */,
+				F6D8099716369547005EF20E /* InMobiAdTracker_iOS_SDK_i251 */,
 				F6D8091616315840005EF20E /* JumpTapAppReport */,
 				F6D8091916315840005EF20E /* Kontagent */,
 				F6D8091B16315840005EF20E /* Localytics-iOS-client-2.6.source */,
@@ -550,77 +553,6 @@
 			path = Mediation;
 			sourceTree = "<group>";
 		};
-		F6D8090616315840005EF20E /* InMobiAdTracker_iOS_SDK_v1.0.1 */ = {
-			isa = PBXGroup;
-			children = (
-				F6D8090716315840005EF20E /* Lib */,
-				F6D8090B16315840005EF20E /* TestApp */,
-			);
-			path = InMobiAdTracker_iOS_SDK_v1.0.1;
-			sourceTree = "<group>";
-		};
-		F6D8090716315840005EF20E /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-				F6D8090816315840005EF20E /* IMAdTrackerAnalytics.h */,
-				F6D8090916315840005EF20E /* IMAdTrackerUtil.h */,
-				F6D8090A16315840005EF20E /* libInMobiAdTracker_iOS.a */,
-			);
-			path = Lib;
-			sourceTree = "<group>";
-		};
-		F6D8090B16315840005EF20E /* TestApp */ = {
-			isa = PBXGroup;
-			children = (
-				F6D8090C16315840005EF20E /* build */,
-				F6D8091516315840005EF20E /* TestApp */,
-			);
-			path = TestApp;
-			sourceTree = "<group>";
-		};
-		F6D8090C16315840005EF20E /* build */ = {
-			isa = PBXGroup;
-			children = (
-				F6D8090D16315840005EF20E /* TestApp.build */,
-			);
-			path = build;
-			sourceTree = "<group>";
-		};
-		F6D8090D16315840005EF20E /* TestApp.build */ = {
-			isa = PBXGroup;
-			children = (
-				F6D8090E16315840005EF20E /* Debug-iphoneos */,
-			);
-			path = TestApp.build;
-			sourceTree = "<group>";
-		};
-		F6D8090E16315840005EF20E /* Debug-iphoneos */ = {
-			isa = PBXGroup;
-			children = (
-				F6D8090F16315840005EF20E /* MyTestApp.build */,
-			);
-			path = "Debug-iphoneos";
-			sourceTree = "<group>";
-		};
-		F6D8090F16315840005EF20E /* MyTestApp.build */ = {
-			isa = PBXGroup;
-			children = (
-				F6D8091016315840005EF20E /* MyTestApp-all-target-headers.hmap */,
-				F6D8091116315840005EF20E /* MyTestApp-generated-files.hmap */,
-				F6D8091216315840005EF20E /* MyTestApp-own-target-headers.hmap */,
-				F6D8091316315840005EF20E /* MyTestApp-project-headers.hmap */,
-				F6D8091416315840005EF20E /* MyTestApp.hmap */,
-			);
-			path = MyTestApp.build;
-			sourceTree = "<group>";
-		};
-		F6D8091516315840005EF20E /* TestApp */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TestApp;
-			sourceTree = "<group>";
-		};
 		F6D8091616315840005EF20E /* JumpTapAppReport */ = {
 			isa = PBXGroup;
 			children = (
@@ -694,6 +626,26 @@
 				F6D8094C16315840005EF20E /* SOMADownloadTrack.m */,
 			);
 			path = smaato_SDK;
+			sourceTree = "<group>";
+		};
+		F6D8099716369547005EF20E /* InMobiAdTracker_iOS_SDK_i251 */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8099816369548005EF20E /* ChangeLog.txt */,
+				F6D809A816369548005EF20E /* Libs */,
+			);
+			path = InMobiAdTracker_iOS_SDK_i251;
+			sourceTree = "<group>";
+		};
+		F6D809A816369548005EF20E /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				F6D809A916369548005EF20E /* IMAdTracker.h */,
+				F6D809AA16369548005EF20E /* IMCommonUtil.h */,
+				F6D809AB16369548005EF20E /* libInMobiAdTracker-2.5.1.a */,
+				F6D809AC16369548005EF20E /* libInMobiCommons-3.6.1.a */,
+			);
+			path = Libs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -771,17 +723,13 @@
 				F6D8095716315840005EF20E /* ProjectApiKey.txt in Resources */,
 				F6D8095816315840005EF20E /* RELEASE_NOTES.txt in Resources */,
 				F6D8095A16315840005EF20E /* README.txt in Resources */,
-				F6D8095C16315840005EF20E /* MyTestApp-all-target-headers.hmap in Resources */,
-				F6D8095D16315840005EF20E /* MyTestApp-generated-files.hmap in Resources */,
-				F6D8095E16315840005EF20E /* MyTestApp-own-target-headers.hmap in Resources */,
-				F6D8095F16315840005EF20E /* MyTestApp-project-headers.hmap in Resources */,
-				F6D8096016315840005EF20E /* MyTestApp.hmap in Resources */,
 				F6D8096316315840005EF20E /* LICENSE in Resources */,
 				F6D8096716315840005EF20E /* Changelog in Resources */,
 				F6D8096816315840005EF20E /* LICENSE.txt in Resources */,
 				F6D8096A16315840005EF20E /* README.pdf in Resources */,
 				F6D8097A16315840005EF20E /* Smaato CPD Tracking v1.4.1.pdf in Resources */,
-				F6D8099616368BB0005EF20E /* Default-568h@2x.png in Resources */,
+				F6D809C116369548005EF20E /* ChangeLog.txt in Resources */,
+				F6D809DD16369BF2005EF20E /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -969,8 +917,8 @@
 					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/Flurry iPhone SDK v3.0.9/FlurryAnalytics\"",
 					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/Flurry iPhone SDK v3.0.9/FlurryAppCircle\"",
 					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/GoogleAdMobAdsSDK\"",
-					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/InMobiAdTracker_iOS_SDK_v1.0.1/Lib\"",
 					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/MilleniumMedia_AppleSDK/MMAdvertiser\"",
+					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/InMobiAdTracker_iOS_SDK_i251/Libs\"",
 				);
 				OTHER_LDFLAGS = (
 					"-weak_framework",
@@ -1010,8 +958,8 @@
 					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/Flurry iPhone SDK v3.0.9/FlurryAnalytics\"",
 					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/Flurry iPhone SDK v3.0.9/FlurryAppCircle\"",
 					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/GoogleAdMobAdsSDK\"",
-					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/InMobiAdTracker_iOS_SDK_v1.0.1/Lib\"",
 					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/MilleniumMedia_AppleSDK/MMAdvertiser\"",
+					"\"$(SRCROOT)/../ios/project/Plugins/WizAnalyticsPlugin/vendor/InMobiAdTracker_iOS_SDK_i251/Libs\"",
 				);
 				OTHER_LDFLAGS = (
 					"-weak_framework",
@@ -1039,7 +987,6 @@
 				F6D8079B16313728005EF20E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		F6D8079C16313728005EF20E /* Build configuration list for PBXNativeTarget "exampleWizAnalytics" */ = {
 			isa = XCConfigurationList;

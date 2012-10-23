@@ -13,7 +13,7 @@ Currently supports;
 - Admob
 - ChartBoost
 - Flurry
-- InMobi
+- InMobi i251 (Build 2.5.1)
 - JumpTapAppReport
 - LeadBolt
 - Localytics
@@ -35,8 +35,11 @@ See below for detailed instructions and check out exampleWizAnalytics/www/index.
 
 - Add plugins directory ios/project/Plugins/WizAnalyticsPlugin/ to your project
 - Add the following frameworks:
+	- AdSupport.framework - Set this framework to Optional to support device versions earlier than iOS 6.
 	- CoreTelephony.framework
 	- CoreData.framework
+	- Security.framework
+	- SystemConfiguration.framework
 	- libsqlite3.dylib
 	- libz.dylib
 
