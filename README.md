@@ -11,15 +11,15 @@ Cordova plugin for accessing the native ad and event logging SDKs.
 Currently supports;
 - Adfonic
 - Admob
-- ChartBoost
-- Flurry
+- ChartBoost v3.0.7
+- Flurry v3.0.9
 - InMobi i251 (Build 2.5.1)
 - JumpTapAppReport
 - LeadBolt
-- Localytics
-- Millenium Media
+- Localytics v2.6
+- Millenium Media 4.5.5
 - MdotM
-- Smaato
+- Smaato 1.4.1
 - Kontagent
 
 
