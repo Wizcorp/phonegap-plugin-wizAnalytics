@@ -49,13 +49,10 @@
 	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
 	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
 	for more details -jm */
-	/*
 	function handleOpenURL(url)
 	{
-		// TODO: do something with the url passed in.
-     - (void)handleOpenURL:(NSURL *)url;
+        window.wizAnalytics.handleOpenURL(url);
 	}
-	*/
 	
 	function onBodyLoad()
 	{		
@@ -93,34 +90,37 @@
         
     function onPause()
     {
-        window.wizAnalytics.session.pause(null);
+        window.wizAnalytics.session.pause();
     }
     
-    function START_SESSION() { window.wizAnalytics.session.start(null); }
-    function END_SESSION() { window.wizAnalytics.session.end(null); }
-    function PAUSE_SESSION() { window.wizAnalytics.session.pause(null); }
-    function RESTART_SESSION() { window.wizAnalytics.session.restart(null); }
+    function startSession() { window.wizAnalytics.session.start(); }
+    function endSession() { window.wizAnalytics.session.end(); }
+    function pauseSession() { window.wizAnalytics.session.pause(); }
+    function restartSession() { window.wizAnalytics.session.restart(); }
         
-    function LOG_EVENT() {
+    function logEvent() {
         var optionsEvent1 = { "PlayerName" : "Player ABC" };
         window.wizAnalytics.event.log("MyEvent1", optionsEvent1);
     }
         
-    function LOG_SCREEN() {
-        window.wizAnalytics.screen.log( "OptionsScreen", null );
+    function logScreen() {
+        var optionsScreen1 = { "FromScreen" : "GameScreen" };
+        window.wizAnalytics.screen.log("OptionsScreen", optionsScreen1 );
     }
         
     </script>
   </head>
   <body onload="onBodyLoad()">
 	<h1>WizAnalytics plugin!</h1>
-      <input type="button" id="push_button" value="Start Session" onclick="START_SESSION()" />
-      <input type="button" id="push_button" value="Pause Session" onclick="PAUSE_SESSION()" />
-      <input type="button" id="push_button" value="End Session" onclick="END_SESSION()" />
-      <input type="button" id="push_button" value="Restart Session" onclick="RESTART_SESSION()" />
-      <input type="button" id="push_button" value="Log Event" onclick="LOG_EVENT()" />
-      <input type="button" id="push_button" value="Log Screen" onclick="LOG_SCREEN()" />
-	<p>Press "Start Session" button to start analytics.  Then experiment with pressing the other analytics buttons.  The events should be recorded in your analytics logs."
+      <input type="button" id="push_button" value="Start Session" onclick="startSession()" />
+      <input type="button" id="push_button" value="Pause Session" onclick="pauseSession()" />
+      <input type="button" id="push_button" value="End Session" onclick="endSession()" />
+      <input type="button" id="push_button" value="Restart Session" onclick="restartSession()" />
+      <input type="button" id="push_button" value="Log Event" onclick="logEvent()" />
+      <input type="button" id="push_button" value="Log Screen" onclick="logScreen()" />
+      <input type="button" id="push_button" value="Handle Open URL" onclick="handleOpenURL('www.google.com')" />
+      <p>Press "Start Session" button to start analytics.  Then experiment with pressing the other analytics buttons.  The events should be recorded in your analytics logs.<br />
+      <p><strong>Note:</strong> You need to click "Start Session" (to start your session) and "End Session" (to end your session and flush any cached analytics to the analytics service providers).
 	<br />
       <p> Don't forget to Check your console log for any white-list rejection errors and add your allowed <strong>hosts</strong> in Cordova.plist/ExternalHosts (wildcards OK, don't enter the URL scheme)</li>
   </body>

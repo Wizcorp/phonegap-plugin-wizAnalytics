@@ -35,7 +35,8 @@ static WizAnalytics *sharedInstance = nil;
 // Get the shared instance and create it if necessary.
 + (WizAnalytics *)sharedInstance {
     if (sharedInstance == nil) {
-        sharedInstance = [[WizAnalytics alloc] init];
+        NSString *usageMessage = @"WizAnalytics was not launched properly.  The \"launch\" method must be invoked before *any* other plugin method.\n\nDid you forget to call wizAnalytics.launch(options) in JavaScript or [WizAnalyticsPlugin launch:withDict:] in native code before calling any other plugin methods?";
+        NSLog(@"%@", usageMessage);
     }
     return sharedInstance;
 }

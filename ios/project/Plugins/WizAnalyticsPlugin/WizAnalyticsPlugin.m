@@ -66,4 +66,13 @@
     [sharedSingleton analyticsScreenEvent:eventName withExtraMetadata:options];
 }
 
+- (void)handleOpenURL:(NSArray*)arguments withDict:(NSDictionary*)options
+{
+    NSString *urlString = [arguments objectAtIndex:1];
+    NSURL *url = [NSURL URLWithString:urlString];
+
+    WizAnalytics* sharedSingleton = [WizAnalytics sharedInstance];
+    [sharedSingleton handleOpenURL:url];
+}
+
 @end

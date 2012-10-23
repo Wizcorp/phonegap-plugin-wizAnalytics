@@ -10,50 +10,42 @@
 
 var wizAnalytics = {
 
-    launch: function() {
-        return cordova.exec(null, null, "WizAnalyticsPlugin", "launch", []);
+    launch : function(options) {
+        return cordova.exec(null, null, "WizAnalyticsPlugin", "launch", [options]);
     },
     
     session : {
-        start : function (options) {
-            cordova.exec(null, null, "WizAnalyticsPlugin", "startSession", [options]);
-            
+        start : function () {
+            cordova.exec(null, null, "WizAnalyticsPlugin", "startSession", []);
         },
         
-        end : function (options) {
-            cordova.exec(null, null, "WizAnalyticsPlugin", "endSession", [options]);
-            
+        pause : function () {
+            cordova.exec(null, null, "WizAnalyticsPlugin", "pauseSession", []);
+        },
+
+        end : function () {
+            cordova.exec(null, null, "WizAnalyticsPlugin", "endSession", []);
         },
         
-        restart : function (options) {
-            cordova.exec(null, null, "WizAnalyticsPlugin", "restartSession", [options]);
-            
+        restart : function () {
+            cordova.exec(null, null, "WizAnalyticsPlugin", "restartSession", []);
         }
-        
     },
     
     event : {
         log : function (eventName, options) {
-            if(typeof(options) == "undefined") {
-		 		cordova.exec(null, null, "WizAnalyticsPlugin", "logEvent", [eventName, options]);
-			} else {
-				cordova.exec(null, null, "WizAnalyticsPlugin", "logEvent", [eventName, options]);
-			}
-            
-            
+            cordova.exec(null, null, "WizAnalyticsPlugin", "logEvent", [eventName, options]);
         }
     },
     
     screen  : {
         log : function (screenName, options) {
-            if(typeof(options) == "undefined") {
-		 		cordova.exec(null, null, "WizAnalyticsPlugin", "logScreen", [screenName, options]);
-			} else {
-				cordova.exec(null, null, "WizAnalyticsPlugin", "logScreen", [screenName, options]);
-			}
-            
-            
+            cordova.exec(null, null, "WizAnalyticsPlugin", "logScreen", [screenName, options]);
         }
+    },
+
+    handleOpenURL : function(url) {
+            cordova.exec(null, null, "WizAnalyticsPlugin", "handleOpenURL", [url]);
     }
 
 };

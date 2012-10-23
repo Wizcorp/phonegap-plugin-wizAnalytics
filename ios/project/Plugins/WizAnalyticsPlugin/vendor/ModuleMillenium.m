@@ -34,6 +34,7 @@
 
 - (void)startSession
 {
+    // startSession is a required protocol method so it is included here (even though it does nothing)
 }
 
 #pragma mark - Optional WizAnalyticsVendorModule protocol methods
