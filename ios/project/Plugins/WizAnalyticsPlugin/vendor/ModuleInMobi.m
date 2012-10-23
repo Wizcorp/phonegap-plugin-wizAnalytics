@@ -64,7 +64,7 @@
 {
     if (!url) return;
     // Let the Ad Tracker SDK look at the URL. //
-    [[IMAdTrackerAnalytics adAnalytics] handleOpenURL:url];
+    //[[IMAdTrackerAnalytics adAnalytics] handleOpenURL:url];
     
 }
 

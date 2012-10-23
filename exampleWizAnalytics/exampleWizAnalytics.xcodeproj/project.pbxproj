@@ -56,7 +56,7 @@
 		F6D8096216315840005EF20E /* Kontagent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8091A16315840005EF20E /* Kontagent.framework */; };
 		F6D8096316315840005EF20E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F6D8091C16315840005EF20E /* LICENSE */; };
 		F6D8096416315840005EF20E /* LocalyticsDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8091F16315840005EF20E /* LocalyticsDatabase.m */; };
-		F6D8096516315840005EF20E /* LocalyticsSession.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8092116315840005EF20E /* LocalyticsSession.m */; };
+		F6D8096516315840005EF20E /* LocalyticsSession.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8092116315840005EF20E /* LocalyticsSession.m */; settings = {COMPILER_FLAGS = "-Wno-format"; }; };
 		F6D8096616315840005EF20E /* LocalyticsUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8092316315840005EF20E /* LocalyticsUploader.m */; };
 		F6D8096716315840005EF20E /* Changelog in Resources */ = {isa = PBXBuildFile; fileRef = F6D8092616315840005EF20E /* Changelog */; };
 		F6D8096816315840005EF20E /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6D8092716315840005EF20E /* LICENSE.txt */; };
@@ -74,9 +74,8 @@
 		F6D8097416315840005EF20E /* ModuleMdotM.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8093F16315840005EF20E /* ModuleMdotM.m */; };
 		F6D8097516315840005EF20E /* ModuleMillenium.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8094116315840005EF20E /* ModuleMillenium.m */; };
 		F6D8097616315840005EF20E /* ModuleSmaato.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8094316315840005EF20E /* ModuleSmaato.m */; };
-		F6D8097716315840005EF20E /* android_tracking.java in Sources */ = {isa = PBXBuildFile; fileRef = F6D8094516315840005EF20E /* android_tracking.java */; };
 		F6D8097816315840005EF20E /* ODIN.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8094716315840005EF20E /* ODIN.m */; };
-		F6D8097916315840005EF20E /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8094916315840005EF20E /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		F6D8097916315840005EF20E /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8094916315840005EF20E /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -Wno-format"; }; };
 		F6D8097A16315840005EF20E /* Smaato CPD Tracking v1.4.1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F6D8094A16315840005EF20E /* Smaato CPD Tracking v1.4.1.pdf */; };
 		F6D8097B16315840005EF20E /* SOMADownloadTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8094C16315840005EF20E /* SOMADownloadTrack.m */; };
 		F6D8097C16315840005EF20E /* WizAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8094E16315840005EF20E /* WizAnalytics.m */; };
@@ -85,6 +84,7 @@
 		F6D8098116315B3C005EF20E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8098016315B3C005EF20E /* CoreTelephony.framework */; };
 		F6D8098316315B7A005EF20E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8098216315B7A005EF20E /* libsqlite3.dylib */; };
 		F6D8098516315BB0005EF20E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8098416315BB0005EF20E /* libz.dylib */; };
+		F6D8099616368BB0005EF20E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D8099516368BAF005EF20E /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -221,6 +221,7 @@
 		F6D8098016315B3C005EF20E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		F6D8098216315B7A005EF20E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		F6D8098416315BB0005EF20E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		F6D8099516368BAF005EF20E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +270,7 @@
 		F6D8073616313728005EF20E = {
 			isa = PBXGroup;
 			children = (
+				F6D8099516368BAF005EF20E /* Default-568h@2x.png */,
 				F6D8098416315BB0005EF20E /* libz.dylib */,
 				F6D8098216315B7A005EF20E /* libsqlite3.dylib */,
 				F6D8098016315B3C005EF20E /* CoreTelephony.framework */,
@@ -779,6 +781,7 @@
 				F6D8096816315840005EF20E /* LICENSE.txt in Resources */,
 				F6D8096A16315840005EF20E /* README.pdf in Resources */,
 				F6D8097A16315840005EF20E /* Smaato CPD Tracking v1.4.1.pdf in Resources */,
+				F6D8099616368BB0005EF20E /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -824,7 +827,6 @@
 				F6D8097416315840005EF20E /* ModuleMdotM.m in Sources */,
 				F6D8097516315840005EF20E /* ModuleMillenium.m in Sources */,
 				F6D8097616315840005EF20E /* ModuleSmaato.m in Sources */,
-				F6D8097716315840005EF20E /* android_tracking.java in Sources */,
 				F6D8097816315840005EF20E /* ODIN.m in Sources */,
 				F6D8097916315840005EF20E /* OpenUDID.m in Sources */,
 				F6D8097B16315840005EF20E /* SOMADownloadTrack.m in Sources */,

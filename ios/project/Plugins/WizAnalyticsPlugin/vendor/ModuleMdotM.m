@@ -47,7 +47,7 @@
     NSString *odin = ODIN1();
     NSString *IFA;
     if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"6.0.0")) {
-        IFA = [[UIDevice currentDevice] identifierForAdvertising];
+        IFA = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
     } else {
         IFA = [[UIDevice currentDevice] uniqueIdentifier];
     }
@@ -56,7 +56,7 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:appOpenEndpoint]];
     NSURLResponse *response;
     NSError *error = nil;
-    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     [pool release];
 }
 

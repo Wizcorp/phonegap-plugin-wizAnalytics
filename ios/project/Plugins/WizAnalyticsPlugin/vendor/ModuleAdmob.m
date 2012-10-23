@@ -61,7 +61,7 @@
             [fileManager createFileAtPath:appOpenPath contents:nil attributes:nil]; // successful report, mark it as such
             NSLog(@"App download successfully reported.");
         } else {
-            NSLog(@"WARNING: App download not successfully reported. %@", [NSString stringWithData:responseData encoding:NSUTF8StringEncoding]);
+            NSLog(@"WARNING: App download not successfully reported. %@", [NSString stringWithUTF8String:[responseData bytes]]);
         }
     }
     [pool release];

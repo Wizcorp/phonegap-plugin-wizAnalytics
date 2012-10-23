@@ -46,8 +46,9 @@
     // Set any info you want to pass to the overlay
     [[MMAdvertiser sharedSDK] setValue:@"test_value" forKey:@"test_key"];
     // Have the branded app SDK look at the url and open an overlay if needed
-    // parameters will contain the parse URL query string key/value pairs
-    NSDictionary *parameters = [[MMAdvertiser sharedSDK] parseURL:url];
+    // parseURL returns an NSDictionary of parameters that will contain the parse URL query string key/value pairs
+    // (this result can be saved and used if required)
+    [[MMAdvertiser sharedSDK] parseURL:url];
 }
 
 @end
