@@ -7,16 +7,7 @@
  *
  */
 
-#import <Foundation/Foundation.h>
+#import "WizAnalyticsVendorModule.h"
 
-@interface ModuleInMobi : NSObject {
-    NSString *_inMobiAPIKey;
-}
-
-@property (nonatomic, retain) NSString *inMobiAPIKey;
-
-- (id)initWithOptions:(NSDictionary *)options;
-- (void)startSession;
-- (void)stopSession;
-- (void)handleOpenURL:(NSURL *)url;
+@interface ModuleInMobi : NSObject <WizAnalyticsVendorModule>
 @end

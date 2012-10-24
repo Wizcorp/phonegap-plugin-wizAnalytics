@@ -10,38 +10,42 @@
 
 var wizAnalytics = {
 
-    launch: function(s, f) {
-        return cordova.exec(s, f, "WizAnalyticsPlugin", "launch", []);                      
+    launch : function(options) {
+        return cordova.exec(null, null, "WizAnalyticsPlugin", "launch", [options]);
     },
     
     session : {
-        start : function (options, s, f) {
-            cordova.exec(s, f, "WizAnalyticsPlugin", "startSession", [options]);
-            
+        start : function () {
+            cordova.exec(null, null, "WizAnalyticsPlugin", "startSession", []);
         },
         
-        end : function (options, s, f) {
-            cordova.exec(s, f, "WizAnalyticsPlugin", "endSession", [options]);
-            
+        pause : function () {
+            cordova.exec(null, null, "WizAnalyticsPlugin", "pauseSession", []);
+        },
+
+        end : function () {
+            cordova.exec(null, null, "WizAnalyticsPlugin", "endSession", []);
         },
         
-        restart : function (options, s, f) {
-            cordova.exec(s, f, "WizAnalyticsPlugin", "restartSession", [options]);
-            
+        restart : function () {
+            cordova.exec(null, null, "WizAnalyticsPlugin", "restartSession", []);
         }
-        
     },
     
     event : {
-        log : function (eventName, options, s, f) {
-            if(typeof(options) == "undefined") {
-		 		cordova.exec(s, f, "WizAnalyticsPlugin", "logEvent", [eventName, options]);	
-			} else {
-				cordova.exec(s, f, "WizAnalyticsPlugin", "logEvent", [eventName, options]);
-			}
-            
-            
+        log : function (eventName, options) {
+            cordova.exec(null, null, "WizAnalyticsPlugin", "logEvent", [eventName, options]);
         }
+    },
+    
+    screen  : {
+        log : function (screenName, options) {
+            cordova.exec(null, null, "WizAnalyticsPlugin", "logScreen", [screenName, options]);
+        }
+    },
+
+    handleOpenURL : function(url) {
+            cordova.exec(null, null, "WizAnalyticsPlugin", "handleOpenURL", [url]);
     }
 
 };

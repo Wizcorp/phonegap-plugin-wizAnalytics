@@ -1,0 +1,79 @@
+InMobi iOS Ad Tracker - Changelog
+
+For detailed documentation, please visit http://developer.inmobi.com/wiki/index.php?title=Main_Page#InMobi_Ad_Tracker_for_Advertisers
+-------------------------------------------------------
+
+11-Oct-2012 SDK i251 (Build 2.5.1) released.
+
+* Introduction of InMobiCommons SDK. InMobiAdTracker SDK has dependency on InMobiCommons SDK. Both should be included in the project as mentioned in the integration guidelines. Ensure that the InMobiAdTracker and InMobiCommons libraries are from the latest release bundle. Refer to Apple documentation on the API exposed.
+* CoreTelephony, AdSupport, and Security frameworks dependency added.
+
+API Changes:
+-----------
+
+====New Class====
+
+IMCommonUtil
+
+====New Properties and Methods====
+
+IMAdTracker.h
+	- (void)initWithAppID:(NSString *)adTrackerAppId;
+
+IMCommonUtil.h
+	+ (void)setLogLevel:(IMLogLevelType)logLevel;
+	+ (IMLogLevelType)getLogLevel;
+	+ (void)setDeviceIdMask:(IMDeviceIdMask)deviceIdMask;
+	+ (IMDeviceIdMask)getDeviceIdMask;
+	+ (NSString *)getReleaseVersion;
+
+====Removed Properties and Methods====
+
+- (void)startSession:(NSString *)appId;
+- (void)stopSession;
+
+====Modifications====
+
+* Logging methods moved from IMAdTracker to IMCommonUtil class.
+-------------------------------------------------------
+
+05-Oct-2012: SDK i211 (Build 2.1.1) released.
+
+- iOS 6 support added.
+-------------------------------------------------------
+
+03-Jul-2012: SDK i201 (Build 2.0.1) released.
+
+- Browserless integration.
+- UDID enabled solution.
+- Install goal is reported implicitly.
+
+API Changes:
+-----------
+
+Added new method:
+- (void)reportGoal:(NSString *)goalName;
+
+Removed methods:
+- (void)reportInstallGoal;
+- (void)reportCustomGoal:(NSString *)goalName;
+-------------------------------------------------------
+
+04-Jun-2012: SDK i110 (Build 1.1.0) released.
+
+ - Added more user friendly logs.
+ - Fixed few minor issues.
+
+ API Changes:
+ -----------
+
+ Added new methods:
+ - (void)reportInstallGoal;
+ - (void)reportCustomGoal:(NSString *)goalName;
+
+ Removed method:
+ - (void)reportEvent:(NSString *)goalName;
+-------------------------------------------------------
+
+09-May-2012: SDK i100 (Build 1.0.0) released.
+-------------------------------------------------------

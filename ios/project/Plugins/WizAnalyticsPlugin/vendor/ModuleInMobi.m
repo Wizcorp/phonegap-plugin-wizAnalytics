@@ -8,13 +8,21 @@
  */
 
 #import "ModuleInMobi.h"
-#import "IMAdTrackerAnalytics.h"
-#import "IMAdTrackerUtil.h"
+#import "IMAdTracker.h"
 
+@interface ModuleInMobi ()
+@property (nonatomic, retain) NSString *inMobiAPIKey;
+@end
 
 @implementation ModuleInMobi
 
-@synthesize inMobiAPIKey = _inMobiAPIKey;
+- (void)dealloc
+{
+    self.inMobiAPIKey = nil;
+    [super dealloc];
+}
+
+#pragma mark - Required WizAnalyticsVendorModule protocol methods
 
 - (id)initWithOptions:(NSDictionary *)options
 {
@@ -24,46 +32,18 @@
     return self;
 }
 
-
 - (void)startSession
 {
-    
     NSLog(@"InMobi START SESSION %@", _inMobiAPIKey);
-    [[IMAdTrackerAnalytics imAnalytics] startSession:_inMobiAPIKey];
-    // [[IMAdTrackerAnalytics imAnalytics] reportInstallGoal];
-
+    [IMAdTracker initWithAppID:_inMobiAPIKey];
+    [IMAdTracker reportAppDownloadGoal];
 }
 
-- (void)stopSession
+#pragma mark - Optional WizAnalyticsVendorModule protocol methods
+
+- (void)logEvent:(NSString *)eventName withExtraMetadata:(NSDictionary *)extraMetadata
 {
-    // [[IMAdTrackerAnalytics imAnalytics] reportInstallGoal];
-
-    
+    [IMAdTracker reportCustomGoal:eventName];
 }
-
-- (void)handleOpenURL:(NSURL *)url
-{
-    if (!url) return;
-    // Let the Ad Tracker SDK look at the URL. //
-    // [[IMAdTrackerAnalytics adAnalytics] handleOpenURL:url];
-
-}
-
-- (void)openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
-{
-    if (!url) return;
-    // Let the Ad Tracker SDK look at the URL. //
-    [[IMAdTrackerAnalytics adAnalytics] handleOpenURL:url];
-    
-}
-
-- (void)dealloc 
-{
-    self.inMobiAPIKey = nil;
-    [super dealloc];
-}
-
-
-
 
 @end

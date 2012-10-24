@@ -7,17 +7,7 @@
  *
  */
 
-#import <Foundation/Foundation.h>
+#import "WizAnalyticsVendorModule.h"
 
-@interface ModuleLocalytics : NSObject {
-    NSString *_localyticsAPIKey;
-}
-
-@property (nonatomic, retain) NSString *localyticsAPIKey;
-
-- (id)initWithOptions:(NSDictionary *)options;
-- (void)startSession;
-- (void)stopSession;
-- (void)resumeSession;
-- (void)logEvent:(NSString *)eventName withExtraMetadata:(NSDictionary *)extraMetadata;
+@interface ModuleLocalytics : NSObject <WizAnalyticsVendorModule>
 @end

@@ -7,14 +7,7 @@
  *
  */
 
-#import <Foundation/Foundation.h>
+#import "WizAnalyticsVendorModule.h"
 
-@interface ModuleSmaato : NSObject {
-    NSString *_smaatoAPIKey;
-}
-
-@property (nonatomic, retain) NSString *smaatoAPIKey;
-
-- (id)initWithOptions:(NSDictionary *)options;
-- (void)startTracking;
+@interface ModuleSmaato : NSObject <WizAnalyticsVendorModule>
 @end

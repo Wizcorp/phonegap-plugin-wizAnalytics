@@ -10,10 +10,19 @@
 #import "ModuleFlurry.h"
 #import "FlurryAnalytics.h"
 
+@interface ModuleFlurry ()
+@property (nonatomic, retain) NSString *flurryAPIKey;
+@end
 
 @implementation ModuleFlurry
 
-@synthesize flurryAPIKey = _flurryAPIKey;
+- (void)dealloc
+{
+    self.flurryAPIKey = nil;
+    [super dealloc];
+}
+
+#pragma mark - Required WizAnalyticsVendorModule protocol methods
 
 - (id)initWithOptions:(NSDictionary *)options
 {
@@ -23,26 +32,18 @@
     return self;
 }
 
-
 - (void)startSession 
 {
     NSLog(@"FLURRY START SESSION %@", _flurryAPIKey);
     [FlurryAnalytics startSession:_flurryAPIKey];
 }
 
+#pragma mark - Optional WizAnalyticsVendorModule protocol methods
+
 - (void)logEvent:(NSString *)eventName withExtraMetadata:(NSDictionary *)extraMetadata
 {
     NSLog(@"FLURRY LOG EVENT %@ DATA %@", eventName, extraMetadata);
     [FlurryAnalytics logEvent:eventName withParameters:extraMetadata];
 }
-
-- (void)dealloc 
-{
-    self.flurryAPIKey = nil;
-    [super dealloc];
-}
-
-
-
 
 @end

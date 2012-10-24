@@ -11,9 +11,19 @@
 #import "LocalyticsSession.h"
 #import "WizDebugLog.h"
 
+@interface ModuleLocalytics ()
+@property (nonatomic, retain) NSString *localyticsAPIKey;
+@end
+
 @implementation ModuleLocalytics
 
-@synthesize localyticsAPIKey = _localyticsAPIKey;
+- (void)dealloc
+{
+    self.localyticsAPIKey = nil;
+    [super dealloc];
+}
+
+#pragma mark - Required WizAnalyticsVendorModule protocol methods
 
 - (id)initWithOptions:(NSDictionary *)options
 {
@@ -23,11 +33,17 @@
     return self;
 }
 
-
 - (void)startSession 
 {
     WizLog(@"LOCALYTICS START SESSION %@", _localyticsAPIKey);
     [[LocalyticsSession sharedLocalyticsSession] startSession:_localyticsAPIKey];
+}
+
+#pragma mark - Optional WizAnalyticsVendorModule protocol methods
+
+- (void)pauseSession
+{
+    [self stopSession];
 }
 
 - (void)stopSession
@@ -47,14 +63,5 @@
     WizLog(@"LOCALYTICS LOG EVENT %@ DATA %@", eventName, extraMetadata);
     [[LocalyticsSession sharedLocalyticsSession] tagEvent:eventName attributes:extraMetadata];
 }
-
-- (void)dealloc 
-{
-    self.localyticsAPIKey = nil;
-    [super dealloc];
-}
-
-
-
 
 @end
