@@ -6,10 +6,9 @@ link the plugin javascript code to the www directory.
 
 Copy Method:
 	mkdir -p ./www/phonegap
-	cp -r ../www/phonegap ./exampleWizAnalytics/www/phonegap
+	cp -r ../www/phonegap ./www
 
 Link Method:
-	mkdir -p ./www/phonegap
-	cp -r ../www/phonegap ./exampleWizAnalytics/www/phonegap
+	mkdir -p ./www/phonegap/plugin/wizAnalyticsPlugin
 	ln -f ../www/phonegap/plugin/wizAnalyticsPlugin/wizAnalyticsPlugin.js ./www/phonegap/plugin/wizAnalyticsPlugin/wizAnalyticsPlugin.js
 
