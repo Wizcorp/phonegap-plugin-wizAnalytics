@@ -7,14 +7,7 @@
  *
  */
 
-#import <Foundation/Foundation.h>
+#import "WizAnalyticsVendorModule.h"
 
-@interface ModuleAdmob : NSObject {
-    NSString *_admobAPIKey;
-}
-
-@property (nonatomic, retain) NSString *admobAPIKey;
-
-- (id)initWithOptions:(NSDictionary *)options;
-- (void)startSession;
+@interface ModuleAdmob : NSObject <WizAnalyticsVendorModule>
 @end

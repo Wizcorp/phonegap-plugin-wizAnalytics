@@ -7,16 +7,7 @@
  *
  */
 
-#import <Foundation/Foundation.h>
+#import "WizAnalyticsVendorModule.h"
 
-@interface ModuleKontagent : NSObject {
-    NSString *_kontagentAPIKey;
-}
-
-@property (nonatomic, retain) NSString *kontagentAPIKey;
-
-- (id)initWithOptions:(NSDictionary *)options;
-- (void)startSession;
-- (void)stopSession;
-- (void)logEvent:(NSString *)eventName withExtraMetadata:(NSDictionary *)extraMetadata;
+@interface ModuleKontagent : NSObject <WizAnalyticsVendorModule>
 @end

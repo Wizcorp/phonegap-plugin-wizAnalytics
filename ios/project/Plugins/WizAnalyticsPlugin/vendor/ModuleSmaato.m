@@ -12,9 +12,19 @@
 #import "OpenUDID.h" 
 #import "ODIN.h"
 
+@interface ModuleSmaato ()
+//@property (nonatomic, retain) NSString *smaatoAPIKey;
+@end
+
 @implementation ModuleSmaato
 
-@synthesize smaatoAPIKey = _smaatoAPIKey;
+- (void)dealloc
+{
+    // self.smaatoAPIKey = nil;
+    [super dealloc];
+}
+
+#pragma mark - Required WizAnalyticsVendorModule protocol methods
 
 - (id)initWithOptions:(NSDictionary *)options
 {
@@ -24,22 +34,12 @@
     return self;
 }
 
-
-- (void)startTracking
+- (void)startSession
 {
     NSLog(@"SMAATO START TRACKING");
     SOMADownloadTrack *track = [[SOMADownloadTrack alloc] init];
     [track sendPingToSOMAServer];
     [track release];
 }
-
-- (void)dealloc 
-{
-    // self.smaatoAPIKey = nil;
-    [super dealloc];
-}
-
-
-
 
 @end
