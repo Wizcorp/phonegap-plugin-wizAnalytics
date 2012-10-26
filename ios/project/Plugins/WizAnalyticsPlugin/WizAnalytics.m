@@ -10,7 +10,7 @@
 #import "WizAnalytics.h"
 #import "WizAnalyticsVendorModule.h"
 #import "WizDebugLog.h"
-#import <objc/objc-runtime.h>
+#import <objc/runtime.h>
 
 @interface WizAnalytics ()
 @property (nonatomic, retain) NSMutableArray *loadedModules;
