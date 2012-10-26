@@ -10,22 +10,11 @@
 #import "WizAnalytics.h"
 #import "WizAnalyticsVendorModule.h"
 #import "WizDebugLog.h"
-#import "ModuleKontagent.h"
-#import "ModuleFlurry.h"
-#import "ModuleLocalytics.h"
-#import "ModuleAdmob.h"
-#import "ModuleInMobi.h"
-#import "ModuleMillenium.h"
-#import "ModuleSmaato.h"
-#import "ModuleAdfonic.h"
-#import "ModuleChartboost.h"
-#import "ModuleJumpTap.h"
-#import "ModuleLeadbolt.h"
-#import "ModuleMdotM.h"
+#import <objc/objc-runtime.h>
 
 @interface WizAnalytics ()
 @property (nonatomic, retain) NSMutableArray *loadedModules;
-@property (nonatomic, retain) NSObject <WizAnalyticsVendorModule> *kontagentModule;
+@property (nonatomic, retain) WizAnalyticsVendorModule *kontagentModule;
 @end
 
 @implementation WizAnalytics
@@ -71,68 +60,36 @@ static WizAnalytics *sharedInstance = nil;
         
         self.loadedModules = [[NSMutableArray alloc] initWithCapacity:[options count]];
         
-        NSObject <WizAnalyticsVendorModule> *module;
+        WizAnalyticsVendorModule *module;
         
-        // Load the specified modules.
-        if ( ([options valueForKey:@"KontagentKey"]) && (![[options valueForKey:@"KontagentKey"] isEqualToString:@""]) ) {
-            module = [[ModuleKontagent alloc] initWithOptions:options];
-            [self.loadedModules addObject:module];
-            self.kontagentModule = module;
-        }
-        
-        if ( ([options valueForKey:@"FlurryKey"]) && (![[options valueForKey:@"FlurryKey"] isEqualToString:@""]) ) {
-            module = [[ModuleFlurry alloc] initWithOptions:options];
-            [self.loadedModules addObject:module];
-        }
-        
-        if ( ([options valueForKey:@"LocalyticsKey"]) && (![[options valueForKey:@"LocalyticsKey"] isEqualToString:@""]) ) {
-            module = [[ModuleLocalytics alloc] initWithOptions:options];
-            [self.loadedModules addObject:module];
-        }
-        
-        if ( ([options valueForKey:@"AdmobKey"]) && (![[options valueForKey:@"AdmobKey"] isEqualToString:@""]) ) {
-            module = [[ModuleAdmob alloc] initWithOptions:options];
-            [self.loadedModules addObject:module];
-        }
-        
-        if ( ([options valueForKey:@"InMobiKey"]) && (![[options valueForKey:@"InMobiKey"] isEqualToString:@""]) ) {
-            module = [[ModuleInMobi alloc] initWithOptions:options];
-            [self.loadedModules addObject:module];
-        }
-        
-        if ( ([options valueForKey:@"MilleniumKey"]) && (![[options valueForKey:@"MilleniumKey"] isEqualToString:@""]) ) {
-            module = [[ModuleMillenium alloc] initWithOptions:options];
-            [self.loadedModules addObject:module];
-        }
-        
-        if ( ([options valueForKey:@"SmaatoKey"]) && (![[options valueForKey:@"SmaatoKey"] isEqualToString:@""]) ) {
-            [self.loadedModules addObject:module];
-        }
-        
-        if ( ([options valueForKey:@"AdfonicKey"]) && (![[options valueForKey:@"AdfonicKey"] isEqualToString:@""]) ) {
-            module = [[ModuleAdfonic alloc] initWithOptions:options];
-            [self.loadedModules addObject:module];
-        }
-        
-        if ( ([options valueForKey:@"ChartboostKey"]) && (![[options valueForKey:@"ChartboostKey"] isEqualToString:@""]) ) {
-            module = [[ModuleChartboost alloc] initWithOptions:options];
-            [self.loadedModules addObject:module];
-        }
-        
-        if ( ([options valueForKey:@"JumpTapKey"]) && (![[options valueForKey:@"JumpTapKey"] isEqualToString:@""]) ) {
-            WizLog(@"jump tap works");
-            module = [[ModuleJumpTap alloc] initWithOptions:options];
-            [self.loadedModules addObject:module];
-        }
-
-        if ( ([options valueForKey:@"LeadboltKey"]) && (![[options valueForKey:@"LeadboltKey"] isEqualToString:@""]) ) {
-            module = [[ModuleLeadbolt alloc] initWithOptions:options];
-            [self.loadedModules addObject:module];
-        }
-        
-        if ( ([options valueForKey:@"MdotMKey"]) && (![[options valueForKey:@"MdotMKey"] isEqualToString:@""]) ) {
-            module = [[ModuleMdotM alloc] initWithOptions:options];
-            [self.loadedModules addObject:module];
+        for ( NSString *key in options ) {
+            if ( (![[options valueForKey:key] isEqualToString:@""]) ) {
+                NSString *baseName = [[key componentsSeparatedByString:@"Key"] objectAtIndex:0];
+                if ( baseName && ![baseName isEqualToString:@"Key"] )
+                {
+                    // Construct the module and get the class.
+                    NSString *moduleName = [NSString stringWithFormat:@"Module%@", baseName];
+                    Class moduleClass = NSClassFromString(moduleName);
+                    
+                    // Allocate the module and load it.
+                    module = [((WizAnalyticsVendorModule *)[moduleClass alloc]) initWithOptions:options];
+                    if ( module ) {
+                        [self.loadedModules addObject:module];
+                    } else {
+                        // Failed to load module
+                        NSArray *vendorModules = ClassGetSubclasses( [WizAnalyticsVendorModule class] );
+                        NSLog( @"\nFailed to load WizAnalyticsVendorModule: %@", moduleName );
+                        NSLog( @"\nList of available WizAnalyticsVendorModules: %@", vendorModules );
+                        NSLog( @"\nDid you forget to link in code containing class: %@ ???", moduleName );
+                        NSAssert( NO, @"WizAnalyticsVendorModule %@ not loaded", moduleName );
+                    }
+                    
+                    // Kontagent is special, save a reference to it for later
+                    if ( [moduleName isEqualToString:@"ModuleKontagent"] ) {
+                        self.kontagentModule = module;
+                    }
+                }
+            }
         }
     }
 
@@ -162,14 +119,14 @@ static WizAnalytics *sharedInstance = nil;
 
 - (void)startAnalyticsSession
 {
-    for ( id <WizAnalyticsVendorModule> module in [self.loadedModules objectEnumerator] ) {
+    for ( WizAnalyticsVendorModule *module in [self.loadedModules objectEnumerator] ) {
         [module startSession];
     }
 }
 
 - (void)restartAnalyticsSession
 {
-    for ( NSObject <WizAnalyticsVendorModule> *module in [self.loadedModules objectEnumerator] ) {
+    for ( WizAnalyticsVendorModule *module in [self.loadedModules objectEnumerator] ) {
         if ( [module respondsToSelector:@selector(resumeSession)] ) {
             [module resumeSession];
         }
@@ -178,7 +135,7 @@ static WizAnalytics *sharedInstance = nil;
 
 - (void)pauseAnalyticsSession
 {
-    for ( NSObject <WizAnalyticsVendorModule> *module in [self.loadedModules objectEnumerator] ) {
+    for ( WizAnalyticsVendorModule *module in [self.loadedModules objectEnumerator] ) {
         if ( [module respondsToSelector:@selector(pauseSession)] ) {
             [module pauseSession];
         }
@@ -187,7 +144,7 @@ static WizAnalytics *sharedInstance = nil;
 
 - (void)endAnalyticsSession
 {
-    for ( NSObject <WizAnalyticsVendorModule> *module in [self.loadedModules objectEnumerator] ) {
+    for ( WizAnalyticsVendorModule *module in [self.loadedModules objectEnumerator] ) {
         if ( [module respondsToSelector:@selector(stopSession)] ) {
             [module stopSession];
         }
@@ -208,7 +165,7 @@ static WizAnalytics *sharedInstance = nil;
         [dataForLogging removeObjectForKey:@"kontagent"];
     }
     
-    for ( NSObject <WizAnalyticsVendorModule> *module in [self.loadedModules objectEnumerator] ) {
+    for ( WizAnalyticsVendorModule *module in [self.loadedModules objectEnumerator] ) {
         if ( [module respondsToSelector:@selector(logEvent:withExtraMetadata:)] ) {
             // Skip kontagent as it has already been logged
             if ( ![module isEqual:self.kontagentModule] ) {
@@ -222,7 +179,7 @@ static WizAnalytics *sharedInstance = nil;
 
 - (void)analyticsScreenEvent:(NSString *)screenName withExtraMetadata:(NSDictionary *)extraMetadata
 {
-    for ( NSObject <WizAnalyticsVendorModule> *module in [self.loadedModules objectEnumerator] ) {
+    for ( WizAnalyticsVendorModule *module in [self.loadedModules objectEnumerator] ) {
         if ( [module respondsToSelector:@selector(logScreen:withExtraMetadata:)] ) {
             [module logScreen:screenName withExtraMetadata:extraMetadata];
         }
@@ -231,11 +188,46 @@ static WizAnalytics *sharedInstance = nil;
 
 - (void)handleOpenURL:(NSURL *)url
 {
-    for ( NSObject <WizAnalyticsVendorModule> *module in [self.loadedModules objectEnumerator] ) {
+    for ( WizAnalyticsVendorModule *module in [self.loadedModules objectEnumerator] ) {
         if ( [module respondsToSelector:@selector(handleOpenURL:)] ) {
             [module handleOpenURL:url];
         }
     }
+}
+
+#pragma - Private Functions
+
+// Get the full list of subclasses for a class and return them in an array.
+// http://www.cocoawithlove.com/2010/01/getting-subclasses-of-objective-c-class.html
+
+static NSArray *ClassGetSubclasses(Class parentClass)
+{
+    int numClasses = objc_getClassList(NULL, 0);
+    Class *classes = NULL;
+    
+    classes = malloc(sizeof(Class) * numClasses);
+    numClasses = objc_getClassList(classes, numClasses);
+    
+    NSMutableArray *result = [NSMutableArray array];
+    for (NSInteger i = 0; i < numClasses; i++)
+    {
+        Class superClass = classes[i];
+        do
+        {
+            superClass = class_getSuperclass(superClass);
+        } while(superClass && superClass != parentClass);
+        
+        if (superClass == nil)
+        {
+            continue;
+        }
+        
+        [result addObject:classes[i]];
+    }
+    
+    free(classes);
+    
+    return result;
 }
 
 @end

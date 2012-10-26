@@ -31,7 +31,7 @@ class) then launch the analytics with analytics keys.
 
 See below for detailed instructions and check out exampleWizAnalytics/www/index.html for JS code.
 
-# USAGE
+# USAGE :
 
 - Add plugins directory ios/project/Plugins/WizAnalyticsPlugin/ to your project
 - Add the following frameworks:
@@ -79,16 +79,34 @@ See below for detailed instructions and check out exampleWizAnalytics/www/index.
 	call the launch method from native code OR JavaScript but not both.
 
   Valid key names are the following:
-            "AdfonicKey"
-            "AdmobKey"
-            "ChartboostKey"
-            "FlurryKey"
-            "InMobiKey"
-            "JumpTapKey"
-            "KontagentKey"
-            "LeadboltKey"
-            "LocalyticsKey"
-            "MilleniumKey"
-            "MdotMKey"
-            "SmaatoKey"
+	- "AdfonicKey"
+	- "AdmobKey"
+	- "ChartboostKey"
+	- "FlurryKey"
+	- "InMobiKey"
+	- "JumpTapKey"
+	- "KontagentKey"
+	- "LeadboltKey"
+	- "LocalyticsKey"
+	- "MilleniumKey"
+	- "MdotMKey"
+	- "SmaatoKey"
 
+# ADDING NEW VENDOR MODULES :
+
+To add a new vendor module to support a new analytics service, create a new
+Objective-C class derived from the base class WizAnalyticsVendorModule with
+name "Module<XXX>".  For example:
+
+		@interface ModuleAcmeAnalytics : WizAnalyticsVendorModule
+		@end
+
+Then, implement the "required" methods for the WizAnalyticsVendorModuleProtocol
+and optional implement the "optional" methods.
+
+Link the implementation of the new class into your application.
+
+To dynamically load the new module, specify the module key in the key dictionary
+when launching the plugin.  The key name for loading the new module is:
+"<class-name>Key".  For the example class above, the corresponding key name
+is "ModuleAcmeAnalyticsKey".  

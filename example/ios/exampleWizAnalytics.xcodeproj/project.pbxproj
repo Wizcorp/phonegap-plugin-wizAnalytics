@@ -84,6 +84,7 @@
 		F6D809DA163699F2005EF20E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D809D9163699F2005EF20E /* Security.framework */; };
 		F6D809DC16369A19005EF20E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D809DB16369A19005EF20E /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F6D809DD16369BF2005EF20E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D8099516368BAF005EF20E /* Default-568h@2x.png */; };
+		F6F399EA163A218100F6E73F /* WizAnalyticsVendorModule.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F399E9163A218100F6E73F /* WizAnalyticsVendorModule.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -220,6 +221,7 @@
 		F6D8099516368BAF005EF20E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F6D809D9163699F2005EF20E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		F6D809DB16369A19005EF20E /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		F6F399E9163A218100F6E73F /* WizAnalyticsVendorModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WizAnalyticsVendorModule.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +279,7 @@
 				F6056BD616379261006A47C6 /* WizAnalyticsPlugin.h */,
 				F6056BD716379261006A47C6 /* WizAnalyticsPlugin.m */,
 				F6056BD816379261006A47C6 /* WizAnalyticsVendorModule.h */,
+				F6F399E9163A218100F6E73F /* WizAnalyticsVendorModule.m */,
 				F6056BD916379261006A47C6 /* WizDebugLog.h */,
 			);
 			name = WizAnalyticsPlugin;
@@ -852,6 +855,7 @@
 				F6056BFF16379261006A47C6 /* SOMADownloadTrack.m in Sources */,
 				F6056C0016379261006A47C6 /* WizAnalytics.m in Sources */,
 				F6056C0116379261006A47C6 /* WizAnalyticsPlugin.m in Sources */,
+				F6F399EA163A218100F6E73F /* WizAnalyticsVendorModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
