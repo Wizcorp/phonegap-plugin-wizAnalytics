@@ -9,5 +9,5 @@
 
 #import "WizAnalyticsVendorModule.h"
 
-@interface ModuleChartboost : NSObject <WizAnalyticsVendorModule>
+@interface ModuleChartboost : WizAnalyticsVendorModule
 @end

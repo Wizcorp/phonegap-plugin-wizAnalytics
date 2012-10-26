@@ -1,4 +1,4 @@
-/* WizAnalyticsVendorModule - Protocol for vendor modules
+/* WizAnalyticsVendorModule - Protocol and base class for vendor modules
  *
  * @author Chris Wynn
  * @copyright WizCorp Inc. [ Incorporated Wizards ] 2012
@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol WizAnalyticsVendorModule
+@protocol WizAnalyticsVendorModuleProtocol
 
 @required
 - (id)initWithOptions:(NSDictionary *)options;
@@ -24,4 +24,7 @@
 
 - (void)handleOpenURL:(NSURL *)url;
 
+@end
+
+@interface WizAnalyticsVendorModule : NSObject <WizAnalyticsVendorModuleProtocol>
 @end
