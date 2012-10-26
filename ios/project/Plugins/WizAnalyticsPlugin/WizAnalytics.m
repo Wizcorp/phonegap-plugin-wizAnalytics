@@ -64,8 +64,15 @@ static WizAnalytics *sharedInstance = nil;
         
         for ( NSString *key in options ) {
             if ( (![[options valueForKey:key] isEqualToString:@""]) ) {
-                NSString *baseName = [[key componentsSeparatedByString:@"Key"] objectAtIndex:0];
-                if ( baseName && ![baseName isEqualToString:@"Key"] )
+                // Determine if the key string ends with the substring "Key"
+                // If so, determine the basename to use when constructing the module name.
+                NSString *baseName = nil;
+                NSRange range = NSMakeRange([key length]-3, 3);
+                if ( [[key substringWithRange:range] isEqualToString:@"Key"] ) {
+                    baseName = [key substringToIndex:[key length]-3];
+                }
+
+                if ( baseName && ![baseName isEqualToString:@""] )
                 {
                     // Construct the module and get the class.
                     NSString *moduleName = [NSString stringWithFormat:@"Module%@", baseName];
