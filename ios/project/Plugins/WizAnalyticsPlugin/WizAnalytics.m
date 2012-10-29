@@ -14,7 +14,7 @@
 
 @interface WizAnalytics ()
 @property (nonatomic, retain) NSMutableArray *loadedModules;
-@property (nonatomic, retain) WizAnalyticsVendorModule *kontagentModule;
+@property (nonatomic, retain) NSObject <WizAnalyticsVendorModule> *kontagentModule;
 @end
 
 @implementation WizAnalytics
@@ -60,7 +60,7 @@ static WizAnalytics *sharedInstance = nil;
         
         self.loadedModules = [[NSMutableArray alloc] initWithCapacity:[options count]];
         
-        WizAnalyticsVendorModule *module;
+        NSObject <WizAnalyticsVendorModule> *module;
         
         for ( NSString *key in options ) {
             if ( (![[options valueForKey:key] isEqualToString:@""]) ) {
@@ -79,12 +79,12 @@ static WizAnalytics *sharedInstance = nil;
                     Class moduleClass = NSClassFromString(moduleName);
                     
                     // Allocate the module and load it.
-                    module = [((WizAnalyticsVendorModule *)[moduleClass alloc]) initWithOptions:options];
+                    module = [((NSObject <WizAnalyticsVendorModule> *)[moduleClass alloc]) initWithOptions:options];
                     if ( module ) {
                         [self.loadedModules addObject:module];
                     } else {
-                        // Failed to load module
-                        NSArray *vendorModules = ClassGetSubclasses( [WizAnalyticsVendorModule class] );
+                        // Failed to load module so find and print all loaded modules.
+                        NSArray *vendorModules = ProtocolGetClasses( "WizAnalyticsVendorModule" );
                         NSLog( @"\nFailed to load WizAnalyticsVendorModule: %@", moduleName );
                         NSLog( @"\nList of available WizAnalyticsVendorModules: %@", vendorModules );
                         NSLog( @"\nDid you forget to link in code containing class: %@ ???", moduleName );
@@ -126,14 +126,14 @@ static WizAnalytics *sharedInstance = nil;
 
 - (void)startAnalyticsSession
 {
-    for ( WizAnalyticsVendorModule *module in [self.loadedModules objectEnumerator] ) {
+    for ( NSObject <WizAnalyticsVendorModule> *module in [self.loadedModules objectEnumerator] ) {
         [module startSession];
     }
 }
 
 - (void)restartAnalyticsSession
 {
-    for ( WizAnalyticsVendorModule *module in [self.loadedModules objectEnumerator] ) {
+    for ( NSObject <WizAnalyticsVendorModule> *module in [self.loadedModules objectEnumerator] ) {
         if ( [module respondsToSelector:@selector(resumeSession)] ) {
             [module resumeSession];
         }
@@ -142,7 +142,7 @@ static WizAnalytics *sharedInstance = nil;
 
 - (void)pauseAnalyticsSession
 {
-    for ( WizAnalyticsVendorModule *module in [self.loadedModules objectEnumerator] ) {
+    for ( NSObject <WizAnalyticsVendorModule> *module in [self.loadedModules objectEnumerator] ) {
         if ( [module respondsToSelector:@selector(pauseSession)] ) {
             [module pauseSession];
         }
@@ -151,7 +151,7 @@ static WizAnalytics *sharedInstance = nil;
 
 - (void)endAnalyticsSession
 {
-    for ( WizAnalyticsVendorModule *module in [self.loadedModules objectEnumerator] ) {
+    for ( NSObject <WizAnalyticsVendorModule> *module in [self.loadedModules objectEnumerator] ) {
         if ( [module respondsToSelector:@selector(stopSession)] ) {
             [module stopSession];
         }
@@ -172,7 +172,7 @@ static WizAnalytics *sharedInstance = nil;
         [dataForLogging removeObjectForKey:@"kontagent"];
     }
     
-    for ( WizAnalyticsVendorModule *module in [self.loadedModules objectEnumerator] ) {
+    for ( NSObject <WizAnalyticsVendorModule> *module in [self.loadedModules objectEnumerator] ) {
         if ( [module respondsToSelector:@selector(logEvent:withExtraMetadata:)] ) {
             // Skip kontagent as it has already been logged
             if ( ![module isEqual:self.kontagentModule] ) {
@@ -186,7 +186,7 @@ static WizAnalytics *sharedInstance = nil;
 
 - (void)analyticsScreenEvent:(NSString *)screenName withExtraMetadata:(NSDictionary *)extraMetadata
 {
-    for ( WizAnalyticsVendorModule *module in [self.loadedModules objectEnumerator] ) {
+    for ( NSObject <WizAnalyticsVendorModule> *module in [self.loadedModules objectEnumerator] ) {
         if ( [module respondsToSelector:@selector(logScreen:withExtraMetadata:)] ) {
             [module logScreen:screenName withExtraMetadata:extraMetadata];
         }
@@ -195,7 +195,7 @@ static WizAnalytics *sharedInstance = nil;
 
 - (void)handleOpenURL:(NSURL *)url
 {
-    for ( WizAnalyticsVendorModule *module in [self.loadedModules objectEnumerator] ) {
+    for ( NSObject <WizAnalyticsVendorModule> *module in [self.loadedModules objectEnumerator] ) {
         if ( [module respondsToSelector:@selector(handleOpenURL:)] ) {
             [module handleOpenURL:url];
         }
@@ -204,32 +204,35 @@ static WizAnalytics *sharedInstance = nil;
 
 #pragma - Private Functions
 
-// Get the full list of subclasses for a class and return them in an array.
+// Get the full list of classes that conform to a protocol.
+// Derived from the notes on this page:
 // http://www.cocoawithlove.com/2010/01/getting-subclasses-of-objective-c-class.html
 
-static NSArray *ClassGetSubclasses(Class parentClass)
+static NSArray *ProtocolGetClasses(char *protocolName)
 {
+    // Get count of number of classes definitions registered with Objective-C runtime.
     int numClasses = objc_getClassList(NULL, 0);
     Class *classes = NULL;
     
+    // Get all classes definitions registered with Objective-C runtime.
     classes = malloc(sizeof(Class) * numClasses);
     numClasses = objc_getClassList(classes, numClasses);
     
+    // Results array.
     NSMutableArray *result = [NSMutableArray array];
+    
+    // Get the protocol by name.
+    Protocol *protocol = objc_getProtocol(protocolName);
+    if ( !protocol ) {
+        return result;
+    }
+    
+    // Check if each class conforms to the protocol, if so add to the array list.
     for (NSInteger i = 0; i < numClasses; i++)
     {
-        Class superClass = classes[i];
-        do
-        {
-            superClass = class_getSuperclass(superClass);
-        } while(superClass && superClass != parentClass);
-        
-        if (superClass == nil)
-        {
-            continue;
+        if ( class_conformsToProtocol(classes[i], protocol) ) {
+            [result addObject:classes[i]];
         }
-        
-        [result addObject:classes[i]];
     }
     
     free(classes);
