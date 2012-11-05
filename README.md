@@ -63,7 +63,7 @@ See below for detailed instructions and check out exampleWizAnalytics/www/index.
 	allocate an instance of WizAnalyticsPlugin and send a message to the plugin
 	specifying the launch options:
 
-		WizAnalyticsPlugin *analytics = [WizAnalyticsPlugin alloc] init];
+		WizAnalyticsPlugin *analytics = [[WizAnalyticsPlugin alloc] init];
 		[analytics launch:nil withDict:analyticsKeyDict];
 
 	where 'keyDict' is your dictionary of key-name to key-value mappings.
