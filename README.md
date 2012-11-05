@@ -95,13 +95,13 @@ See below for detailed instructions and check out exampleWizAnalytics/www/index.
 # ADDING NEW VENDOR MODULES :
 
 To add a new vendor module to support a new analytics service, create a new
-Objective-C class derived from the base class WizAnalyticsVendorModule with
+Objective-C class that conforms to the WizAnalyticsVendorModule protocol with
 name "Module<XXX>".  For example:
 
-		@interface ModuleAcmeAnalytics : WizAnalyticsVendorModule
+		@interface ModuleAcmeAnalytics : NSObject <WizAnalyticsVendorModule>
 		@end
 
-Then, implement the "required" methods for the WizAnalyticsVendorModuleProtocol
+Then, implement the "required" methods for the WizAnalyticsVendorModule protocol
 and optional implement the "optional" methods.
 
 Link the implementation of the new class into your application.

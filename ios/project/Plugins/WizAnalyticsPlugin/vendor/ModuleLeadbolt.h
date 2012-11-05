@@ -9,5 +9,5 @@
 
 #import "WizAnalyticsVendorModule.h"
 
-@interface ModuleLeadbolt : WizAnalyticsVendorModule
+@interface ModuleLeadbolt : NSObject <WizAnalyticsVendorModule>
 @end
