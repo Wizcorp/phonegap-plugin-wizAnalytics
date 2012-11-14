@@ -20,28 +20,10 @@
 
 @implementation WizAnalyticsPlugin
 
-- (void)launch:(NSArray*)arguments withDict:(NSDictionary*)options
-{
-    // Initialize the singleton (if it doesn't already exist).
-    [WizAnalytics sharedInstance:options];
-}
-
-- (void)startSession:(NSArray*)arguments withDict:(NSDictionary*)options
-{
-    WizAnalytics* sharedSingleton = [WizAnalytics sharedInstance];
-    [sharedSingleton startAnalyticsSession];
-}
-
 - (void)pauseSession:(NSArray*)arguments withDict:(NSDictionary*)options
 {
     WizAnalytics* sharedSingleton = [WizAnalytics sharedInstance];
     [sharedSingleton pauseAnalyticsSession];
-}
-
-- (void)endSession:(NSArray*)arguments withDict:(NSDictionary*)options
-{
-    WizAnalytics* sharedSingleton = [WizAnalytics sharedInstance];
-    [sharedSingleton endAnalyticsSession];
 }
 
 - (void)restartSession:(NSArray*)arguments withDict:(NSDictionary*)options

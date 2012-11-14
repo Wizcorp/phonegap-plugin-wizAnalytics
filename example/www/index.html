@@ -57,7 +57,6 @@
 	function onBodyLoad()
 	{		
 		document.addEventListener("deviceready", onDeviceReady, false);
-		document.addEventListener("pause", onPause, false);
 	}
 	
 	/* When this function is called, Cordova has been initialized and is ready to roll */
@@ -68,35 +67,8 @@
 	{
         if (!window.wizAnalytics) {
             alert("Could not find wizAnalytics");
-        }
-        
-        // Set the app-specific keys for the analytics used by the app.
-        var options = {
-            //"AdfonicKey":YourKeyHere,
-            //"AdmobKey":YourKeyHere,
-            //"ChartboostKey":YourKeyHere,
-            //"FlurryKey":YourKeyHere,
-            //"InMobiKey":YourKeyHere,
-            //"JumpTapKey":YourKeyHere,
-            //"KontagentKey":"YourKeyHere",
-            //"LeadboltKey":YourKeyHere,
-            //"LocalyticsKey":YourKeyHere,
-            //"MilleniumKey":YourKeyHere,
-            //"MdotMKey":YourKeyHere,
-            //"SmaatoKey":YourKeyHere
-        };
-        window.wizAnalytics.launch(options);
+        }        
 	}
-        
-    function onPause()
-    {
-        window.wizAnalytics.session.pause();
-    }
-    
-    function startSession() { window.wizAnalytics.session.start(); }
-    function endSession() { window.wizAnalytics.session.end(); }
-    function pauseSession() { window.wizAnalytics.session.pause(); }
-    function restartSession() { window.wizAnalytics.session.restart(); }
         
     function logEvent() {
         var optionsEvent1 = { "PlayerName" : "Player ABC" };
@@ -108,19 +80,19 @@
         window.wizAnalytics.screen.log("OptionsScreen", optionsScreen1 );
     }
         
+    function pauseSession() { window.wizAnalytics.session.pause(); }
+    function restartSession() { window.wizAnalytics.session.restart(); }
+        
     </script>
   </head>
   <body onload="onBodyLoad()">
 	<h1>WizAnalytics plugin!</h1>
-      <input type="button" id="push_button" value="Start Session" onclick="startSession()" />
-      <input type="button" id="push_button" value="Pause Session" onclick="pauseSession()" />
-      <input type="button" id="push_button" value="End Session" onclick="endSession()" />
-      <input type="button" id="push_button" value="Restart Session" onclick="restartSession()" />
       <input type="button" id="push_button" value="Log Event" onclick="logEvent()" />
       <input type="button" id="push_button" value="Log Screen" onclick="logScreen()" />
+      <input type="button" id="push_button" value="Pause Session" onclick="pauseSession()" />
+      <input type="button" id="push_button" value="Restart Session" onclick="restartSession()" />
       <input type="button" id="push_button" value="Handle Open URL" onclick="handleOpenURL('www.google.com')" />
-      <p>Press "Start Session" button to start analytics.  Then experiment with pressing the other analytics buttons.  The events should be recorded in your analytics logs.<br />
-      <p><strong>Note:</strong> You need to click "Start Session" (to start your session) and "End Session" (to end your session and flush any cached analytics to the analytics service providers).
+      <p>Experiment by pressing the analytics buttons.  The events should be recorded in your analytics logs.<br />
 	<br />
       <p> Don't forget to Check your console log for any white-list rejection errors and add your allowed <strong>hosts</strong> in Cordova.plist/ExternalHosts (wildcards OK, don't enter the URL scheme)</li>
   </body>

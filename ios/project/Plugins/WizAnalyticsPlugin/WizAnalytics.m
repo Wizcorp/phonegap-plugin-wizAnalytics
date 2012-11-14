@@ -15,6 +15,10 @@
 @interface WizAnalytics ()
 @property (nonatomic, retain) NSMutableArray *loadedModules;
 @property (nonatomic, retain) NSObject <WizAnalyticsVendorModule> *kontagentModule;
++ (void)load;
+- (void)startAnalyticsSession;
+- (void)endAnalyticsSession;
+- (void)willTerminate:(NSNotification *)notification;
 @end
 
 @implementation WizAnalytics
@@ -24,38 +28,60 @@ static WizAnalytics *sharedInstance = nil;
 // Get the shared instance and create it if necessary.
 + (WizAnalytics *)sharedInstance {
     if (sharedInstance == nil) {
-        NSString *usageMessage = @"WizAnalytics was not launched properly.  The \"launch\" method must be invoked before *any* other plugin method.\n\nDid you forget to call wizAnalytics.launch(options) in JavaScript or [WizAnalyticsPlugin launch:withDict:] in native code before calling any other plugin methods?";
-        NSLog(@"%@", usageMessage);
+        sharedInstance = [[WizAnalytics alloc] init];
     }
     return sharedInstance;
 }
 
-// Get the shared instance and create it using options if necessary.
-+ (WizAnalytics *)sharedInstance:(NSDictionary*)options {
-    if (sharedInstance == nil) {
-        sharedInstance = [[WizAnalytics alloc] initWithOptions:options];
-    }
-    return sharedInstance;
+#pragma - Class Methods
+
++ (void)load
+{
+    // Create the singleton and start session when this class is added to the run-time.
+    [[WizAnalytics sharedInstance] startAnalyticsSession];
 }
+
+#pragma - Instance Methods
 
 // house keeping
 - (void)dealloc
 {
+    [[WizAnalytics sharedInstance] endAnalyticsSession];
+    
+    // Stop the instance from observing all notification center notifications.
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+
     self.loadedModules = nil;
     self.kontagentModule = nil;
-    
+
     [super dealloc];
+}
+
+- (void)willTerminate:(NSNotification *)notification
+{
+    [[WizAnalytics sharedInstance] endAnalyticsSession];
+    
+    // Stop the instance from observing all notification center notifications.
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (id)init
 {
-    NSAssert(NO, @"Allocating an instance of singleton class not permitted.  Use [WizAnalytics sharedIntance:] instead.");
-    return nil;
-}
+    if ( sharedInstance != nil ) {
+        [NSException raise:NSInternalInconsistencyException
+                    format:@"[%@ %@] cannot be called; use +[%@ %@] instead",
+         NSStringFromClass([self class]), NSStringFromSelector(_cmd),
+         NSStringFromClass([self class]), NSStringFromSelector(@selector(sharedInstance))];
+    } else if ((self = [super init])) {
+        // Get options from the wizAnalytics.plist (in the application bundle)
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"wizAnalytics" ofType:@"plist"];
+        NSMutableDictionary *options = [NSMutableDictionary dictionaryWithContentsOfFile:path];
+        
+        if ( options == nil ) {
+            [NSException raise:NSInternalInconsistencyException
+                        format:@"Missing wizAnalytics.plist -- required when using the wizAnalytics plugin.  Please add it to your application bundle."];
+        }
 
-- (id)initWithOptions:(NSDictionary*)options
-{
-    if ((self = [super init])) {
         WizLog(@"Analytics config %@", options);
         
         self.loadedModules = [[NSMutableArray alloc] initWithCapacity:[options count]];
@@ -98,6 +124,26 @@ static WizAnalytics *sharedInstance = nil;
                 }
             }
         }
+        
+        // Register the instance to observe didEnterBackground notifications
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(pauseAnalyticsSession)
+                                                     name:UIApplicationDidEnterBackgroundNotification
+                                                   object:nil];
+    
+        // Register the instance to observe didBecomeActive notifications
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(restartAnalyticsSession)
+                                                     name:UIApplicationDidBecomeActiveNotification
+                                                   object:nil];
+                
+        // Register for willTerminate notifications here so that we can observer terminate
+        // events and end the session.  This isn't strictly required (and may not be called
+        // according to the docs).
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(willTerminate:)
+                                                     name:UIApplicationWillTerminateNotification
+                                                   object:nil];
     }
 
     return self;

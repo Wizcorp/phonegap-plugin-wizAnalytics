@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AdmobKey</key>
+	<string>PutYourAdmobKeyHere</string>
+	<key>AdmobOtherParam1</key>
+	<string>AdmobOtherParamValue1</string>
+	<key>AdmobOtherParam2</key>
+	<string>AdmobOtherParamValue2</string>
+	<key>ChartboostKey</key>
+	<string>PutYourChartboostKeyHere</string>
+	<key>LocalyticsKey</key>
+	<string>PutYourLocalyticsKeyHere</string>
+</dict>
+</plist>
