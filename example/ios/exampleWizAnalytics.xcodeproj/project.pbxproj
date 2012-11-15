@@ -47,6 +47,7 @@
 		F6056C0016379261006A47C6 /* WizAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = F6056BD516379261006A47C6 /* WizAnalytics.m */; };
 		F6056C0116379261006A47C6 /* WizAnalyticsPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = F6056BD716379261006A47C6 /* WizAnalyticsPlugin.m */; };
 		F6056C0416379F92006A47C6 /* www in Resources */ = {isa = PBXBuildFile; fileRef = F6056C0316379F92006A47C6 /* www */; };
+		F69905671653A81A009EFCFB /* wizAnalytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = F69905661653A81A009EFCFB /* wizAnalytics.plist */; };
 		F6D8074916313728005EF20E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8074816313728005EF20E /* Foundation.framework */; };
 		F6D8074B16313728005EF20E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8074A16313728005EF20E /* UIKit.framework */; };
 		F6D8074D16313728005EF20E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8074C16313728005EF20E /* CoreGraphics.framework */; };
@@ -176,6 +177,7 @@
 		F6056BD816379261006A47C6 /* WizAnalyticsVendorModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WizAnalyticsVendorModule.h; sourceTree = "<group>"; };
 		F6056BD916379261006A47C6 /* WizDebugLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WizDebugLog.h; sourceTree = "<group>"; };
 		F6056C0316379F92006A47C6 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../www; sourceTree = "<group>"; };
+		F69905661653A81A009EFCFB /* wizAnalytics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = wizAnalytics.plist; sourceTree = "<group>"; };
 		F6D8074416313728005EF20E /* exampleWizAnalytics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = exampleWizAnalytics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D8074816313728005EF20E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F6D8074A16313728005EF20E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -629,6 +631,7 @@
 				F6D8076816313728005EF20E /* main.m */,
 				F6D8076A16313728005EF20E /* exampleWizAnalytics-Prefix.pch */,
 				F6D8078C16313728005EF20E /* Cordova.plist */,
+				F69905661653A81A009EFCFB /* wizAnalytics.plist */,
 				F6D8079516313728005EF20E /* MainViewController.xib */,
 				F6D8079916313728005EF20E /* verify.sh */,
 			);
@@ -802,6 +805,7 @@
 				F6056BEE16379261006A47C6 /* README.pdf in Resources */,
 				F6056BFE16379261006A47C6 /* Smaato CPD Tracking v1.4.1.pdf in Resources */,
 				F6056C0416379F92006A47C6 /* www in Resources */,
+				F69905671653A81A009EFCFB /* wizAnalytics.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
