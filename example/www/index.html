@@ -80,17 +80,12 @@
         window.wizAnalytics.screen.log("OptionsScreen", optionsScreen1 );
     }
         
-    function pauseSession() { window.wizAnalytics.session.pause(); }
-    function restartSession() { window.wizAnalytics.session.restart(); }
-        
     </script>
   </head>
   <body onload="onBodyLoad()">
 	<h1>WizAnalytics plugin!</h1>
       <input type="button" id="push_button" value="Log Event" onclick="logEvent()" />
       <input type="button" id="push_button" value="Log Screen" onclick="logScreen()" />
-      <input type="button" id="push_button" value="Pause Session" onclick="pauseSession()" />
-      <input type="button" id="push_button" value="Restart Session" onclick="restartSession()" />
       <input type="button" id="push_button" value="Handle Open URL" onclick="handleOpenURL('www.google.com')" />
       <p>Experiment by pressing the analytics buttons.  The events should be recorded in your analytics logs.<br />
 	<br />

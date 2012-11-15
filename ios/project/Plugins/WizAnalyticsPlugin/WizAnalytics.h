@@ -12,15 +12,9 @@
 
 @interface WizAnalytics : NSObject
 
-- (void)pauseAnalyticsSession;
-- (void)restartAnalyticsSession;
-
 - (void)analyticsEvent:(NSString *)eventName withExtraMetadata:(NSDictionary *)extraMetadata;
-
 - (void)analyticsScreenEvent:(NSString *)eventName withExtraMetadata:(NSDictionary *)extraMetadata;
-
 - (void)handleOpenURL:(NSURL *)url;
-
 
 // Accessor methods
 + (id)sharedInstance;

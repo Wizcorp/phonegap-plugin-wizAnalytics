@@ -20,8 +20,6 @@
 /* 
  *  Plugin methods
  */
-- (void)pauseSession:(NSArray*)arguments withDict:(NSDictionary*)options;
-- (void)restartSession:(NSArray*)arguments withDict:(NSDictionary*)options;
 - (void)logEvent:(NSArray*)arguments withDict:(NSDictionary*)options;
 - (void)logScreen:(NSArray*)arguments withDict:(NSDictionary*)options;
 - (void)handleOpenURL:(NSArray*)arguments withDict:(NSDictionary*)options;

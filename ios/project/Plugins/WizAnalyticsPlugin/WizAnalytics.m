@@ -17,6 +17,8 @@
 @property (nonatomic, retain) NSObject <WizAnalyticsVendorModule> *kontagentModule;
 + (void)load;
 - (void)startAnalyticsSession;
+- (void)restartAnalyticsSession;
+- (void)pauseAnalyticsSession;
 - (void)endAnalyticsSession;
 - (void)willTerminate:(NSNotification *)notification;
 @end

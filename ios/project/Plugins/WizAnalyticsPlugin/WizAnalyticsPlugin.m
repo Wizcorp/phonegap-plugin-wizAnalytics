@@ -20,18 +20,6 @@
 
 @implementation WizAnalyticsPlugin
 
-- (void)pauseSession:(NSArray*)arguments withDict:(NSDictionary*)options
-{
-    WizAnalytics* sharedSingleton = [WizAnalytics sharedInstance];
-    [sharedSingleton pauseAnalyticsSession];
-}
-
-- (void)restartSession:(NSArray*)arguments withDict:(NSDictionary*)options
-{
-    WizAnalytics* sharedSingleton = [WizAnalytics sharedInstance];
-    [sharedSingleton restartAnalyticsSession];
-}
-
 - (void)logEvent:(NSArray*)arguments withDict:(NSDictionary*)options
 {
     NSString *eventName = [arguments objectAtIndex:1];

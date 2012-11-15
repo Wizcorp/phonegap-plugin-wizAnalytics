@@ -10,16 +10,6 @@
 
 var wizAnalytics = {
 
-    session : {
-        pause : function () {
-            cordova.exec(null, null, "WizAnalyticsPlugin", "pauseSession", []);
-        },
-
-        restart : function () {
-            cordova.exec(null, null, "WizAnalyticsPlugin", "restartSession", []);
-        }
-    },
-    
     event : {
         log : function (eventName, options) {
             cordova.exec(null, null, "WizAnalyticsPlugin", "logEvent", [eventName, options]);
