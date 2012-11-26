@@ -55,12 +55,8 @@
     
     NSURLResponse *response;
     NSError *error = nil;
-    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    
-    NSString *string = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
-    WizLog(@"Leadbolt responseData: %@", string);
-    
-    
+    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+        
     [pool release];
 
     
