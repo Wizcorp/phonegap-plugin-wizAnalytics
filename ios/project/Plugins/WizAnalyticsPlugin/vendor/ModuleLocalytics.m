@@ -64,4 +64,10 @@
     [[LocalyticsSession sharedLocalyticsSession] tagEvent:eventName attributes:extraMetadata];
 }
 
+- (void)logScreen:(NSString *)screenName withExtraMetadata:(NSDictionary *)extraMetadata
+{
+    WizLog(@"LOCALYTICS LOG SCREEN %@", screenName);
+    [[LocalyticsSession sharedLocalyticsSession] tagScreen:screenName];
+}
+
 @end
