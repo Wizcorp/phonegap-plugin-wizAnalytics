@@ -15,12 +15,12 @@
 	<key>CFBundlePackageType</key>
 	<string>FMWK</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.1.11</string>
+	<string>1.1.13</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.1.11</string>
+	<string>1.1.13</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>© 2011 Kontagent</string>
+	<string>© 2012 Kontagent</string>
 </dict>
 </plist>

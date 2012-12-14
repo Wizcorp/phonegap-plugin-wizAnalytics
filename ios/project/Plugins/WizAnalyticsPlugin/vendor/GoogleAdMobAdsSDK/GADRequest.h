@@ -13,10 +13,6 @@
 // Constant for getting test ads on the simulator using the testDevices method.
 #define GAD_SIMULATOR_ID @"Simulator"
 
-// The google ad mob network name to use with the additional parameters methods
-// below.
-#define kGADGoogleAdMobNetworkName @"GoogleAdMobAds"
-
 // Genders to help deliver more relevant ads.
 typedef enum {
   kGADGenderUnknown,
@@ -94,11 +90,11 @@ typedef enum {
 // and then @"Football".
 - (void)addKeyword:(NSString *)keyword;
 
+// Add the device's identifier into this array for testing purposes.
+@property (nonatomic, retain) NSArray *testDevices;
+
 #pragma mark -
 #pragma mark Deprecated Methods
-
-// Please use the testing property instead.
-@property (nonatomic, retain) NSArray *testDevices;
 
 // Accesses the additionalParameters for the "GoogleAdmob" ad network. Please
 // use -registerAdNetworkExtras: method above and pass an instance of
