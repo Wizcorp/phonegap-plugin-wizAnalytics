@@ -1,8 +1,8 @@
-/* wizAnalytics - Flurry Module
+/* wizAnalytics - Admob Module
  *
  * @author Ally Ogilvie
  * @copyright WizCorp Inc. [ Incorporated Wizards ] 2012
- * @file ModuleFlurry.m for iOS
+ * @file ModuleAdmob.m for iOS
  *
  *
  */

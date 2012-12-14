@@ -9,10 +9,6 @@
 /* Begin PBXBuildFile section */
 		F6056BDA16379261006A47C6 /* libChartboost.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6056B6D16379261006A47C6 /* libChartboost.a */; };
 		F6056BDB16379261006A47C6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F6056B6E16379261006A47C6 /* README.md */; };
-		F6056BDC16379261006A47C6 /* libFlurryAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6056B7216379261006A47C6 /* libFlurryAnalytics.a */; };
-		F6056BDD16379261006A47C6 /* libFlurryAppCircle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6056B7716379261006A47C6 /* libFlurryAppCircle.a */; };
-		F6056BDE16379261006A47C6 /* ProjectApiKey.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6056B7816379261006A47C6 /* ProjectApiKey.txt */; };
-		F6056BDF16379261006A47C6 /* RELEASE_NOTES.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6056B7916379261006A47C6 /* RELEASE_NOTES.txt */; };
 		F6056BE016379261006A47C6 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6056B8416379261006A47C6 /* libGoogleAdMobAds.a */; };
 		F6056BE116379261006A47C6 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6056B8C16379261006A47C6 /* README.txt */; };
 		F6056BE216379261006A47C6 /* ChangeLog.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6056B8E16379261006A47C6 /* ChangeLog.txt */; };
@@ -31,7 +27,6 @@
 		F6056BEF16379261006A47C6 /* ModuleAdfonic.m in Sources */ = {isa = PBXBuildFile; fileRef = F6056BB416379261006A47C6 /* ModuleAdfonic.m */; };
 		F6056BF016379261006A47C6 /* ModuleAdmob.m in Sources */ = {isa = PBXBuildFile; fileRef = F6056BB616379261006A47C6 /* ModuleAdmob.m */; };
 		F6056BF116379261006A47C6 /* ModuleChartboost.m in Sources */ = {isa = PBXBuildFile; fileRef = F6056BB816379261006A47C6 /* ModuleChartboost.m */; };
-		F6056BF216379261006A47C6 /* ModuleFlurry.m in Sources */ = {isa = PBXBuildFile; fileRef = F6056BBA16379261006A47C6 /* ModuleFlurry.m */; };
 		F6056BF316379261006A47C6 /* ModuleInMobi.m in Sources */ = {isa = PBXBuildFile; fileRef = F6056BBC16379261006A47C6 /* ModuleInMobi.m */; };
 		F6056BF416379261006A47C6 /* ModuleJumpTap.m in Sources */ = {isa = PBXBuildFile; fileRef = F6056BBE16379261006A47C6 /* ModuleJumpTap.m */; };
 		F6056BF516379261006A47C6 /* ModuleKontagent.m in Sources */ = {isa = PBXBuildFile; fileRef = F6056BC016379261006A47C6 /* ModuleKontagent.m */; };
@@ -92,14 +87,6 @@
 		F6056B6C16379261006A47C6 /* Chartboost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chartboost.h; sourceTree = "<group>"; };
 		F6056B6D16379261006A47C6 /* libChartboost.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libChartboost.a; sourceTree = "<group>"; };
 		F6056B6E16379261006A47C6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		F6056B7116379261006A47C6 /* FlurryAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAnalytics.h; sourceTree = "<group>"; };
-		F6056B7216379261006A47C6 /* libFlurryAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryAnalytics.a; sourceTree = "<group>"; };
-		F6056B7416379261006A47C6 /* FlurryAdDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAdDelegate.h; sourceTree = "<group>"; };
-		F6056B7516379261006A47C6 /* FlurryAppCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAppCircle.h; sourceTree = "<group>"; };
-		F6056B7616379261006A47C6 /* FlurryOffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryOffer.h; sourceTree = "<group>"; };
-		F6056B7716379261006A47C6 /* libFlurryAppCircle.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryAppCircle.a; sourceTree = "<group>"; };
-		F6056B7816379261006A47C6 /* ProjectApiKey.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ProjectApiKey.txt; sourceTree = "<group>"; };
-		F6056B7916379261006A47C6 /* RELEASE_NOTES.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RELEASE_NOTES.txt; sourceTree = "<group>"; };
 		F6056B7B16379261006A47C6 /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
 		F6056B7C16379261006A47C6 /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
 		F6056B7D16379261006A47C6 /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
@@ -144,8 +131,6 @@
 		F6056BB616379261006A47C6 /* ModuleAdmob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleAdmob.m; sourceTree = "<group>"; };
 		F6056BB716379261006A47C6 /* ModuleChartboost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleChartboost.h; sourceTree = "<group>"; };
 		F6056BB816379261006A47C6 /* ModuleChartboost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleChartboost.m; sourceTree = "<group>"; };
-		F6056BB916379261006A47C6 /* ModuleFlurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleFlurry.h; sourceTree = "<group>"; };
-		F6056BBA16379261006A47C6 /* ModuleFlurry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleFlurry.m; sourceTree = "<group>"; };
 		F6056BBB16379261006A47C6 /* ModuleInMobi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleInMobi.h; sourceTree = "<group>"; };
 		F6056BBC16379261006A47C6 /* ModuleInMobi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleInMobi.m; sourceTree = "<group>"; };
 		F6056BBD16379261006A47C6 /* ModuleJumpTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleJumpTap.h; sourceTree = "<group>"; };
@@ -250,8 +235,6 @@
 				F6D8075F16313728005EF20E /* MobileCoreServices.framework in Frameworks */,
 				F6D8076116313728005EF20E /* CoreMedia.framework in Frameworks */,
 				F6056BDA16379261006A47C6 /* libChartboost.a in Frameworks */,
-				F6056BDC16379261006A47C6 /* libFlurryAnalytics.a in Frameworks */,
-				F6056BDD16379261006A47C6 /* libFlurryAppCircle.a in Frameworks */,
 				F6056BE016379261006A47C6 /* libGoogleAdMobAds.a in Frameworks */,
 				F6056BE316379261006A47C6 /* libInMobiAdTracker-2.5.1.a in Frameworks */,
 				F6056BE416379261006A47C6 /* libInMobiCommons-3.6.1.a in Frameworks */,
@@ -289,7 +272,6 @@
 			isa = PBXGroup;
 			children = (
 				F6056B6A16379261006A47C6 /* Chartboost */,
-				F6056B6F16379261006A47C6 /* Flurry iPhone SDK v3.0.9 */,
 				F6056B7A16379261006A47C6 /* GoogleAdMobAdsSDK */,
 				F6056B8D16379261006A47C6 /* InMobiAdTracker_iOS_SDK_i251 */,
 				F6056B9A16379261006A47C6 /* InMobiAdTracker_iOS_SDK_v1.0.1 */,
@@ -303,8 +285,6 @@
 				F6056BB616379261006A47C6 /* ModuleAdmob.m */,
 				F6056BB716379261006A47C6 /* ModuleChartboost.h */,
 				F6056BB816379261006A47C6 /* ModuleChartboost.m */,
-				F6056BB916379261006A47C6 /* ModuleFlurry.h */,
-				F6056BBA16379261006A47C6 /* ModuleFlurry.m */,
 				F6056BBB16379261006A47C6 /* ModuleInMobi.h */,
 				F6056BBC16379261006A47C6 /* ModuleInMobi.m */,
 				F6056BBD16379261006A47C6 /* ModuleJumpTap.h */,
@@ -335,37 +315,6 @@
 				F6056B6E16379261006A47C6 /* README.md */,
 			);
 			path = Chartboost;
-			sourceTree = "<group>";
-		};
-		F6056B6F16379261006A47C6 /* Flurry iPhone SDK v3.0.9 */ = {
-			isa = PBXGroup;
-			children = (
-				F6056B7016379261006A47C6 /* FlurryAnalytics */,
-				F6056B7316379261006A47C6 /* FlurryAppCircle */,
-				F6056B7816379261006A47C6 /* ProjectApiKey.txt */,
-				F6056B7916379261006A47C6 /* RELEASE_NOTES.txt */,
-			);
-			path = "Flurry iPhone SDK v3.0.9";
-			sourceTree = "<group>";
-		};
-		F6056B7016379261006A47C6 /* FlurryAnalytics */ = {
-			isa = PBXGroup;
-			children = (
-				F6056B7116379261006A47C6 /* FlurryAnalytics.h */,
-				F6056B7216379261006A47C6 /* libFlurryAnalytics.a */,
-			);
-			path = FlurryAnalytics;
-			sourceTree = "<group>";
-		};
-		F6056B7316379261006A47C6 /* FlurryAppCircle */ = {
-			isa = PBXGroup;
-			children = (
-				F6056B7416379261006A47C6 /* FlurryAdDelegate.h */,
-				F6056B7516379261006A47C6 /* FlurryAppCircle.h */,
-				F6056B7616379261006A47C6 /* FlurryOffer.h */,
-				F6056B7716379261006A47C6 /* libFlurryAppCircle.a */,
-			);
-			path = FlurryAppCircle;
 			sourceTree = "<group>";
 		};
 		F6056B7A16379261006A47C6 /* GoogleAdMobAdsSDK */ = {
@@ -795,8 +744,6 @@
 				F6D8079616313728005EF20E /* MainViewController.xib in Resources */,
 				F6D809DD16369BF2005EF20E /* Default-568h@2x.png in Resources */,
 				F6056BDB16379261006A47C6 /* README.md in Resources */,
-				F6056BDE16379261006A47C6 /* ProjectApiKey.txt in Resources */,
-				F6056BDF16379261006A47C6 /* RELEASE_NOTES.txt in Resources */,
 				F6056BE116379261006A47C6 /* README.txt in Resources */,
 				F6056BE216379261006A47C6 /* ChangeLog.txt in Resources */,
 				F6056BE716379261006A47C6 /* LICENSE in Resources */,
@@ -842,7 +789,6 @@
 				F6056BEF16379261006A47C6 /* ModuleAdfonic.m in Sources */,
 				F6056BF016379261006A47C6 /* ModuleAdmob.m in Sources */,
 				F6056BF116379261006A47C6 /* ModuleChartboost.m in Sources */,
-				F6056BF216379261006A47C6 /* ModuleFlurry.m in Sources */,
 				F6056BF316379261006A47C6 /* ModuleInMobi.m in Sources */,
 				F6056BF416379261006A47C6 /* ModuleJumpTap.m in Sources */,
 				F6056BF516379261006A47C6 /* ModuleKontagent.m in Sources */,
@@ -990,8 +936,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/Chartboost\"",
-					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/Flurry iPhone SDK v3.0.9/FlurryAnalytics\"",
-					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/Flurry iPhone SDK v3.0.9/FlurryAppCircle\"",
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/GoogleAdMobAdsSDK\"",
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/InMobiAdTracker_iOS_SDK_i251/Libs\"",
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/MilleniumMedia_AppleSDK/MMAdvertiser\"",
@@ -1031,8 +975,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/Chartboost\"",
-					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/Flurry iPhone SDK v3.0.9/FlurryAnalytics\"",
-					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/Flurry iPhone SDK v3.0.9/FlurryAppCircle\"",
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/GoogleAdMobAdsSDK\"",
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/InMobiAdTracker_iOS_SDK_i251/Libs\"",
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/MilleniumMedia_AppleSDK/MMAdvertiser\"",
