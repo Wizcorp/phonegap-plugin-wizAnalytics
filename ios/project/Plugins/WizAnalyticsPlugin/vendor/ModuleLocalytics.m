@@ -1,8 +1,8 @@
-/* wizAnalytics - Flurry Module
+/* wizAnalytics - Localytics Module
  *
  * @author Ally Ogilvie
  * @copyright WizCorp Inc. [ Incorporated Wizards ] 2012
- * @file ModuleFlurry.m for iOS
+ * @file ModuleLocalytics.m for iOS
  *
  *
  */

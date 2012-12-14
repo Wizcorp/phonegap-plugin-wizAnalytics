@@ -1,4 +1,4 @@
-/* wizAnalytics - Flurry Module
+/* wizAnalytics - Millenium Module
  *
  * @author Ally Ogilvie
  * @copyright WizCorp Inc. [ Incorporated Wizards ] 2012
