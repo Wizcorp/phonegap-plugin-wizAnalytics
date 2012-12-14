@@ -10,17 +10,16 @@ Cordova plugin for accessing the native ad and event logging SDKs.
 
 Currently supports;
 - Adfonic
-- Admob
+- Admob 6.2.1
 - ChartBoost v3.0.7
-- Flurry v3.0.9
 - InMobi i251 (Build 2.5.1)
 - JumpTapAppReport
 - LeadBolt
 - Localytics v2.6
-- Millenium Media 4.5.5
+- Millenium Media 4.6.1
 - MdotM
 - Smaato 1.4.1
-- Kontagent
+- Kontagent 1.3.3
 
 
 
@@ -53,7 +52,6 @@ See below for detailed instructions and check out exampleWizAnalytics/www/index.
 	- "AdfonicKey"
 	- "AdmobKey"
 	- "ChartboostKey"
-	- "FlurryKey"
 	- "InMobiKey"
 	- "JumpTapKey"
 	- "KontagentKey"

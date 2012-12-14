@@ -1,5 +1,10 @@
 Changelog
 ----------------------------------
+Version 4.6.1 - 9/24/12
+- Added log levels
+- Improved conversion tracking
+- Compiled no-thumb by default
+
 Version 4.5.5 - 3/26/11
 - Removed UDID call
 
