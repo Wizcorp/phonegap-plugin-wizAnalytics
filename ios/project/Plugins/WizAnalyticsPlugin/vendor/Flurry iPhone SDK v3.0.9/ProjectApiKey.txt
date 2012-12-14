@@ -1,2 +1,0 @@
-Project: Test MLB
-API Key: R2832H82QGUIJNKJ4DWX
