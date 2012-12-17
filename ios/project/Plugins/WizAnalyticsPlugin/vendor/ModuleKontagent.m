@@ -39,9 +39,7 @@
 {
     WizLog(@"KONTAGENT START TRACKING %@", _kontagentAPIKey);
     
-    [Kontagent startSession:_kontagentAPIKey mode:kKontagentSDKMode_PRODUCTION];
-
-    [Kontagent messageSent:@"NEW_SESSION" trackingId:[Kontagent generateUniqueTrackingTag] optionalParams:nil];
+    [Kontagent startSession:_kontagentAPIKey mode:kKontagentSDKMode_PRODUCTION shouldSendApplicationAddedAutomatically:YES];
     
     // This is also filled in automatically by the library
     [Kontagent sendDeviceInformation:nil];
