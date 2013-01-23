@@ -40,7 +40,6 @@
 		30A0434914DC770100060A13 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30A0434614DC770100060A13 /* Localizable.strings */; };
 		30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E5649113A7FCAF007403D8 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
-		F6C7C16616AF8E3A009965DE /* www in Resources */ = {isa = PBXBuildFile; fileRef = F6C7C16516AF8E3A009965DE /* www */; };
 		F6C7C1E216AF9061009965DE /* libChartboost.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7C17516AF9060009965DE /* libChartboost.a */; };
 		F6C7C1E316AF9061009965DE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F6C7C17616AF9060009965DE /* README.md */; };
 		F6C7C1E416AF9061009965DE /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7C19516AF9060009965DE /* libGoogleAdMobAds.a */; };
@@ -85,6 +84,7 @@
 		F6C7C21316AF93EB009965DE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7C21216AF93EB009965DE /* MessageUI.framework */; };
 		F6C7C21516AF9412009965DE /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7C21416AF9412009965DE /* StoreKit.framework */; };
 		F6FA7BA516AFBE2100AD8974 /* wizAnalytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6FA7BA416AFBE2100AD8974 /* wizAnalytics.plist */; };
+		F6FA7BB016AFC2CE00AD8974 /* www in Resources */ = {isa = PBXBuildFile; fileRef = F6FA7BAF16AFC2CE00AD8974 /* www */; };
 		F840E1F1165FE0F500CFE078 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840E1F0165FE0F500CFE078 /* config.xml */; };
 /* End PBXBuildFile section */
 
@@ -145,7 +145,6 @@
 		32CA4F630368D1EE00C91783 /* exampleWizAnalytics-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "exampleWizAnalytics-Prefix.pch"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* exampleWizAnalytics-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "exampleWizAnalytics-Info.plist"; path = "../exampleWizAnalytics-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
-		F6C7C16516AF8E3A009965DE /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../www; sourceTree = "<group>"; };
 		F6C7C17316AF9060009965DE /* CBAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAnalytics.h; sourceTree = "<group>"; };
 		F6C7C17416AF9060009965DE /* Chartboost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chartboost.h; sourceTree = "<group>"; };
 		F6C7C17516AF9060009965DE /* libChartboost.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libChartboost.a; sourceTree = "<group>"; };
@@ -240,6 +239,7 @@
 		F6C7C21216AF93EB009965DE /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		F6C7C21416AF9412009965DE /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		F6FA7BA416AFBE2100AD8974 /* wizAnalytics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = wizAnalytics.plist; path = exampleWizAnalytics/wizAnalytics.plist; sourceTree = "<group>"; };
+		F6FA7BAF16AFC2CE00AD8974 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = exampleWizAnalytics/config.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -323,6 +323,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				F6FA7BAF16AFC2CE00AD8974 /* www */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				F840E1F0165FE0F500CFE078 /* config.xml */,
 				301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */,
@@ -332,7 +333,6 @@
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				F6FA7BA416AFBE2100AD8974 /* wizAnalytics.plist */,
-				F6C7C16516AF8E3A009965DE /* www */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -773,7 +773,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "exampleWizAnalytics" */;
 			buildPhases = (
-				F6FA7B9A16AFBA5500AD8974 /* Copy plugin to www folder */,
+				F6FA7B9A16AFBA5500AD8974 /* Copy content to www folder */,
 				304B58A110DAC018002A0835 /* Touch www folder */,
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -858,7 +858,6 @@
 				3088BBC1154F3926009F9C59 /* Default@2x~iphone.png in Resources */,
 				3088BBC2154F3926009F9C59 /* Default~iphone.png in Resources */,
 				D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */,
-				F6C7C16616AF8E3A009965DE /* www in Resources */,
 				F6C7C1E316AF9061009965DE /* README.md in Resources */,
 				F6C7C1E516AF9061009965DE /* README.txt in Resources */,
 				F6C7C1E616AF9061009965DE /* ChangeLog.txt in Resources */,
@@ -868,6 +867,7 @@
 				F6C7C1F216AF9061009965DE /* README in Resources */,
 				F6C7C20116AF9061009965DE /* Smaato CPD Tracking v1.4.1.pdf in Resources */,
 				F6FA7BA516AFBE2100AD8974 /* wizAnalytics.plist in Resources */,
+				F6FA7BB016AFC2CE00AD8974 /* www in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -888,19 +888,19 @@
 			shellPath = /bin/sh;
 			shellScript = "touch -cm ${PROJECT_DIR}/www";
 		};
-		F6FA7B9A16AFBA5500AD8974 /* Copy plugin to www folder */ = {
+		F6FA7B9A16AFBA5500AD8974 /* Copy content to www folder */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy plugin to www folder";
+			name = "Copy content to www folder";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "mkdir -p $PROJECT_DIR/../www/phonegap\ncp -r $PROJECT_DIR/../../www/phonegap $PROJECT_DIR/../www";
+			shellScript = "cp -r $PROJECT_DIR/../www $PROJECT_DIR\ncp -r $PROJECT_DIR/../../www/phonegap $PROJECT_DIR/www";
 		};
 /* End PBXShellScriptBuildPhase section */
 
