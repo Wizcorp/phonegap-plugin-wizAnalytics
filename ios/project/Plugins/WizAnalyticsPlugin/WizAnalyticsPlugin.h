@@ -7,12 +7,7 @@
  *
  */
 
-#ifdef CORDOVA_FRAMEWORK
 #import <Cordova/CDVPlugin.h>
-#else
-#import "CDVPlugin.h"
-#endif
-
 
 @interface WizAnalyticsPlugin : CDVPlugin <UIWebViewDelegate> {
 }
@@ -20,8 +15,8 @@
 /* 
  *  Plugin methods
  */
-- (void)logEvent:(NSArray*)arguments withDict:(NSDictionary*)options;
-- (void)logScreen:(NSArray*)arguments withDict:(NSDictionary*)options;
-- (void)handleOpenURL:(NSArray*)arguments withDict:(NSDictionary*)options;
+- (void)logEvent:(CDVInvokedUrlCommand*)command;
+- (void)logScreen:(CDVInvokedUrlCommand*)command;
+- (void)handleOpenURL:(CDVInvokedUrlCommand*)command;
 
 @end

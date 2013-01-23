@@ -1,4 +1,6 @@
 .DS_Store
-example/www/phonegap/*
 example/ios/exampleWizAnalytics.xcodeproj/xcuserdata/*
 example/ios/exampleWizAnalytics.xcodeproj/project.xcworkspace/*
+example/ios/CordovaLib/CordovaLib.xcodeproj/xcuserdata/*
+example/ios/www/phonegap/*
+example/ios/www/index.html
