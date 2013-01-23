@@ -84,6 +84,7 @@
 		F6C7C21116AF9393009965DE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF5C4109A6A2B0062928A /* SystemConfiguration.framework */; };
 		F6C7C21316AF93EB009965DE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7C21216AF93EB009965DE /* MessageUI.framework */; };
 		F6C7C21516AF9412009965DE /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7C21416AF9412009965DE /* StoreKit.framework */; };
+		F6FA7BA516AFBE2100AD8974 /* wizAnalytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6FA7BA416AFBE2100AD8974 /* wizAnalytics.plist */; };
 		F840E1F1165FE0F500CFE078 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840E1F0165FE0F500CFE078 /* config.xml */; };
 /* End PBXBuildFile section */
 
@@ -238,6 +239,7 @@
 		F6C7C20F16AF9361009965DE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		F6C7C21216AF93EB009965DE /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		F6C7C21416AF9412009965DE /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		F6FA7BA416AFBE2100AD8974 /* wizAnalytics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = wizAnalytics.plist; path = exampleWizAnalytics/wizAnalytics.plist; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = exampleWizAnalytics/config.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -321,15 +323,16 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				F6C7C16516AF8E3A009965DE /* www */,
+				080E96DDFE201D6D7F000001 /* Classes */,
 				F840E1F0165FE0F500CFE078 /* config.xml */,
 				301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */,
-				080E96DDFE201D6D7F000001 /* Classes */,
-				307C750510C5A3420062BCA9 /* Plugins */,
-				29B97315FDCFA39411CA2CEA /* Other Sources */,
-				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				307C750510C5A3420062BCA9 /* Plugins */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				F6FA7BA416AFBE2100AD8974 /* wizAnalytics.plist */,
+				F6C7C16516AF8E3A009965DE /* www */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -864,6 +867,7 @@
 				F6C7C1F016AF9061009965DE /* LICENSE.txt in Resources */,
 				F6C7C1F216AF9061009965DE /* README in Resources */,
 				F6C7C20116AF9061009965DE /* Smaato CPD Tracking v1.4.1.pdf in Resources */,
+				F6FA7BA516AFBE2100AD8974 /* wizAnalytics.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
