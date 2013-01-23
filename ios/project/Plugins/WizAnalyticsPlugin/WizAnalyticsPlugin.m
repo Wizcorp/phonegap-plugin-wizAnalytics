@@ -10,35 +10,31 @@
 #import "WizAnalyticsPlugin.h"
 #import "WizAnalytics.h"
 
-#ifdef CORDOVA_FRAMEWORK
 #import <Cordova/CDVPlugin.h>
-#else
-#import "CDVPlugin.h"
-#endif
-
-
 
 @implementation WizAnalyticsPlugin
 
-- (void)logEvent:(NSArray*)arguments withDict:(NSDictionary*)options
+- (void)logEvent:(CDVInvokedUrlCommand*)command
 {
-    NSString *eventName = [arguments objectAtIndex:1];
+    NSString *eventName = [command.arguments objectAtIndex:0];
+    NSDictionary *options = [command.arguments objectAtIndex:1];
     
     WizAnalytics* sharedSingleton = [WizAnalytics sharedInstance];
     [sharedSingleton analyticsEvent:eventName withExtraMetadata:options];
 }
 
-- (void)logScreen:(NSArray*)arguments withDict:(NSDictionary*)options
+- (void)logScreen:(CDVInvokedUrlCommand*)command
 {
-    NSString *eventName = [arguments objectAtIndex:1];
+    NSString *eventName = [command.arguments objectAtIndex:0];
+    NSDictionary *options = [command.arguments objectAtIndex:1];
     
     WizAnalytics* sharedSingleton = [WizAnalytics sharedInstance];
     [sharedSingleton analyticsScreenEvent:eventName withExtraMetadata:options];
 }
 
-- (void)handleOpenURL:(NSArray*)arguments withDict:(NSDictionary*)options
+- (void)handleOpenURL:(CDVInvokedUrlCommand*)command
 {
-    NSString *urlString = [arguments objectAtIndex:1];
+    NSString *urlString = [command.arguments objectAtIndex:0];
     NSURL *url = [NSURL URLWithString:urlString];
 
     WizAnalytics* sharedSingleton = [WizAnalytics sharedInstance];

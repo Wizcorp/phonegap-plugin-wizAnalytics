@@ -1,5 +1,5 @@
 # PLUGIN: 
-For Cordova v1.9
+For Cordova v2.3
 phonegap-plugin-wizAnalytics
 
 
@@ -35,7 +35,9 @@ See below for detailed instructions and check out exampleWizAnalytics/www/index.
 	- AdSupport.framework - Set this framework to Optional to support device versions earlier than iOS 6.
 	- CoreTelephony.framework
 	- CoreData.framework
+	- MessageUI.framework
 	- Security.framework
+	- StoreKit.framework
 	- SystemConfiguration.framework
 	- libsqlite3.dylib
 	- libz.dylib
