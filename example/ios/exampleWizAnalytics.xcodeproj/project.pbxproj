@@ -40,6 +40,8 @@
 		F6056C0016379261006A47C6 /* WizAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = F6056BD516379261006A47C6 /* WizAnalytics.m */; };
 		F6056C0116379261006A47C6 /* WizAnalyticsPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = F6056BD716379261006A47C6 /* WizAnalyticsPlugin.m */; };
 		F6056C0416379F92006A47C6 /* www in Resources */ = {isa = PBXBuildFile; fileRef = F6056C0316379F92006A47C6 /* www */; };
+		F66CCA3616E4851100BF6FC0 /* ModuleApsalar.m in Sources */ = {isa = PBXBuildFile; fileRef = F66CCA3516E4851100BF6FC0 /* ModuleApsalar.m */; };
+		F66CCA3D16E4922000BF6FC0 /* libApsalar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F66CCA3B16E4922000BF6FC0 /* libApsalar.a */; };
 		F69905671653A81A009EFCFB /* wizAnalytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = F69905661653A81A009EFCFB /* wizAnalytics.plist */; };
 		F6A476D3167AFEC200380189 /* libMMAdvertiser_4.6.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6A476D2167AFEC200380189 /* libMMAdvertiser_4.6.1.a */; };
 		F6D6DD461671C1A00031C1EA /* Cordova.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D6DD451671C1A00031C1EA /* Cordova.framework */; };
@@ -159,6 +161,10 @@
 		F6056BD816379261006A47C6 /* WizAnalyticsVendorModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WizAnalyticsVendorModule.h; sourceTree = "<group>"; };
 		F6056BD916379261006A47C6 /* WizDebugLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WizDebugLog.h; sourceTree = "<group>"; };
 		F6056C0316379F92006A47C6 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../www; sourceTree = "<group>"; };
+		F66CCA3416E4851100BF6FC0 /* ModuleApsalar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleApsalar.h; sourceTree = "<group>"; };
+		F66CCA3516E4851100BF6FC0 /* ModuleApsalar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleApsalar.m; sourceTree = "<group>"; };
+		F66CCA3916E4922000BF6FC0 /* Apsalar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Apsalar.h; sourceTree = "<group>"; };
+		F66CCA3B16E4922000BF6FC0 /* libApsalar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libApsalar.a; sourceTree = "<group>"; };
 		F69905661653A81A009EFCFB /* wizAnalytics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = wizAnalytics.plist; sourceTree = "<group>"; };
 		F6A476CF167AFEB200380189 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		F6A476D2167AFEC200380189 /* libMMAdvertiser_4.6.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMMAdvertiser_4.6.1.a; sourceTree = "<group>"; };
@@ -239,6 +245,7 @@
 				F6056BE416379261006A47C6 /* libInMobiCommons-3.6.1.a in Frameworks */,
 				F6056BE616379261006A47C6 /* Kontagent.framework in Frameworks */,
 				F6A476D3167AFEC200380189 /* libMMAdvertiser_4.6.1.a in Frameworks */,
+				F66CCA3D16E4922000BF6FC0 /* libApsalar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +277,7 @@
 		F6056B6916379261006A47C6 /* vendor */ = {
 			isa = PBXGroup;
 			children = (
+				F66CCA3816E4921F00BF6FC0 /* Apsalar */,
 				F6056B6A16379261006A47C6 /* Chartboost */,
 				F6056B7A16379261006A47C6 /* GoogleAdMobAdsSDK */,
 				F6056B8D16379261006A47C6 /* InMobiAdTracker_iOS_SDK_i251 */,
@@ -282,6 +290,8 @@
 				F6056BB416379261006A47C6 /* ModuleAdfonic.m */,
 				F6056BB516379261006A47C6 /* ModuleAdmob.h */,
 				F6056BB616379261006A47C6 /* ModuleAdmob.m */,
+				F66CCA3416E4851100BF6FC0 /* ModuleApsalar.h */,
+				F66CCA3516E4851100BF6FC0 /* ModuleApsalar.m */,
 				F6056BB716379261006A47C6 /* ModuleChartboost.h */,
 				F6056BB816379261006A47C6 /* ModuleChartboost.m */,
 				F6056BBB16379261006A47C6 /* ModuleInMobi.h */,
@@ -512,6 +522,15 @@
 				F6056BD316379261006A47C6 /* SOMADownloadTrack.m */,
 			);
 			path = smaato_SDK;
+			sourceTree = "<group>";
+		};
+		F66CCA3816E4921F00BF6FC0 /* Apsalar */ = {
+			isa = PBXGroup;
+			children = (
+				F66CCA3916E4922000BF6FC0 /* Apsalar.h */,
+				F66CCA3B16E4922000BF6FC0 /* libApsalar.a */,
+			);
+			path = Apsalar;
 			sourceTree = "<group>";
 		};
 		F6D8073616313728005EF20E = {
@@ -800,6 +819,7 @@
 				F6056BFF16379261006A47C6 /* SOMADownloadTrack.m in Sources */,
 				F6056C0016379261006A47C6 /* WizAnalytics.m in Sources */,
 				F6056C0116379261006A47C6 /* WizAnalyticsPlugin.m in Sources */,
+				F66CCA3616E4851100BF6FC0 /* ModuleApsalar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -937,6 +957,7 @@
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/GoogleAdMobAdsSDK\"",
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/InMobiAdTracker_iOS_SDK_i251/Libs\"",
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/MilleniumMedia_AppleSDK/MMAdvertiser\"",
+					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/Apsalar\"",
 				);
 				OTHER_LDFLAGS = (
 					"-weak_framework",
@@ -976,6 +997,7 @@
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/GoogleAdMobAdsSDK\"",
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/InMobiAdTracker_iOS_SDK_i251/Libs\"",
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/MilleniumMedia_AppleSDK/MMAdvertiser\"",
+					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/Apsalar\"",
 				);
 				OTHER_LDFLAGS = (
 					"-weak_framework",
