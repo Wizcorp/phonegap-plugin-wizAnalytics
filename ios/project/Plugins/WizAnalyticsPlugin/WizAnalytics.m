@@ -39,8 +39,16 @@ static WizAnalytics *sharedInstance = nil;
 
 + (void)load
 {
+    // Setup our own autorelease pool as there are auto-released allocations
+    // that occur before the main autorelease pool gets setup.  Not doing this
+    // results in memory leak warnings in iOS 5.1 (but not iOS 6.0).
+    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+
     // Create the singleton and start session when this class is added to the run-time.
     [[WizAnalytics sharedInstance] startAnalyticsSession];
+    
+    // Release the pool now that we're done.
+    [pool release];
 }
 
 #pragma - Instance Methods
