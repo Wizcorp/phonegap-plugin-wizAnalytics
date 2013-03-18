@@ -9,6 +9,7 @@ Cordova plugin for accessing the native ad and event logging SDKs.
 (iOS only, Droid users please be patient...)
 
 Currently supports;
+- Apsalar 5.0.0U
 - Adfonic
 - Admob 6.2.1
 - ChartBoost v3.0.7
@@ -51,6 +52,7 @@ See below for detailed instructions and check out exampleWizAnalytics/www/index.
   file included in your application bundle.
 
   Valid key names are the following:
+	- "ApsalarKey"
 	- "AdfonicKey"
 	- "AdmobKey"
 	- "ChartboostKey"
