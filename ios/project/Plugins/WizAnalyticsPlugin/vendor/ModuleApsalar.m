@@ -59,11 +59,11 @@
 - (void)logEvent:(NSString *)eventName withExtraMetadata:(NSDictionary *)extraMetadata
 {
     if (extraMetadata != nil) {
-        [Apsalar event:eventName];
-        WizLog(@"[Apsalar] ******* [event] %@:", eventName);
-	} else {
         [Apsalar event:eventName withArgs:extraMetadata];
         WizLog(@"[Apsalar] ******* [event] %@: %@:", eventName, extraMetadata);
+	} else {
+        [Apsalar event:eventName];
+        WizLog(@"[Apsalar] ******* [event] %@:", eventName);
     }
 }
 
