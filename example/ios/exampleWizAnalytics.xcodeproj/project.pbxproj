@@ -40,6 +40,9 @@
 		30A0434914DC770100060A13 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30A0434614DC770100060A13 /* Localizable.strings */; };
 		30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E5649113A7FCAF007403D8 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
+		F66522DA17263BA700FFB8F1 /* ModuleGoogle.m in Sources */ = {isa = PBXBuildFile; fileRef = F66522D917263BA600FFB8F1 /* ModuleGoogle.m */; };
+		F66522E61726405200FFB8F1 /* libGoogleAnalytics_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F66522E31726405200FFB8F1 /* libGoogleAnalytics_debug.a */; };
+		F66522E71726405200FFB8F1 /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = F66522E41726405200FFB8F1 /* Readme.txt */; };
 		F678BA0316F6F76600B24B91 /* ModuleApsalar.m in Sources */ = {isa = PBXBuildFile; fileRef = F678BA0216F6F76600B24B91 /* ModuleApsalar.m */; };
 		F678BA0816F6F80200B24B91 /* libApsalar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F678BA0616F6F77000B24B91 /* libApsalar.a */; };
 		F6C7C1E216AF9061009965DE /* libChartboost.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7C17516AF9060009965DE /* libChartboost.a */; };
@@ -147,6 +150,16 @@
 		32CA4F630368D1EE00C91783 /* exampleWizAnalytics-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "exampleWizAnalytics-Prefix.pch"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* exampleWizAnalytics-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "exampleWizAnalytics-Info.plist"; path = "../exampleWizAnalytics-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
+		F66522D817263BA600FFB8F1 /* ModuleGoogle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleGoogle.h; sourceTree = "<group>"; };
+		F66522D917263BA600FFB8F1 /* ModuleGoogle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleGoogle.m; sourceTree = "<group>"; };
+		F66522DD1726405200FFB8F1 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		F66522DE1726405200FFB8F1 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		F66522DF1726405200FFB8F1 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		F66522E01726405200FFB8F1 /* GAITransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITransaction.h; sourceTree = "<group>"; };
+		F66522E11726405200FFB8F1 /* GAITransactionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITransactionItem.h; sourceTree = "<group>"; };
+		F66522E21726405200FFB8F1 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
+		F66522E31726405200FFB8F1 /* libGoogleAnalytics_debug.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics_debug.a; sourceTree = "<group>"; };
+		F66522E41726405200FFB8F1 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
 		F678BA0116F6F76600B24B91 /* ModuleApsalar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleApsalar.h; sourceTree = "<group>"; };
 		F678BA0216F6F76600B24B91 /* ModuleApsalar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleApsalar.m; sourceTree = "<group>"; };
 		F678BA0516F6F77000B24B91 /* Apsalar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Apsalar.h; sourceTree = "<group>"; };
@@ -284,6 +297,7 @@
 				F6C7C1EA16AF9061009965DE /* Kontagent.framework in Frameworks */,
 				F6C7C1F116AF9061009965DE /* libMMAdvertiser_4.6.1.a in Frameworks */,
 				F678BA0816F6F80200B24B91 /* libApsalar.a in Frameworks */,
+				F66522E61726405200FFB8F1 /* libGoogleAnalytics_debug.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +470,29 @@
 			path = se.lproj;
 			sourceTree = "<group>";
 		};
+		F66522DB1726405200FFB8F1 /* GoogleAnalyticsiOS_2.0beta4 */ = {
+			isa = PBXGroup;
+			children = (
+				F66522DC1726405200FFB8F1 /* Library */,
+				F66522E41726405200FFB8F1 /* Readme.txt */,
+			);
+			path = GoogleAnalyticsiOS_2.0beta4;
+			sourceTree = "<group>";
+		};
+		F66522DC1726405200FFB8F1 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				F66522DD1726405200FFB8F1 /* GAI.h */,
+				F66522DE1726405200FFB8F1 /* GAITrackedViewController.h */,
+				F66522DF1726405200FFB8F1 /* GAITracker.h */,
+				F66522E01726405200FFB8F1 /* GAITransaction.h */,
+				F66522E11726405200FFB8F1 /* GAITransactionItem.h */,
+				F66522E21726405200FFB8F1 /* libGoogleAnalytics.a */,
+				F66522E31726405200FFB8F1 /* libGoogleAnalytics_debug.a */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 		F678BA0416F6F77000B24B91 /* Apsalar */ = {
 			isa = PBXGroup;
 			children = (
@@ -487,6 +524,7 @@
 				F6C7C17216AF9060009965DE /* Chartboost */,
 				F6C7C17716AF9060009965DE /* Flurry iPhone SDK v3.0.9 */,
 				F6C7C17A16AF9060009965DE /* GoogleAdMobAdsSDK */,
+				F66522DB1726405200FFB8F1 /* GoogleAnalyticsiOS_2.0beta4 */,
 				F6C7C19716AF9060009965DE /* InMobiAdTracker_iOS_SDK_i251 */,
 				F6C7C1A416AF9060009965DE /* InMobiAdTracker_iOS_SDK_v1.0.1 */,
 				F6C7C1A716AF9060009965DE /* JumpTapAppReport */,
@@ -501,6 +539,8 @@
 				F678BA0216F6F76600B24B91 /* ModuleApsalar.m */,
 				F6C7C1C116AF9061009965DE /* ModuleChartboost.h */,
 				F6C7C1C216AF9061009965DE /* ModuleChartboost.m */,
+				F66522D817263BA600FFB8F1 /* ModuleGoogle.h */,
+				F66522D917263BA600FFB8F1 /* ModuleGoogle.m */,
 				F6C7C1C316AF9061009965DE /* ModuleInMobi.h */,
 				F6C7C1C416AF9061009965DE /* ModuleInMobi.m */,
 				F6C7C1C516AF9061009965DE /* ModuleJumpTap.h */,
@@ -887,6 +927,7 @@
 				F6C7C20116AF9061009965DE /* Smaato CPD Tracking v1.4.1.pdf in Resources */,
 				F6FA7BA516AFBE2100AD8974 /* wizAnalytics.plist in Resources */,
 				F6FA7BB016AFC2CE00AD8974 /* www in Resources */,
+				F66522E71726405200FFB8F1 /* Readme.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -952,6 +993,7 @@
 				F6C7C20316AF9061009965DE /* WizAnalytics.m in Sources */,
 				F6C7C20416AF9061009965DE /* WizAnalyticsPlugin.m in Sources */,
 				F678BA0316F6F76600B24B91 /* ModuleApsalar.m in Sources */,
+				F66522DA17263BA700FFB8F1 /* ModuleGoogle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1027,6 +1069,7 @@
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/InMobiAdTracker_iOS_SDK_i251/Libs\"",
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/MilleniumMedia_AppleSDK/MMAdvertiser\"",
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/Apsalar\"",
+					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/GoogleAnalyticsiOS_2.0beta4/Library\"",
 				);
 				PRODUCT_NAME = exampleWizAnalytics;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1057,6 +1100,7 @@
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/InMobiAdTracker_iOS_SDK_i251/Libs\"",
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/MilleniumMedia_AppleSDK/MMAdvertiser\"",
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/Apsalar\"",
+					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/GoogleAnalyticsiOS_2.0beta4/Library\"",
 				);
 				PRODUCT_NAME = exampleWizAnalytics;
 				TARGETED_DEVICE_FAMILY = "1,2";

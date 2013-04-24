@@ -13,6 +13,7 @@ Currently supports;
 - Adfonic
 - Admob 6.2.1
 - ChartBoost v3.0.7
+- Google Analytics 2.0 beta4
 - InMobi i251 (Build 2.5.1)
 - JumpTapAppReport
 - LeadBolt
@@ -56,6 +57,7 @@ See below for detailed instructions and check out exampleWizAnalytics/www/index.
 	- "AdfonicKey"
 	- "AdmobKey"
 	- "ChartboostKey"
+	- "GoogleKey"
 	- "InMobiKey"
 	- "JumpTapKey"
 	- "KontagentKey"
