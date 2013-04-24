@@ -12,5 +12,7 @@
 	<string>PutYourChartboostKeyHere</string>
 	<key>LocalyticsKey</key>
 	<string>PutYourLocalyticsKeyHere</string>
+	<key>GoogleKey</key>
+	<string>PutYourGoogleAnalyticsKeyHere</string>
 </dict>
 </plist>
