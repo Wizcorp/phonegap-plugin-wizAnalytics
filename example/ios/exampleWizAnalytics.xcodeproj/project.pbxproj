@@ -43,31 +43,26 @@
 		F66522DA17263BA700FFB8F1 /* ModuleGoogle.m in Sources */ = {isa = PBXBuildFile; fileRef = F66522D917263BA600FFB8F1 /* ModuleGoogle.m */; };
 		F66522E61726405200FFB8F1 /* libGoogleAnalytics_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F66522E31726405200FFB8F1 /* libGoogleAnalytics_debug.a */; };
 		F66522E71726405200FFB8F1 /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = F66522E41726405200FFB8F1 /* Readme.txt */; };
+		F6740D2A172930F500C2C1E5 /* libLocalyticsAMP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6740D26172930F400C2C1E5 /* libLocalyticsAMP.a */; };
+		F6740D2B172930F500C2C1E5 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F6740D27172930F500C2C1E5 /* LICENSE */; };
+		F6740D3B172A2E6700C2C1E5 /* libChartboost.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6740D39172A2E6700C2C1E5 /* libChartboost.a */; };
+		F6740D3C172A2E6700C2C1E5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F6740D3A172A2E6700C2C1E5 /* README.md */; };
+		F6740D46172A5CE800C2C1E5 /* Changelog in Resources */ = {isa = PBXBuildFile; fileRef = F6740D3D172A5CE800C2C1E5 /* Changelog */; };
+		F6740D47172A5CE800C2C1E5 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6740D3E172A5CE800C2C1E5 /* LICENSE.txt */; };
+		F6740D48172A5CE800C2C1E5 /* libMMSDK_5.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6740D40172A5CE800C2C1E5 /* libMMSDK_5.0.0.a */; };
 		F678BA0316F6F76600B24B91 /* ModuleApsalar.m in Sources */ = {isa = PBXBuildFile; fileRef = F678BA0216F6F76600B24B91 /* ModuleApsalar.m */; };
 		F678BA0816F6F80200B24B91 /* libApsalar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F678BA0616F6F77000B24B91 /* libApsalar.a */; };
-		F6C7C1E216AF9061009965DE /* libChartboost.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7C17516AF9060009965DE /* libChartboost.a */; };
-		F6C7C1E316AF9061009965DE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F6C7C17616AF9060009965DE /* README.md */; };
 		F6C7C1E416AF9061009965DE /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7C19516AF9060009965DE /* libGoogleAdMobAds.a */; };
 		F6C7C1E516AF9061009965DE /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6C7C19616AF9060009965DE /* README.txt */; };
 		F6C7C1E616AF9061009965DE /* ChangeLog.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6C7C19816AF9060009965DE /* ChangeLog.txt */; };
 		F6C7C1E716AF9061009965DE /* libInMobiAdTracker-2.5.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7C1A016AF9060009965DE /* libInMobiAdTracker-2.5.1.a */; };
 		F6C7C1E816AF9061009965DE /* libInMobiCommons-3.6.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7C1A116AF9060009965DE /* libInMobiCommons-3.6.1.a */; };
 		F6C7C1E916AF9061009965DE /* JumpTapAppReport.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C7C1A916AF9060009965DE /* JumpTapAppReport.m */; };
-		F6C7C1EA16AF9061009965DE /* Kontagent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7C1AB16AF9060009965DE /* Kontagent.framework */; };
-		F6C7C1EB16AF9061009965DE /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F6C7C1AD16AF9061009965DE /* LICENSE */; };
-		F6C7C1EC16AF9061009965DE /* LocalyticsDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C7C1B016AF9061009965DE /* LocalyticsDatabase.m */; };
-		F6C7C1ED16AF9061009965DE /* LocalyticsSession.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C7C1B216AF9061009965DE /* LocalyticsSession.m */; };
-		F6C7C1EE16AF9061009965DE /* LocalyticsUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C7C1B416AF9061009965DE /* LocalyticsUploader.m */; };
-		F6C7C1EF16AF9061009965DE /* Changelog in Resources */ = {isa = PBXBuildFile; fileRef = F6C7C1B716AF9061009965DE /* Changelog */; };
-		F6C7C1F016AF9061009965DE /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6C7C1B816AF9061009965DE /* LICENSE.txt */; };
-		F6C7C1F116AF9061009965DE /* libMMAdvertiser_4.6.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7C1BA16AF9061009965DE /* libMMAdvertiser_4.6.1.a */; };
-		F6C7C1F216AF9061009965DE /* README in Resources */ = {isa = PBXBuildFile; fileRef = F6C7C1BC16AF9061009965DE /* README */; };
 		F6C7C1F316AF9061009965DE /* ModuleAdfonic.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C7C1BE16AF9061009965DE /* ModuleAdfonic.m */; };
 		F6C7C1F416AF9061009965DE /* ModuleAdmob.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C7C1C016AF9061009965DE /* ModuleAdmob.m */; };
 		F6C7C1F516AF9061009965DE /* ModuleChartboost.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C7C1C216AF9061009965DE /* ModuleChartboost.m */; };
 		F6C7C1F616AF9061009965DE /* ModuleInMobi.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C7C1C416AF9061009965DE /* ModuleInMobi.m */; };
 		F6C7C1F716AF9061009965DE /* ModuleJumpTap.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C7C1C616AF9061009965DE /* ModuleJumpTap.m */; };
-		F6C7C1F816AF9061009965DE /* ModuleKontagent.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C7C1C816AF9061009965DE /* ModuleKontagent.m */; };
 		F6C7C1F916AF9061009965DE /* ModuleLeadbolt.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C7C1CA16AF9061009965DE /* ModuleLeadbolt.m */; };
 		F6C7C1FA16AF9061009965DE /* ModuleLocalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C7C1CC16AF9061009965DE /* ModuleLocalytics.m */; };
 		F6C7C1FB16AF9061009965DE /* ModuleMdotM.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C7C1CE16AF9061009965DE /* ModuleMdotM.m */; };
@@ -81,7 +76,7 @@
 		F6C7C20416AF9061009965DE /* WizAnalyticsPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C7C1DF16AF9061009965DE /* WizAnalyticsPlugin.m */; };
 		F6C7C20616AF92E7009965DE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7C20516AF92E7009965DE /* CoreData.framework */; };
 		F6C7C20816AF92F7009965DE /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7C20716AF92F6009965DE /* CoreTelephony.framework */; };
-		F6C7C20A16AF930C009965DE /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7C20916AF930C009965DE /* AdSupport.framework */; };
+		F6C7C20A16AF930C009965DE /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7C20916AF930C009965DE /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F6C7C20C16AF9323009965DE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7C20B16AF9323009965DE /* Security.framework */; };
 		F6C7C20E16AF9350009965DE /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7C20D16AF9350009965DE /* libsqlite3.dylib */; };
 		F6C7C21016AF9361009965DE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7C20F16AF9361009965DE /* libz.dylib */; };
@@ -160,14 +155,25 @@
 		F66522E21726405200FFB8F1 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
 		F66522E31726405200FFB8F1 /* libGoogleAnalytics_debug.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics_debug.a; sourceTree = "<group>"; };
 		F66522E41726405200FFB8F1 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		F6740D26172930F400C2C1E5 /* libLocalyticsAMP.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libLocalyticsAMP.a; sourceTree = "<group>"; };
+		F6740D27172930F500C2C1E5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F6740D28172930F500C2C1E5 /* LocalyticsAmpSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalyticsAmpSession.h; sourceTree = "<group>"; };
+		F6740D29172930F500C2C1E5 /* LocalyticsSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalyticsSession.h; sourceTree = "<group>"; };
+		F6740D38172A2E6700C2C1E5 /* Chartboost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chartboost.h; sourceTree = "<group>"; };
+		F6740D39172A2E6700C2C1E5 /* libChartboost.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libChartboost.a; sourceTree = "<group>"; };
+		F6740D3A172A2E6700C2C1E5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		F6740D3D172A5CE800C2C1E5 /* Changelog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Changelog; sourceTree = "<group>"; };
+		F6740D3E172A5CE800C2C1E5 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		F6740D40172A5CE800C2C1E5 /* libMMSDK_5.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMMSDK_5.0.0.a; sourceTree = "<group>"; };
+		F6740D41172A5CE800C2C1E5 /* MMAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMAdView.h; sourceTree = "<group>"; };
+		F6740D42172A5CE800C2C1E5 /* MMInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMInterstitial.h; sourceTree = "<group>"; };
+		F6740D43172A5CE800C2C1E5 /* MMRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMRequest.h; sourceTree = "<group>"; };
+		F6740D44172A5CE800C2C1E5 /* MMSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSDK.h; sourceTree = "<group>"; };
+		F6740D45172A5CE800C2C1E5 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		F678BA0116F6F76600B24B91 /* ModuleApsalar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleApsalar.h; sourceTree = "<group>"; };
 		F678BA0216F6F76600B24B91 /* ModuleApsalar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleApsalar.m; sourceTree = "<group>"; };
 		F678BA0516F6F77000B24B91 /* Apsalar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Apsalar.h; sourceTree = "<group>"; };
 		F678BA0616F6F77000B24B91 /* libApsalar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libApsalar.a; sourceTree = "<group>"; };
-		F6C7C17316AF9060009965DE /* CBAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAnalytics.h; sourceTree = "<group>"; };
-		F6C7C17416AF9060009965DE /* Chartboost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chartboost.h; sourceTree = "<group>"; };
-		F6C7C17516AF9060009965DE /* libChartboost.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libChartboost.a; sourceTree = "<group>"; };
-		F6C7C17616AF9060009965DE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		F6C7C17D16AF9060009965DE /* DFPBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPBannerView.h; sourceTree = "<group>"; };
 		F6C7C17E16AF9060009965DE /* DFPExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPExtras.h; sourceTree = "<group>"; };
 		F6C7C17F16AF9060009965DE /* DFPInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPInterstitial.h; sourceTree = "<group>"; };
@@ -199,20 +205,6 @@
 		F6C7C1A116AF9060009965DE /* libInMobiCommons-3.6.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libInMobiCommons-3.6.1.a"; sourceTree = "<group>"; };
 		F6C7C1A816AF9060009965DE /* JumpTapAppReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumpTapAppReport.h; sourceTree = "<group>"; };
 		F6C7C1A916AF9060009965DE /* JumpTapAppReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpTapAppReport.m; sourceTree = "<group>"; };
-		F6C7C1AB16AF9060009965DE /* Kontagent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kontagent.framework; sourceTree = "<group>"; };
-		F6C7C1AD16AF9061009965DE /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		F6C7C1AF16AF9061009965DE /* LocalyticsDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalyticsDatabase.h; sourceTree = "<group>"; };
-		F6C7C1B016AF9061009965DE /* LocalyticsDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalyticsDatabase.m; sourceTree = "<group>"; };
-		F6C7C1B116AF9061009965DE /* LocalyticsSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalyticsSession.h; sourceTree = "<group>"; };
-		F6C7C1B216AF9061009965DE /* LocalyticsSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalyticsSession.m; sourceTree = "<group>"; };
-		F6C7C1B316AF9061009965DE /* LocalyticsUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalyticsUploader.h; sourceTree = "<group>"; };
-		F6C7C1B416AF9061009965DE /* LocalyticsUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalyticsUploader.m; sourceTree = "<group>"; };
-		F6C7C1B516AF9061009965DE /* WebserviceConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebserviceConstants.h; sourceTree = "<group>"; };
-		F6C7C1B716AF9061009965DE /* Changelog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Changelog; sourceTree = "<group>"; };
-		F6C7C1B816AF9061009965DE /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
-		F6C7C1BA16AF9061009965DE /* libMMAdvertiser_4.6.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMMAdvertiser_4.6.1.a; sourceTree = "<group>"; };
-		F6C7C1BB16AF9061009965DE /* MMAdvertiser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMAdvertiser.h; sourceTree = "<group>"; };
-		F6C7C1BC16AF9061009965DE /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		F6C7C1BD16AF9061009965DE /* ModuleAdfonic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleAdfonic.h; sourceTree = "<group>"; };
 		F6C7C1BE16AF9061009965DE /* ModuleAdfonic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleAdfonic.m; sourceTree = "<group>"; };
 		F6C7C1BF16AF9061009965DE /* ModuleAdmob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleAdmob.h; sourceTree = "<group>"; };
@@ -223,8 +215,6 @@
 		F6C7C1C416AF9061009965DE /* ModuleInMobi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleInMobi.m; sourceTree = "<group>"; };
 		F6C7C1C516AF9061009965DE /* ModuleJumpTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleJumpTap.h; sourceTree = "<group>"; };
 		F6C7C1C616AF9061009965DE /* ModuleJumpTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleJumpTap.m; sourceTree = "<group>"; };
-		F6C7C1C716AF9061009965DE /* ModuleKontagent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleKontagent.h; sourceTree = "<group>"; };
-		F6C7C1C816AF9061009965DE /* ModuleKontagent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleKontagent.m; sourceTree = "<group>"; };
 		F6C7C1C916AF9061009965DE /* ModuleLeadbolt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleLeadbolt.h; sourceTree = "<group>"; };
 		F6C7C1CA16AF9061009965DE /* ModuleLeadbolt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleLeadbolt.m; sourceTree = "<group>"; };
 		F6C7C1CB16AF9061009965DE /* ModuleLocalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleLocalytics.h; sourceTree = "<group>"; };
@@ -290,14 +280,14 @@
 				301BF5C3109A6A2B0062928A /* QuartzCore.framework in Frameworks */,
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
 				30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */,
-				F6C7C1E216AF9061009965DE /* libChartboost.a in Frameworks */,
 				F6C7C1E416AF9061009965DE /* libGoogleAdMobAds.a in Frameworks */,
 				F6C7C1E716AF9061009965DE /* libInMobiAdTracker-2.5.1.a in Frameworks */,
 				F6C7C1E816AF9061009965DE /* libInMobiCommons-3.6.1.a in Frameworks */,
-				F6C7C1EA16AF9061009965DE /* Kontagent.framework in Frameworks */,
-				F6C7C1F116AF9061009965DE /* libMMAdvertiser_4.6.1.a in Frameworks */,
 				F678BA0816F6F80200B24B91 /* libApsalar.a in Frameworks */,
 				F66522E61726405200FFB8F1 /* libGoogleAnalytics_debug.a in Frameworks */,
+				F6740D2A172930F500C2C1E5 /* libLocalyticsAMP.a in Frameworks */,
+				F6740D3B172A2E6700C2C1E5 /* libChartboost.a in Frameworks */,
+				F6740D48172A5CE800C2C1E5 /* libMMSDK_5.0.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +483,39 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
+		F6740D25172930F400C2C1E5 /* Localytics */ = {
+			isa = PBXGroup;
+			children = (
+				F6740D26172930F400C2C1E5 /* libLocalyticsAMP.a */,
+				F6740D27172930F500C2C1E5 /* LICENSE */,
+				F6740D28172930F500C2C1E5 /* LocalyticsAmpSession.h */,
+				F6740D29172930F500C2C1E5 /* LocalyticsSession.h */,
+			);
+			path = Localytics;
+			sourceTree = "<group>";
+		};
+		F6740D37172A2E6700C2C1E5 /* Chartboost */ = {
+			isa = PBXGroup;
+			children = (
+				F6740D38172A2E6700C2C1E5 /* Chartboost.h */,
+				F6740D39172A2E6700C2C1E5 /* libChartboost.a */,
+				F6740D3A172A2E6700C2C1E5 /* README.md */,
+			);
+			path = Chartboost;
+			sourceTree = "<group>";
+		};
+		F6740D3F172A5CE800C2C1E5 /* MMSDK */ = {
+			isa = PBXGroup;
+			children = (
+				F6740D40172A5CE800C2C1E5 /* libMMSDK_5.0.0.a */,
+				F6740D41172A5CE800C2C1E5 /* MMAdView.h */,
+				F6740D42172A5CE800C2C1E5 /* MMInterstitial.h */,
+				F6740D43172A5CE800C2C1E5 /* MMRequest.h */,
+				F6740D44172A5CE800C2C1E5 /* MMSDK.h */,
+			);
+			path = MMSDK;
+			sourceTree = "<group>";
+		};
 		F678BA0416F6F77000B24B91 /* Apsalar */ = {
 			isa = PBXGroup;
 			children = (
@@ -521,15 +544,14 @@
 			isa = PBXGroup;
 			children = (
 				F678BA0416F6F77000B24B91 /* Apsalar */,
-				F6C7C17216AF9060009965DE /* Chartboost */,
+				F6740D37172A2E6700C2C1E5 /* Chartboost */,
 				F6C7C17716AF9060009965DE /* Flurry iPhone SDK v3.0.9 */,
 				F6C7C17A16AF9060009965DE /* GoogleAdMobAdsSDK */,
 				F66522DB1726405200FFB8F1 /* GoogleAnalyticsiOS_2.0beta4 */,
 				F6C7C19716AF9060009965DE /* InMobiAdTracker_iOS_SDK_i251 */,
 				F6C7C1A416AF9060009965DE /* InMobiAdTracker_iOS_SDK_v1.0.1 */,
 				F6C7C1A716AF9060009965DE /* JumpTapAppReport */,
-				F6C7C1AA16AF9060009965DE /* Kontagent */,
-				F6C7C1AC16AF9060009965DE /* Localytics-iOS-client-2.6.source */,
+				F6740D25172930F400C2C1E5 /* Localytics */,
 				F6C7C1B616AF9061009965DE /* MilleniumMedia_AppleSDK */,
 				F6C7C1BD16AF9061009965DE /* ModuleAdfonic.h */,
 				F6C7C1BE16AF9061009965DE /* ModuleAdfonic.m */,
@@ -545,8 +567,6 @@
 				F6C7C1C416AF9061009965DE /* ModuleInMobi.m */,
 				F6C7C1C516AF9061009965DE /* ModuleJumpTap.h */,
 				F6C7C1C616AF9061009965DE /* ModuleJumpTap.m */,
-				F6C7C1C716AF9061009965DE /* ModuleKontagent.h */,
-				F6C7C1C816AF9061009965DE /* ModuleKontagent.m */,
 				F6C7C1C916AF9061009965DE /* ModuleLeadbolt.h */,
 				F6C7C1CA16AF9061009965DE /* ModuleLeadbolt.m */,
 				F6C7C1CB16AF9061009965DE /* ModuleLocalytics.h */,
@@ -560,17 +580,6 @@
 				F6C7C1D316AF9061009965DE /* smaato_SDK */,
 			);
 			path = vendor;
-			sourceTree = "<group>";
-		};
-		F6C7C17216AF9060009965DE /* Chartboost */ = {
-			isa = PBXGroup;
-			children = (
-				F6C7C17316AF9060009965DE /* CBAnalytics.h */,
-				F6C7C17416AF9060009965DE /* Chartboost.h */,
-				F6C7C17516AF9060009965DE /* libChartboost.a */,
-				F6C7C17616AF9060009965DE /* README.md */,
-			);
-			path = Chartboost;
 			sourceTree = "<group>";
 		};
 		F6C7C17716AF9060009965DE /* Flurry iPhone SDK v3.0.9 */ = {
@@ -759,55 +768,15 @@
 			path = JumpTapAppReport;
 			sourceTree = "<group>";
 		};
-		F6C7C1AA16AF9060009965DE /* Kontagent */ = {
-			isa = PBXGroup;
-			children = (
-				F6C7C1AB16AF9060009965DE /* Kontagent.framework */,
-			);
-			path = Kontagent;
-			sourceTree = "<group>";
-		};
-		F6C7C1AC16AF9060009965DE /* Localytics-iOS-client-2.6.source */ = {
-			isa = PBXGroup;
-			children = (
-				F6C7C1AD16AF9061009965DE /* LICENSE */,
-				F6C7C1AE16AF9061009965DE /* src */,
-			);
-			path = "Localytics-iOS-client-2.6.source";
-			sourceTree = "<group>";
-		};
-		F6C7C1AE16AF9061009965DE /* src */ = {
-			isa = PBXGroup;
-			children = (
-				F6C7C1AF16AF9061009965DE /* LocalyticsDatabase.h */,
-				F6C7C1B016AF9061009965DE /* LocalyticsDatabase.m */,
-				F6C7C1B116AF9061009965DE /* LocalyticsSession.h */,
-				F6C7C1B216AF9061009965DE /* LocalyticsSession.m */,
-				F6C7C1B316AF9061009965DE /* LocalyticsUploader.h */,
-				F6C7C1B416AF9061009965DE /* LocalyticsUploader.m */,
-				F6C7C1B516AF9061009965DE /* WebserviceConstants.h */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
 		F6C7C1B616AF9061009965DE /* MilleniumMedia_AppleSDK */ = {
 			isa = PBXGroup;
 			children = (
-				F6C7C1B716AF9061009965DE /* Changelog */,
-				F6C7C1B816AF9061009965DE /* LICENSE.txt */,
-				F6C7C1B916AF9061009965DE /* MMAdvertiser */,
-				F6C7C1BC16AF9061009965DE /* README */,
+				F6740D3D172A5CE800C2C1E5 /* Changelog */,
+				F6740D3E172A5CE800C2C1E5 /* LICENSE.txt */,
+				F6740D3F172A5CE800C2C1E5 /* MMSDK */,
+				F6740D45172A5CE800C2C1E5 /* README.txt */,
 			);
 			path = MilleniumMedia_AppleSDK;
-			sourceTree = "<group>";
-		};
-		F6C7C1B916AF9061009965DE /* MMAdvertiser */ = {
-			isa = PBXGroup;
-			children = (
-				F6C7C1BA16AF9061009965DE /* libMMAdvertiser_4.6.1.a */,
-				F6C7C1BB16AF9061009965DE /* MMAdvertiser.h */,
-			);
-			path = MMAdvertiser;
 			sourceTree = "<group>";
 		};
 		F6C7C1D316AF9061009965DE /* smaato_SDK */ = {
@@ -917,17 +886,16 @@
 				3088BBC1154F3926009F9C59 /* Default@2x~iphone.png in Resources */,
 				3088BBC2154F3926009F9C59 /* Default~iphone.png in Resources */,
 				D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */,
-				F6C7C1E316AF9061009965DE /* README.md in Resources */,
 				F6C7C1E516AF9061009965DE /* README.txt in Resources */,
 				F6C7C1E616AF9061009965DE /* ChangeLog.txt in Resources */,
-				F6C7C1EB16AF9061009965DE /* LICENSE in Resources */,
-				F6C7C1EF16AF9061009965DE /* Changelog in Resources */,
-				F6C7C1F016AF9061009965DE /* LICENSE.txt in Resources */,
-				F6C7C1F216AF9061009965DE /* README in Resources */,
 				F6C7C20116AF9061009965DE /* Smaato CPD Tracking v1.4.1.pdf in Resources */,
 				F6FA7BA516AFBE2100AD8974 /* wizAnalytics.plist in Resources */,
 				F6FA7BB016AFC2CE00AD8974 /* www in Resources */,
 				F66522E71726405200FFB8F1 /* Readme.txt in Resources */,
+				F6740D2B172930F500C2C1E5 /* LICENSE in Resources */,
+				F6740D3C172A2E6700C2C1E5 /* README.md in Resources */,
+				F6740D46172A5CE800C2C1E5 /* Changelog in Resources */,
+				F6740D47172A5CE800C2C1E5 /* LICENSE.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -973,15 +941,11 @@
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				F6C7C1E916AF9061009965DE /* JumpTapAppReport.m in Sources */,
-				F6C7C1EC16AF9061009965DE /* LocalyticsDatabase.m in Sources */,
-				F6C7C1ED16AF9061009965DE /* LocalyticsSession.m in Sources */,
-				F6C7C1EE16AF9061009965DE /* LocalyticsUploader.m in Sources */,
 				F6C7C1F316AF9061009965DE /* ModuleAdfonic.m in Sources */,
 				F6C7C1F416AF9061009965DE /* ModuleAdmob.m in Sources */,
 				F6C7C1F516AF9061009965DE /* ModuleChartboost.m in Sources */,
 				F6C7C1F616AF9061009965DE /* ModuleInMobi.m in Sources */,
 				F6C7C1F716AF9061009965DE /* ModuleJumpTap.m in Sources */,
-				F6C7C1F816AF9061009965DE /* ModuleKontagent.m in Sources */,
 				F6C7C1F916AF9061009965DE /* ModuleLeadbolt.m in Sources */,
 				F6C7C1FA16AF9061009965DE /* ModuleLocalytics.m in Sources */,
 				F6C7C1FB16AF9061009965DE /* ModuleMdotM.m in Sources */,
@@ -1058,6 +1022,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "exampleWizAnalytics/exampleWizAnalytics-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = NO_UDID;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "exampleWizAnalytics/exampleWizAnalytics-Info.plist";
@@ -1067,9 +1032,22 @@
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/Chartboost\"",
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/GoogleAdMobAdsSDK\"",
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/InMobiAdTracker_iOS_SDK_i251/Libs\"",
-					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/MilleniumMedia_AppleSDK/MMAdvertiser\"",
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/Apsalar\"",
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/GoogleAnalyticsiOS_2.0beta4/Library\"",
+					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/Localytics\"",
+					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/MilleniumMedia_AppleSDK/MMSDK\"",
+				);
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					CoreFoundation,
+					"-weak_framework",
+					UIKit,
+					"-weak_framework",
+					AVFoundation,
+					"-weak_framework",
+					CoreMedia,
+					"-weak-lSystem",
+					"-ObjC",
 				);
 				PRODUCT_NAME = exampleWizAnalytics;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1089,6 +1067,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "exampleWizAnalytics/exampleWizAnalytics-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = NO_UDID;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "exampleWizAnalytics/exampleWizAnalytics-Info.plist";
@@ -1098,9 +1077,22 @@
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/Chartboost\"",
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/GoogleAdMobAdsSDK\"",
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/InMobiAdTracker_iOS_SDK_i251/Libs\"",
-					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/MilleniumMedia_AppleSDK/MMAdvertiser\"",
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/Apsalar\"",
 					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/GoogleAnalyticsiOS_2.0beta4/Library\"",
+					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/Localytics\"",
+					"\"$(SRCROOT)/../../ios/project/Plugins/WizAnalyticsPlugin/vendor/MilleniumMedia_AppleSDK/MMSDK\"",
+				);
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					CoreFoundation,
+					"-weak_framework",
+					UIKit,
+					"-weak_framework",
+					AVFoundation,
+					"-weak_framework",
+					CoreMedia,
+					"-weak-lSystem",
+					"-ObjC",
 				);
 				PRODUCT_NAME = exampleWizAnalytics;
 				TARGETED_DEVICE_FAMILY = "1,2";

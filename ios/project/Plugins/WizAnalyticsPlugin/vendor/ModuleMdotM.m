@@ -10,6 +10,7 @@
 #import "ModuleMdotM.h"
 #import "WizDebugLog.h"
 #import "ODIN.h"
+#import <AdSupport/AdSupport.h>
 
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
@@ -42,17 +43,27 @@
 - (void)startSession
 {
     WizLog(@"MdotM START TRACKING %@ %@", _mdotmKey , _mdotmLogin);
-    
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init]; 
+
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+    NSString *eventID = @"startSession";
     NSString *odin = ODIN1();
-    NSString *IFA;
-    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"6.0.0")) {
-        IFA = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    NSString *usertoken;
+    if ( [[UIDevice currentDevice] respondsToSelector:@selector(identifierForVendor)] ) {
+        usertoken = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
     } else {
-        IFA = [[UIDevice currentDevice] uniqueIdentifier];
+        CFUUIDRef theUUID = CFUUIDCreate(NULL);
+        CFStringRef string = CFUUIDCreateString(NULL, theUUID);
+        CFRelease(theUUID);
+        usertoken = [(NSString *)string autorelease];
     }
-    
-    NSString *appOpenEndpoint = [NSString stringWithFormat:@"http://ads.mdotm.com/ads/trackback.php?advid=%@&deviceid=%@&odin=%@&IFA=%@&appid=%@", _mdotmLogin,  [[UIDevice currentDevice] uniqueIdentifier],  odin, IFA, _mdotmKey];
+    NSString *aid = @"";
+    NSString *ate = @"0";
+    if ( [ASIdentifierManager respondsToSelector:@selector(sharedManager)] ) {
+        ASIdentifierManager *identifierManager = [ASIdentifierManager sharedManager];
+        aid = [[identifierManager advertisingIdentifier] UUIDString];
+        ate = [identifierManager isAdvertisingTrackingEnabled] ? @"1" : @"0";
+    }
+    NSString *appOpenEndpoint = [NSString stringWithFormat:@"http://ads.mdotm.com/ads/trackback.php?advid=%@&odin=%@&aid=%@&ate=%@&usertoken=%@&appid=%@&eventID=%@", _mdotmLogin, odin, aid, ate, usertoken, _mdotmKey, eventID];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:appOpenEndpoint]];
     NSURLResponse *response;
     NSError *error = nil;
