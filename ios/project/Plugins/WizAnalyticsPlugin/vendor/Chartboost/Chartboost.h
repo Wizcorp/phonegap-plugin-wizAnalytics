@@ -1,7 +1,7 @@
 //
 //  Chartboost.h
 //  Chartboost
-//  3.0.7
+//  3.2
 //
 //  Created by Kenneth Ballenegger on 8/1/11.
 //  Copyright 2011 Chartboost. All rights reserved.
@@ -19,6 +19,7 @@
 
 @property (retain) NSString *appId;
 @property (retain) NSString *appSignature;
+@property (retain) UIView   *rootView;
 
 @property (assign) id <ChartboostDelegate> delegate;
 
@@ -28,7 +29,6 @@
 @property NSUInteger timeout;
 // Override the orientation (otherwise automatically detected from status bar)
 @property UIInterfaceOrientation orientation;
-
 
 // Get the singleton
 + (Chartboost *)sharedChartboost;
@@ -40,7 +40,7 @@
 - (void)cacheInterstitial;
 - (void)cacheInterstitial:(NSString *)location;
 
-// Show an interstitial, optionally takes a location argument
+// Show an interstitial, optionally takes a location and/or a view argument
 - (void)showInterstitial;
 - (void)showInterstitial:(NSString *)location;
 

@@ -13,13 +13,17 @@
 #import <ifaddrs.h> 
 #import <arpa/inet.h>
 #import <sys/sysctl.h>
+#import <AdSupport/AdSupport.h>
 
 #import "JumpTapAppReport.h"
 
-
 @implementation JumpTapAppReport
 
+#ifdef CCI
+NSString * const  JTConversionBaseUrl    = @"http://a.adjust-sp.jp/a";
+#else
 NSString * const  JTConversionBaseUrl    = @"http://a.jumptap.com/a";
+#endif
 
 static NSString * reportingUrl           = nil;
 static BOOL       reportApplicationUsage = NO;
@@ -95,49 +99,16 @@ static BOOL       loggingEnabled         = NO;
 	[self submitReportWithExtraInfo: info withAppUrl: scheme];
 	[scheme autorelease];
 }
-
-//Taken from http://code.google.com/p/odinmobile/source/browse/Sample%20Code/iOS/tags/1.0/ODIN.m
-unsigned char*  getMacAddressForConversion(unsigned char* ptr, char* ifName) {
-    
-    int                 mib[6];
-    size_t              len;
-    char                *buf;
-    struct if_msghdr    *ifm;
-    struct sockaddr_dl  *sdl;
-    
-    mib[0] = CTL_NET;
-    mib[1] = AF_ROUTE;
-    mib[2] = 0;
-    mib[3] = AF_LINK;
-    mib[4] = NET_RT_IFLIST;
-    
-    if ((mib[5] = if_nametoindex("en0")) == 0) {
-        //NSLog(@"ODIN-1.1: if_nametoindex error");
-        return nil;
+#ifndef CCI
++ (NSString *) constructIDFAForConversion {
+    if([ASIdentifierManager respondsToSelector:@selector(sharedManager)]) { //in iOS 6, we can use the idfa
+        ASIdentifierManager * identifierManager = [ASIdentifierManager sharedManager];
+        NSUUID * idfaBlob = [identifierManager advertisingIdentifier];
+        return [idfaBlob UUIDString];
     }
-    
-    if (sysctl(mib, 6, NULL, &len, NULL, 0) < 0) {
-        //NSLog(@"ODIN-1.1: sysctl 1 error");
-        return nil;
-    }
-    
-    if ((buf = malloc(len)) == NULL) {
-        //NSLog(@"ODIN-1.1: malloc error");
-        return nil;
-    }
-    
-    if (sysctl(mib, 6, buf, &len, NULL, 0) < 0) {
-        //NSLog(@"ODIN-1.1: sysctl 2 error");
-        return nil;
-    }
-    
-    ifm = (struct if_msghdr *)buf;
-    sdl = (struct sockaddr_dl *)(ifm + 1);
-    ptr = (unsigned char *)LLADDR(sdl);
-    free(buf);
-    return ptr;
+    return @""; //empty string. Easier than having to worry about nil's all over the place.
 }
-
+#endif
 
 + (NSString*)sha1DigestToString:(unsigned char*)messageDigest {
     CFMutableStringRef string = CFStringCreateMutable(NULL, 40);
@@ -147,19 +118,28 @@ unsigned char*  getMacAddressForConversion(unsigned char* ptr, char* ifName) {
     CFStringLowercase(string, CFLocaleGetSystem());
     return (NSString*)string;
 }
-
-+ (NSString *) constructDeviceMACForConversion {
-    unsigned char macAddressString[18];
-    CFDataRef data = CFDataCreate(NULL, (uint8_t*) getMacAddressForConversion(macAddressString,"en0"), 6);
-    unsigned char messageDigest[CC_SHA1_DIGEST_LENGTH];
-    if(CC_SHA1(CFDataGetBytePtr((CFDataRef)data), CFDataGetLength((CFDataRef)data), messageDigest)){
-        return [self sha1DigestToString:messageDigest];
+#ifndef CCI
++ (NSString *) checkTrackingEnabledForConversion {
+    if([ASIdentifierManager respondsToSelector:@selector(sharedManager)]) {
+        ASIdentifierManager * identifierManager = [ASIdentifierManager sharedManager];
+        if([identifierManager isAdvertisingTrackingEnabled]){
+            return @"Y";
+        }else{
+            return @"N";
+        }
     }
-    return @""; //empty string. Easier than having to worry about nil's all over the place.
+    return @"";
 }
+#endif
 
 #ifndef NO_UDID
 + (NSString *) constructHashedDeviceIdForConversion {
+    NSString * version = [[UIDevice currentDevice] systemVersion];
+#ifndef CCI
+    if([[version substringToIndex:1] intValue] > 5) { //in iOS 6, don't send UDID
+        return @"";
+    }
+#endif
     NSString * deviceId = [[UIDevice currentDevice] uniqueIdentifier];
     NSData * stringBytes = [deviceId dataUsingEncoding:NSASCIIStringEncoding];
     unsigned char messageDigest[CC_SHA1_DIGEST_LENGTH];
@@ -187,8 +167,10 @@ unsigned char*  getMacAddressForConversion(unsigned char* ptr, char* ifName) {
 #ifndef NO_UDID
         NSString * hashedHardwareId = [self constructHashedDeviceIdForConversion];
 #endif
-		NSString * hardwareMAC = [self constructDeviceMACForConversion];
-		
+#ifndef CCI        
+        NSString * hardwareIDFA = [self constructIDFAForConversion];
+        NSString * trackingEnabled = [self checkTrackingEnabledForConversion];
+#endif
 		NSString * event = hasReportedInstall ? @"run" : @"download";
 		
 		NSString * app = [[NSBundle mainBundle] bundleIdentifier];
@@ -210,20 +192,42 @@ unsigned char*  getMacAddressForConversion(unsigned char* ptr, char* ifName) {
 		
 		NSMutableDictionary *parameters = [[NSMutableDictionary alloc] init];
 #ifndef NO_UDID
-        [self forRequest:parameters addParameter:hashedHardwareId forKey:@"hid_sha1"];
+        if(hashedHardwareId != @""){
+            [self forRequest:parameters addParameter:hashedHardwareId forKey:@"hid_sha1"];
+        }
 #endif
-        [self forRequest:parameters addParameter:hardwareMAC      forKey:@"mac_sha1"];
+#ifndef CCI
+        if(trackingEnabled != @""){
+            [self forRequest:parameters addParameter:trackingEnabled  forKey:@"idflag"  ];
+        }
+        if(hardwareIDFA != @""){
+            [self forRequest:parameters addParameter:hardwareIDFA     forKey:@"idfa"    ];
+        }
+#endif
 		[self forRequest:parameters addParameter:app			  forKey:@"app"	    ];
 		[self forRequest:parameters addParameter:appVersion		  forKey:@"appVer"  ];
 		[self forRequest:parameters addParameter:event			  forKey:@"event"	];
 		[self forRequest:parameters addParameter:installDate	  forKey:@"date"	];
 		[self forRequest:parameters addParameter: @"false"	      forKey:@"bounce"  ];				
 
-		if (info != nil) {
+        NSMutableString * reportUrl = [[NSMutableString alloc] initWithString:@""];
+        bool foundUrl = NO;
+		
+        if (info != nil) {
+            // extract an override reporting url if there is one.
+            NSString * reportUrlParameter = (NSString *)[parameters objectForKey:@"reportUrl"];
+            if (reportUrlParameter != nil) {
+                [reportUrl appendString:reportUrlParameter];
+                foundUrl = YES;
+            }
+            [parameters removeObjectForKey:@"reportUrl"];
 			[parameters addEntriesFromDictionary:info];
 		}
 		
-		NSMutableString * reportUrl = [[NSMutableString alloc] initWithString:[self reportingUrl]];
+        if (!foundUrl) {
+            [reportUrl appendString:[self reportingUrl]];
+        }
+        
 		[self appendDictionary: parameters toRequest: reportUrl];
 
 		[parameters release];

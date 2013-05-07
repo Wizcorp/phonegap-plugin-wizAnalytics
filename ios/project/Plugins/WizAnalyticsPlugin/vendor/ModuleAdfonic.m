@@ -9,6 +9,7 @@
 
 #import "ModuleAdfonic.h"
 #import "WizDebugLog.h"
+#import <AdSupport/AdSupport.h>
 
 @interface ModuleAdfonic ()
 @property (nonatomic, retain) NSString *adfonicAPIKey;
@@ -48,20 +49,25 @@
 -(void)adfonicInstallTracking {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-	NSString *key = [NSString stringWithFormat:@"%@_AdfonicInstall", 
+	NSString *key = [NSString stringWithFormat:@"%@_AdfonicInstall",
                      [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"]];
 	if ([defaults boolForKey:key] == NO) {
+        NSString *idfa = @"";
+        if ( [ASIdentifierManager respondsToSelector:@selector(sharedManager)] ) {
+            ASIdentifierManager *identifierManager = [ASIdentifierManager sharedManager];
+            idfa = [[identifierManager advertisingIdentifier] UUIDString];
+        }
 		NSString* url = [NSString stringWithFormat:@"http://tracker.adfonic.net/is/%@/%@",
-						 _appId, [[UIDevice currentDevice] uniqueIdentifier]];
+						 _appId, idfa];
 		NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
 		NSURLResponse *urlResponse;
 		NSError *error;
 		[NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&error];
 		int code = (urlResponse ? [(NSHTTPURLResponse *)urlResponse statusCode] : -1);
 		if (!error && (code == 200)) {
-			[defaults setBool:YES forKey:key];	
+			[defaults setBool:YES forKey:key];
 		}
-	}	
+	}
 	[pool release];
 }
 
