@@ -8,7 +8,7 @@
  */
 
 #import "ModuleMillenium.h"
-#import "MMAdvertiser.h"
+#import "MMSDK.h"
 
 @interface ModuleMillenium ()
 @property (nonatomic, retain) NSString *milleniumAPIKey;
@@ -34,21 +34,20 @@
 
 - (void)startSession
 {
-    // startSession is a required protocol method so it is included here (even though it does nothing)
+    [MMSDK initialize];
 }
 
 #pragma mark - Optional WizAnalyticsVendorModule protocol methods
 
+- (void)logEvent:(NSString *)eventName withExtraMetadata:(NSDictionary *)extraMetadata
+{
+    [MMSDK trackEventWithId:eventName];
+}
+
 - (void)handleOpenURL:(NSURL *)url
 {
     // Track conversion
-    [[MMAdvertiser sharedSDK] trackConversionWithGoalId:_milleniumAPIKey];
-    // Set any info you want to pass to the overlay
-    [[MMAdvertiser sharedSDK] setValue:@"test_value" forKey:@"test_key"];
-    // Have the branded app SDK look at the url and open an overlay if needed
-    // parseURL returns an NSDictionary of parameters that will contain the parse URL query string key/value pairs
-    // (this result can be saved and used if required)
-    [[MMAdvertiser sharedSDK] parseURL:url];
+    [MMSDK trackConversionWithGoalId:_milleniumAPIKey];
 }
 
 @end

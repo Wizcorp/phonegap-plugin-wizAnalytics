@@ -11,8 +11,6 @@
 #define JT_INSTALL_FLAG_KEY @"JTAppInstall"
 #define JT_INSTALL_DATE_KEY @"JTAppInstallDate"
 
-
-
 @interface JumpTapAppReport : NSObject
 
 /***
@@ -53,8 +51,17 @@
  ***/
 + (void) submitReportWithExtraInfo: (NSDictionary*) info withAppUrl: (NSString*) appUrl;
 
-+ (NSString *) constructDeviceMACForConversion;
-
+/***
+ * Sets the base url for reporting purposes.  The default is http://a.jumptap.com/a
+ *
+ ***/
++ (void) setReportingUrl:(NSString*)toSet;
+#ifndef CCI
++ (NSString *) constructIDFAForConversion;
++ (NSString *)sha1DigestToString:(unsigned char*)messageDigest;
++ (NSString *) checkTrackingEnabledForConversion;
+#endif
+#ifndef NO_UDID
 + (NSString *) constructHashedDeviceIdForConversion;
-
+#endif
 @end

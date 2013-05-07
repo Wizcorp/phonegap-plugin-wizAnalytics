@@ -9,18 +9,18 @@ Cordova plugin for accessing the native ad and event logging SDKs.
 (iOS only, Droid users please be patient...)
 
 Currently supports;
-- Apsalar 5.0.0U
+- Apsalar 5.0.1
 - Adfonic
-- Admob 6.2.1
+- Admob 6.4.1
 - ChartBoost v3.0.7
+- Google Analytics 2.0 beta4
 - InMobi i251 (Build 2.5.1)
 - JumpTapAppReport
 - LeadBolt
-- Localytics v2.6
-- Millenium Media 4.6.1
+- Localytics 2.17.3
+- Millenium Media 5.0.0
 - MdotM
 - Smaato 1.4.1
-- Kontagent 1.3.3
 
 
 
@@ -56,9 +56,9 @@ See below for detailed instructions and check out exampleWizAnalytics/www/index.
 	- "AdfonicKey"
 	- "AdmobKey"
 	- "ChartboostKey"
+	- "GoogleKey"
 	- "InMobiKey"
 	- "JumpTapKey"
-	- "KontagentKey"
 	- "LeadboltKey"
 	- "LocalyticsKey"
 	- "MilleniumKey"

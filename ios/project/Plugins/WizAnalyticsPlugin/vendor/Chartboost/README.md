@@ -1,8 +1,10 @@
 # Chartboost for iOS
 
-*Version 3.0.7*
+*Version 3.2*
 
-The Chartboost iOS SDK is the cornerstone of the Chartboost network. It provides the functionality for showing ads and  more apps pages, and tracking analytics and in-app purchase revenue.
+The Chartboost iOS SDK is the cornerstone of the Chartboost network. It
+provides the functionality for showing interstitials, More-Apps pages, and
+tracking in-app purchase revenue.
 
 
 ### Usage
@@ -11,21 +13,23 @@ Integrating Chartboost takes two easy steps:
 
  1. Drop the Chartboost folder into your Xcode project.
     
-    Ensure you are linking against the following frameworks: `QuartzCore`, `SystemConfiguration`, `StoreKit`, `CoreGraphics`, and `GameKit`.
+    Ensure you are linking against the following frameworks: `QuartzCore`,
+    `SystemConfiguration`, `StoreKit`, and `CoreGraphics`.  Weak-link
+    `AdSupport.framework` by selecting "Optional" next to it in build phases.
 
- 2. Instanciate with the Chartboost SDK in your `application:didFinishLaunchingWithOptions:` method, like this:
+ 2. Instantiate the Chartboost SDK in your `applicationDidBecomeActive` method, like this:
     
         #import "Chartboost.h"
         
-        - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+        - (void)applicationDidBecomeActive:(UIApplication *)application        
             
             Chartboost *cb = [Chartboost sharedChartboost];
-            cb.appId = /* your app id goes here */
-            cb.appSignature = /* your app signature goes here */
+            cb.appId = @"YOUR_CHARTBOOST_APP_ID";
+            cb.appSignature = @"YOUR_CHARTBOOST_APP_SIGNATURE";
+            
             [cb startSession];
             [cb showInterstitial];
             
-            return YES;
         }
 
 
@@ -34,6 +38,8 @@ Integrating Chartboost takes two easy steps:
 
 For more common use cases, visit our [online documentation](url).
 
-Check out our header files `Chartboost.h`, and `CBAnalytics.h` for the full API specification.
+Check out our header file `Chartboost.h` for the full API
+specification.
 
-If you encounter any issues, do not hesitate to contact our kick-ass support team at [support@chartboost.com](mailto:support@chartboost.com).
+If you encounter any issues, do not hesitate to contact our happy support team
+at [support@chartboost.com](mailto:support@chartboost.com).

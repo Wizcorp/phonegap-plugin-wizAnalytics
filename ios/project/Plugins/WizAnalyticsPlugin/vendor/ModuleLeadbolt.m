@@ -9,6 +9,7 @@
 
 #import "ModuleLeadbolt.h"
 #import "WizDebugLog.h"
+#import <AdSupport/AdSupport.h>
 #import <ifaddrs.h>
 #import <arpa/inet.h>
 
@@ -47,7 +48,15 @@
     
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init]; 
     NSString *ip = [self getIPAddress];
-    NSString *appOpenEndpoint = [NSString stringWithFormat:@"http://ad.leadbolt.net/conv?advertiser_id=%@&key=%@&client_ip=%@&pf=1&dev_id=%@&group=%@", _leadboltAdId, _leadboltKey, ip, [[UIDevice currentDevice] uniqueIdentifier], _leadboltGroup ];
+    NSMutableString *appOpenEndpoint = [NSMutableString stringWithFormat:@"http://ad.leadbolt.net/conv?advertiser_id=%@&key=%@&client_ip=%@&pf=1&group=%@", _leadboltAdId, _leadboltKey, ip, _leadboltGroup ];
+    
+    if ( [ASIdentifierManager respondsToSelector:@selector(sharedManager)] ) {
+        ASIdentifierManager *identifierManager = [ASIdentifierManager sharedManager];
+        NSUUID *idfa = [identifierManager advertisingIdentifier];
+        if ( [identifierManager isAdvertisingTrackingEnabled] ) {
+            [appOpenEndpoint appendFormat:@"&ios_ifa=%@", [idfa UUIDString]];
+        }
+    }
     
     WizLog(@"Leadbolt endpoint %@", appOpenEndpoint);
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:appOpenEndpoint]];

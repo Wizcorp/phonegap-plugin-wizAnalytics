@@ -9,6 +9,7 @@
 
 #import "ModuleAdmob.h"
 #import <CommonCrypto/CommonDigest.h>
+#import <AdSupport/AdSupport.h>
 
 @interface ModuleAdmob ()
 @property (nonatomic, retain) NSString *admobAPIKey;
@@ -69,8 +70,13 @@
 
 
 - (NSString *)hashedISU {
-    NSString *result = nil;
-    NSString *isu = [UIDevice currentDevice].uniqueIdentifier;
+    NSString *result = @"";
+    NSString *isu = nil;
+    
+    if ( [ASIdentifierManager respondsToSelector:@selector(sharedManager)] ) {
+        ASIdentifierManager *identifierManager = [ASIdentifierManager sharedManager];
+        isu = [[identifierManager advertisingIdentifier] UUIDString];
+    }
     
     if(isu) {
         unsigned char digest[16];
