@@ -50,6 +50,7 @@
 		F6740D46172A5CE800C2C1E5 /* Changelog in Resources */ = {isa = PBXBuildFile; fileRef = F6740D3D172A5CE800C2C1E5 /* Changelog */; };
 		F6740D47172A5CE800C2C1E5 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6740D3E172A5CE800C2C1E5 /* LICENSE.txt */; };
 		F6740D48172A5CE800C2C1E5 /* libMMSDK_5.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6740D40172A5CE800C2C1E5 /* libMMSDK_5.0.0.a */; };
+		F676081F1740938B005DB025 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F676081E1740938B005DB025 /* AssetsLibrary.framework */; };
 		F678BA0316F6F76600B24B91 /* ModuleApsalar.m in Sources */ = {isa = PBXBuildFile; fileRef = F678BA0216F6F76600B24B91 /* ModuleApsalar.m */; };
 		F678BA0816F6F80200B24B91 /* libApsalar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F678BA0616F6F77000B24B91 /* libApsalar.a */; };
 		F6C7C1E416AF9061009965DE /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C7C19516AF9060009965DE /* libGoogleAdMobAds.a */; };
@@ -170,6 +171,7 @@
 		F6740D43172A5CE800C2C1E5 /* MMRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMRequest.h; sourceTree = "<group>"; };
 		F6740D44172A5CE800C2C1E5 /* MMSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMSDK.h; sourceTree = "<group>"; };
 		F6740D45172A5CE800C2C1E5 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		F676081E1740938B005DB025 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		F678BA0116F6F76600B24B91 /* ModuleApsalar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleApsalar.h; sourceTree = "<group>"; };
 		F678BA0216F6F76600B24B91 /* ModuleApsalar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleApsalar.m; sourceTree = "<group>"; };
 		F678BA0516F6F77000B24B91 /* Apsalar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Apsalar.h; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F676081F1740938B005DB025 /* AssetsLibrary.framework in Frameworks */,
 				F6C7C21516AF9412009965DE /* StoreKit.framework in Frameworks */,
 				F6C7C21316AF93EB009965DE /* MessageUI.framework in Frameworks */,
 				F6C7C21116AF9393009965DE /* SystemConfiguration.framework in Frameworks */,
@@ -380,6 +383,7 @@
 				301BF5B4109A6A2B0062928A /* AddressBook.framework */,
 				301BF5B6109A6A2B0062928A /* AddressBookUI.framework */,
 				F6C7C20916AF930C009965DE /* AdSupport.framework */,
+				F676081E1740938B005DB025 /* AssetsLibrary.framework */,
 				301BF5B8109A6A2B0062928A /* AudioToolbox.framework */,
 				301BF5BA109A6A2B0062928A /* AVFoundation.framework */,
 				301BF5BC109A6A2B0062928A /* CFNetwork.framework */,

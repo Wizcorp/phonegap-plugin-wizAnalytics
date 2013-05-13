@@ -1,5 +1,5 @@
 # PLUGIN: 
-For Cordova v2.4
+For Cordova v2.5
 phonegap-plugin-wizAnalytics
 
 
