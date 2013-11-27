@@ -14,5 +14,7 @@
 	<string>PutYourLocalyticsKeyHere</string>
 	<key>GoogleKey</key>
 	<string>PutYourGoogleAnalyticsKeyHere</string>
+    <key>MixPanelKey</key>
+    <string>PutYourMixPanelAnalyticsKeyHere</string>
 </dict>
 </plist>

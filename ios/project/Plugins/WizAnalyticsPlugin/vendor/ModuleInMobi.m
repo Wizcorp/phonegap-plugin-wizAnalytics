@@ -1,14 +1,15 @@
 /* wizAnalytics - InMobiAdTracker Module
  *
  * @author Ally Ogilvie
- * @copyright WizCorp Inc. [ Incorporated Wizards ] 2012
+ * @copyright Wizcorp Inc. [ Incorporated Wizards ] 2013
  * @file ModuleInMobi.m for iOS
  *
  *
  */
 
 #import "ModuleInMobi.h"
-#import "IMAdTracker.h"
+#import "InMobi.h"
+#import "InMobiAnalytics.h"
 
 @interface ModuleInMobi ()
 @property (nonatomic, retain) NSString *inMobiAPIKey;
@@ -35,15 +36,14 @@
 - (void)startSession
 {
     NSLog(@"InMobi START SESSION %@", _inMobiAPIKey);
-    [IMAdTracker initWithAppID:_inMobiAPIKey];
-    [IMAdTracker reportAppDownloadGoal];
+    [InMobi initialize:_inMobiAPIKey];
 }
 
 #pragma mark - Optional WizAnalyticsVendorModule protocol methods
 
 - (void)logEvent:(NSString *)eventName withExtraMetadata:(NSDictionary *)extraMetadata
 {
-    [IMAdTracker reportCustomGoal:eventName];
+    [InMobiAnalytics tagEvent:eventName];
 }
 
 @end

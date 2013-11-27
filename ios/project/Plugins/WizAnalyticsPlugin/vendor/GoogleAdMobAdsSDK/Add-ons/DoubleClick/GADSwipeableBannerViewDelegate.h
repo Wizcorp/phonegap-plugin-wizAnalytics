@@ -12,6 +12,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class GADBannerView;
+
 @protocol GADSwipeableBannerViewDelegate <NSObject>
 
 @optional

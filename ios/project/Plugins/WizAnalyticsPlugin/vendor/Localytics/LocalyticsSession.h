@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-#define CLIENT_VERSION              @"2.17.3"
+#define CLIENT_VERSION              @"2.21.1"
 #define MARKETING_PLATFORM
 
 /*!
@@ -45,9 +45,6 @@
 @protocol LocalyticsSessionDelegate;
 
 @interface LocalyticsSession : NSObject
-
-
-+ (void)logMessage:(NSString *)message;
 
 /*!
  @property enableHTTPS
@@ -229,6 +226,12 @@ customerValueIncrease:(NSNumber *)customerValueIncrease;
  */
 - (void)setLocation:(CLLocationCoordinate2D)deviceLocation;
 
+/*!
+ @method setPushToken
+ @abstract Stores the device's APNS token. This will be used in all event and session calls.
+ @param pushToken device token returned by application:didRegisterForRemoteNotificationsWithDeviceToken:
+ */
+- (void)setPushToken:(NSData *)pushToken;
 
 /*!
  @method setCustomDimension
@@ -282,6 +285,16 @@ customerValueIncrease:(NSNumber *)customerValueIncrease;
  To delete the value, pass in nil.
  */
 - (void)setCustomerEmail:(NSString *)email;
+
+#ifdef MARKETING_PLATFORM
+/*!
+ @method handleRemoteNotification
+ @abstract Used to record performance data for push notifications
+ @param notificationInfo The dictionary from either didFinishLaunchingWithOptions
+ or didReceiveRemoteNotification should be passed on to this method
+ */
+- (void)handleRemoteNotification:(NSDictionary *)notificationInfo;
+#endif
 
 @end
 

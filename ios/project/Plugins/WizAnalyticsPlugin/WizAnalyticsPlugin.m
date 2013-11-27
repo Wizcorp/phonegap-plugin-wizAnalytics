@@ -1,7 +1,7 @@
 /* WizAnalyticsPlugin - IOS side of the bridge to WizAnalytics JavaScript for Cordova
  *
  * @author Ally Ogilvie
- * @copyright WizCorp Inc. [ Incorporated Wizards ] 2012
+ * @copyright Wizcorp Inc. [ Incorporated Wizards ] 2013
  * @file WizAnalyticsPlugin.m for Cordova
  *
  *
@@ -9,8 +9,6 @@
 
 #import "WizAnalyticsPlugin.h"
 #import "WizAnalytics.h"
-
-#import <Cordova/CDVPlugin.h>
 
 @implementation WizAnalyticsPlugin
 

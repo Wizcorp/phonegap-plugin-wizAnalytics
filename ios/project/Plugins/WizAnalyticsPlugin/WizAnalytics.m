@@ -1,7 +1,7 @@
 /* wizAnalytics - IOS controller
  *
  * @author Ally Ogilvie
- * @copyright WizCorp Inc. [ Incorporated Wizards ] 2012
+ * @copyright Wizcorp Inc. [ Incorporated Wizards ] 2013
  * @file wizAnalytics.m for iOS
  *
  *
