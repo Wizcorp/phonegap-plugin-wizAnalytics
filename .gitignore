@@ -1,6 +1,21 @@
+# OS X
 .DS_Store
-example/ios/exampleWizAnalytics.xcodeproj/xcuserdata/*
-example/ios/exampleWizAnalytics.xcodeproj/project.xcworkspace/*
-example/ios/CordovaLib/CordovaLib.xcodeproj/xcuserdata/*
-example/ios/www/phonegap/*
-example/ios/www/index.html
+
+# Xcode
+*.swp
+*~.nib
+build/
+*.pbxuser
+*.perspective
+*.perspectivev3
+xcuserdata
+
+# Android Studio
+.idea/
+bin/
+gen/
+*.iml
+*.iws
+out/
+local.properties
+log
