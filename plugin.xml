@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="jp.wizcorp.phonegap.plugin.wizAnalytics"
+    version="1.0.0">
+
+    <name>Wizard Analytics Plugin</name>
+    
+    <description>This plugin allows native analytics and JavaScript event logging APIs.</description>
+    
+    <author>Ally Ogilvie - aogilvie@wizcorp.jp</author>
+    
+    <keywords>wizcorp, wizard, analytics</keywords>
+	
+	<engines>
+	    <engine name="cordova" version=">=3.3.0" />
+	</engines>
+
+    <license>MIT</license>
+
+    <js-module src="www/phonegap/plugin/wizAnalyticsPlugin/wizAnalyticsPlugin.js" name="wizAnalyticsPlugin" target="phonegap/plugin/wizAnalyticsPlugin/wizAnalyticsPlugin.js">
+        <clobbers target="window.wizAnalytics" />
+    </js-module>
+    
+    <!-- ios -->
+    <platform name="ios">
+
+        <config-file target="config.xml" parent="/*">
+		    <feature name="WizAnalyticsPlugin">
+		        <param name="ios-package" value="WizAnalyticsPlugin" />
+		        <param name="onload" value="true" />
+		    </feature>
+        </config-file>
+               
+        <!-- Plugin files -->
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/WizAnalytics.h" target="WizAnalyticsPlugin" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/WizAnalytics.m" target="WizAnalyticsPlugin" compiler-flags="-fno-objc-arc" />
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/WizAnalyticsPlugin.h" target="WizAnalyticsPlugin" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/WizAnalyticsPlugin.m" target="WizAnalyticsPlugin" compiler-flags="-fno-objc-arc" />
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/WizAnalyticsVendorModule.h" target="WizAnalyticsPlugin" />
+        
+        <!-- Logger -->
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/WizDebugLog.h" target="WizAnalyticsPlugin" />
+        
+        <!-- Modules -->
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/ModuleApsalar.h" target="WizAnalyticsPlugin/vendor" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/ModuleApsalar.m" target="WizAnalyticsPlugin/vendor" compiler-flags="-fno-objc-arc" />
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/ModuleGoogle.h" target="WizAnalyticsPlugin/vendor" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/ModuleGoogle.m" target="WizAnalyticsPlugin/vendor" compiler-flags="-fno-objc-arc" />
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/ModuleLocalytics.h" target="WizAnalyticsPlugin/vendor" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/ModuleLocalytics.m" target="WizAnalyticsPlugin/vendor" compiler-flags="-fno-objc-arc" />
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/ModuleMixPanel.h" target="WizAnalyticsPlugin/vendor" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/ModuleMixPanel.m" target="WizAnalyticsPlugin/vendor" compiler-flags="-fno-objc-arc" />
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/ModuleFlurry.h" target="WizAnalyticsPlugin/vendor" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/ModuleFlurry.m" target="WizAnalyticsPlugin/vendor" compiler-flags="-fno-objc-arc" />
+        
+        <!-- Example Config File -->
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/wizAnalytics.plist" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        
+        <!-- Vendor files -->
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Apsalar/Apsalar.h" target="WizAnalyticsPlugin/vendor/Apsalar" />
+        <framework src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Apsalar/libApsalarNoIDFA.a" custom="true" target="WizAnalyticsPlugin/vendor/Apsalar" />
+        
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Flurry/Flurry.h" target="WizAnalyticsPlugin/vendor/Flurry" />
+        <framework src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Flurry/libFlurry_4.3.2.a" custom="true" target="WizAnalyticsPlugin/vendor/Flurry" />
+        
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/GoogleAnalytics/Library/GAI.h" target="WizAnalyticsPlugin/vendor/GoogleAnalytics/Library" />
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/GoogleAnalytics/Library/GAIDictionaryBuilder.h" target="WizAnalyticsPlugin/vendor/GoogleAnalytics/Library" />
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/GoogleAnalytics/Library/GAIFields.h" target="WizAnalyticsPlugin/vendor/GoogleAnalytics/Library" />
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/GoogleAnalytics/Library/GAILogger.h" target="WizAnalyticsPlugin/vendor/GoogleAnalytics/Library" />
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/GoogleAnalytics/Library/GAITrackedViewController.h" target="WizAnalyticsPlugin/vendor/GoogleAnalytics/Library" />
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/GoogleAnalytics/Library/GAITracker.h" target="WizAnalyticsPlugin/vendor/GoogleAnalytics/Library" />
+        <framework src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/GoogleAnalytics/libGoogleAnalyticsServices.a" custom="true" target="vendor/GoogleAnalytics" />
+        
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Localytics/LocalyticsAmpSession.h" target="WizAnalyticsPlugin/vendor/Localytics" />
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Localytics/LocalyticsSession.h" target="WizAnalyticsPlugin/vendor/Localytics" />
+        <framework src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Localytics/libLocalyticsAMP.a" custom="true" target="vendor/Localytics" />
+        
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/Mixpanel.h" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/Mixpanel.m" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPArrowLeft.png" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPArrowLeft@2x.png" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPArrowRight.png" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPArrowRight@2x.png" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPCheckmark.png" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPCheckmark@2x.png" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPCloseBtn.png" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPCloseBtn@2x.png" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPDismissKeyboard.png" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPDismissKeyboard@2x.png" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPLogo.png" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPLogo@2x.png" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPNotification.h" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPNotification.m" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPNotification.storyboard" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPNotificationViewController.h" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPNotificationViewController.m" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPSurvey.h" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPSurvey.m" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPSurvey.storyboard" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPSurveyNavigationController.h" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPSurveyNavigationController.m" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPSurveyQuestion.h" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPSurveyQuestion.m" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPSurveyQuestionViewController.h" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/MPSurveyQuestionViewController.m" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/NSData+MPBase64.h" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/NSData+MPBase64.m" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/UIColor+MPColor.h" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/UIColor+MPColor.m" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/UIImage+MPAverageColor.h" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/UIImage+MPAverageColor.m" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/UIImage+MPImageEffects.h" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/UIImage+MPImageEffects.m" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <header-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/UIView+MPSnapshotImage.h" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        <source-file src="platforms/ios/HelloCordova/Plugins/WizAnalyticsPlugin/vendor/Mixpanel/UIView+MPSnapshotImage.m" target="WizAnalyticsPlugin/vendor/Mixpanel" />
+        
+        <framework src="CoreGraphics.framework" />
+        <framework src="SystemConfiguration.framework" />
+        <framework src="CoreData.framework" />
+        <framework src="Accelerate.framework" />
+        <framework src="CoreTelephony.framework" />
+        <framework src="AdSupport.framework" />
+        <framework src="QuartzCore.framework" />
+        <framework src="Security.framework" />
+        <framework src="libz.dylib" />
+        <framework src="libsqlite3.0.dylib" />
+    	
+    </platform>
+
+</plugin>
