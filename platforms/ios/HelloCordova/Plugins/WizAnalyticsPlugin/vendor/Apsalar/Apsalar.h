@@ -11,12 +11,8 @@
 
 @interface Apsalar : NSObject 
 + (void) startSession:(NSString *)apiKey withKey:(NSString *)apiSecret ;
-+ (void) startSession:(NSString *)apiKey
-              withKey:(NSString *)apiSecret
-     andLaunchOptions:(NSDictionary *)launchOptions;
-+ (void) startSession:(NSString *)apiKey
-              withKey:(NSString *)apiSecret
-               andURL:(NSURL *)url;
++ (void) startSession:(NSString *)apiKey withKey:(NSString *)apiSecret andLaunchOptions:(NSDictionary *)launchOptions;
++ (void) startSession:(NSString *)apiKey withKey:(NSString *)apiSecret andURL:(NSURL *)url;
 + (void) reStartSession:(NSString *)apiKey withKey:(NSString *)apiSecret;
 + (BOOL) sessionStarted;
 + (void) endSession;
