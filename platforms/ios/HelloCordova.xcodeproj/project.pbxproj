@@ -805,6 +805,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloCordova/HelloCordova-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUGGER=1";
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "HelloCordova/HelloCordova-Info.plist";
@@ -848,6 +849,7 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloCordova/HelloCordova-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUGGER=1";
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "HelloCordova/HelloCordova-Info.plist";

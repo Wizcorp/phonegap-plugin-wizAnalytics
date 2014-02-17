@@ -28,7 +28,6 @@
         <config-file target="config.xml" parent="/*">
 		    <feature name="WizAnalyticsPlugin">
 		        <param name="ios-package" value="WizAnalyticsPlugin" />
-		        <param name="onload" value="true" />
 		    </feature>
         </config-file>
                
