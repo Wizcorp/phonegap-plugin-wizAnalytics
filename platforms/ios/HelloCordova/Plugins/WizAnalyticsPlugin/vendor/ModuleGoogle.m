@@ -8,6 +8,8 @@
 
 #import "ModuleGoogle.h"
 #import "GAI.h"
+#import "GAIDictionaryBuilder.h"
+#import "GAIFields.h"
 #import "WizDebugLog.h"
 
 @interface ModuleGoogle ()
@@ -26,8 +28,7 @@
 
 #pragma mark - Required WizAnalyticsVendorModule protocol methods
 
-- (id)initWithOptions:(NSDictionary *)options
-{
+- (id)initWithOptions:(NSDictionary *)options {
     if ((self = [super init])) {
         WizLog(@"BOOT GoogleAnalytics");
         self.googleAnalyticsTrackingId = [options objectForKey:@"GoogleKey"];
@@ -35,8 +36,7 @@
     return self;
 }
 
-- (void)startSession
-{
+- (void)startSession {
     WizLog(@"GoogleAnalytics START SESSION %@", _googleAnalyticsTrackingId);
     
     // Optional: automatically send uncaught exceptions to Google Analytics.
@@ -51,19 +51,18 @@
 
 #pragma mark - Optional WizAnalyticsVendorModule protocol methods
 
-- (void)logEvent:(NSString *)eventName withExtraMetadata:(NSDictionary *)extraMetadata
-{
-    WizLog(@"GoogleAnalytics LOG EVENT %@ DATA %@", eventName, extraMetadata);    
-    [self.tracker sendEventWithCategory:[extraMetadata objectForKey:@"category"]
-                             withAction:[extraMetadata objectForKey:@"action"]
-                              withLabel:nil
-                              withValue:nil];
+- (void)logEvent:(NSString *)eventName withExtraMetadata:(NSDictionary *)extraMetadata {
+    WizLog(@"GoogleAnalytics LOG EVENT %@ DATA %@", eventName, extraMetadata);
+    [self.tracker send:[[GAIDictionaryBuilder
+                         createEventWithCategory:[extraMetadata objectForKey:@"category"]
+                         action:[extraMetadata objectForKey:@"action"]
+                         label:nil
+                         value:nil] build]];
 }
 
-- (void)logScreen:(NSString *)screenName withExtraMetadata:(NSDictionary *)extraMetadata
-{
+- (void)logScreen:(NSString *)screenName withExtraMetadata:(NSDictionary *)extraMetadata {
     WizLog(@"GoogleAnalytics LOG SCREEN %@", screenName);
-    [self.tracker sendView:screenName];
+    [self.tracker set:kGAIScreenName value:screenName];
 }
 
 @end

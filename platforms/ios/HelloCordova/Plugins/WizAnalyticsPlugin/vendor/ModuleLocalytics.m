@@ -1,14 +1,13 @@
 /* wizAnalytics - Localytics Module
  *
  * @author Ally Ogilvie
- * @copyright WizCorp Inc. [ Incorporated Wizards ] 2012
+ * @copyright Wizcorp Inc. [ Incorporated Wizards ] 2015
  * @file ModuleLocalytics.m for iOS
- *
  *
  */
 
 #import "ModuleLocalytics.h"
-#import "LocalyticsSession.h"
+#import "Localytics.h"
 #import "WizDebugLog.h"
 
 @interface ModuleLocalytics ()
@@ -17,57 +16,51 @@
 
 @implementation ModuleLocalytics
 
-- (void)dealloc
-{
+- (void)dealloc {
     self.localyticsAPIKey = nil;
     [super dealloc];
 }
 
 #pragma mark - Required WizAnalyticsVendorModule protocol methods
 
-- (id)initWithOptions:(NSDictionary *)options
-{
+- (id)initWithOptions:(NSDictionary *)options {
     if ((self = [super init])) {
         self.localyticsAPIKey = [options objectForKey:@"LocalyticsKey"];
     }
     return self;
 }
 
-- (void)startSession 
-{
+- (void)startSession {
     WizLog(@"LOCALYTICS START SESSION %@", _localyticsAPIKey);
-    [[LocalyticsSession sharedLocalyticsSession] startSession:_localyticsAPIKey];
+    [Localytics integrate:_localyticsAPIKey];
+    [Localytics openSession];
+    [Localytics upload];
 }
 
 #pragma mark - Optional WizAnalyticsVendorModule protocol methods
 
-- (void)pauseSession
-{
-    [self stopSession];
+- (void)pauseSession {
+    [Localytics closeSession];
 }
 
-- (void)stopSession
-{
-    [[LocalyticsSession sharedLocalyticsSession] close];
-    [[LocalyticsSession sharedLocalyticsSession] upload];
+- (void)stopSession {
+    [Localytics closeSession];
+    [Localytics upload];
 }
 
-- (void)resumeSession
-{
-    [[LocalyticsSession sharedLocalyticsSession] resume];
-    [[LocalyticsSession sharedLocalyticsSession] upload];
+- (void)resumeSession {
+    [Localytics openSession];
+    [Localytics upload];
 }
 
-- (void)logEvent:(NSString *)eventName withExtraMetadata:(NSDictionary *)extraMetadata
-{
+- (void)logEvent:(NSString *)eventName withExtraMetadata:(NSDictionary *)extraMetadata {
     WizLog(@"LOCALYTICS LOG EVENT %@ DATA %@", eventName, extraMetadata);
-    [[LocalyticsSession sharedLocalyticsSession] tagEvent:eventName attributes:extraMetadata];
+    [Localytics tagEvent:eventName attributes:extraMetadata];
 }
 
-- (void)logScreen:(NSString *)screenName withExtraMetadata:(NSDictionary *)extraMetadata
-{
+- (void)logScreen:(NSString *)screenName withExtraMetadata:(NSDictionary *)extraMetadata {
     WizLog(@"LOCALYTICS LOG SCREEN %@", screenName);
-    [[LocalyticsSession sharedLocalyticsSession] tagScreen:screenName];
+    [Localytics tagScreen:screenName];
 }
 
 @end

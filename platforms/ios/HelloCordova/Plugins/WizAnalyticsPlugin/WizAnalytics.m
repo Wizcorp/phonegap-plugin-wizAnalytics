@@ -1,9 +1,8 @@
 /* wizAnalytics - IOS controller
  *
  * @author Ally Ogilvie
- * @copyright Wizcorp Inc. [ Incorporated Wizards ] 2013
+ * @copyright Wizcorp Inc. [ Incorporated Wizards ] 2015
  * @file wizAnalytics.m for iOS
- *
  *
  */
 
@@ -37,8 +36,7 @@ static WizAnalytics *sharedInstance = nil;
 
 #pragma - Class Methods
 
-+ (void)load
-{
++ (void)load {
     // Create the singleton and start session when this class is added to the run-time.
     [[WizAnalytics sharedInstance] startAnalyticsSession];
 }
@@ -46,8 +44,7 @@ static WizAnalytics *sharedInstance = nil;
 #pragma - Instance Methods
 
 // house keeping
-- (void)dealloc
-{
+- (void)dealloc {
     [[WizAnalytics sharedInstance] endAnalyticsSession];
     
     // Stop the instance from observing all notification center notifications.
@@ -59,16 +56,14 @@ static WizAnalytics *sharedInstance = nil;
     [super dealloc];
 }
 
-- (void)willTerminate:(NSNotification *)notification
-{
+- (void)willTerminate:(NSNotification *)notification {
     [[WizAnalytics sharedInstance] endAnalyticsSession];
     
     // Stop the instance from observing all notification center notifications.
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (id)init
-{
+- (id)init {
     if ( sharedInstance != nil ) {
         [NSException raise:NSInternalInconsistencyException
                     format:@"[%@ %@] cannot be called; use +[%@ %@] instead",
@@ -172,15 +167,13 @@ static WizAnalytics *sharedInstance = nil;
     return self;
 }
 
-- (void)startAnalyticsSession
-{
+- (void)startAnalyticsSession {
     for ( NSObject <WizAnalyticsVendorModule> *module in [self.loadedModules objectEnumerator] ) {
         [module startSession];
     }
 }
 
-- (void)restartAnalyticsSession
-{
+- (void)restartAnalyticsSession {
     for ( NSObject <WizAnalyticsVendorModule> *module in [self.loadedModules objectEnumerator] ) {
         if ( [module respondsToSelector:@selector(resumeSession)] ) {
             [module resumeSession];
@@ -188,8 +181,7 @@ static WizAnalytics *sharedInstance = nil;
     }
 }
 
-- (void)pauseAnalyticsSession
-{
+- (void)pauseAnalyticsSession {
     for ( NSObject <WizAnalyticsVendorModule> *module in [self.loadedModules objectEnumerator] ) {
         if ( [module respondsToSelector:@selector(pauseSession)] ) {
             [module pauseSession];
@@ -197,8 +189,7 @@ static WizAnalytics *sharedInstance = nil;
     }
 }
 
-- (void)endAnalyticsSession
-{
+- (void)endAnalyticsSession {
     for ( NSObject <WizAnalyticsVendorModule> *module in [self.loadedModules objectEnumerator] ) {
         if ( [module respondsToSelector:@selector(stopSession)] ) {
             [module stopSession];
@@ -232,8 +223,7 @@ static WizAnalytics *sharedInstance = nil;
     [dataForLogging release];
 }
 
-- (void)analyticsScreenEvent:(NSString *)screenName withExtraMetadata:(NSDictionary *)extraMetadata
-{
+- (void)analyticsScreenEvent:(NSString *)screenName withExtraMetadata:(NSDictionary *)extraMetadata {
     for ( NSObject <WizAnalyticsVendorModule> *module in [self.loadedModules objectEnumerator] ) {
         if ( [module respondsToSelector:@selector(logScreen:withExtraMetadata:)] ) {
             [module logScreen:screenName withExtraMetadata:extraMetadata];
@@ -241,8 +231,7 @@ static WizAnalytics *sharedInstance = nil;
     }
 }
 
-- (void)handleOpenURL:(NSURL *)url
-{
+- (void)handleOpenURL:(NSURL *)url {
     for ( NSObject <WizAnalyticsVendorModule> *module in [self.loadedModules objectEnumerator] ) {
         if ( [module respondsToSelector:@selector(handleOpenURL:)] ) {
             [module handleOpenURL:url];
@@ -256,8 +245,7 @@ static WizAnalytics *sharedInstance = nil;
 // Derived from the notes on this page:
 // http://www.cocoawithlove.com/2010/01/getting-subclasses-of-objective-c-class.html
 
-static NSArray *ProtocolGetClasses(char *protocolName)
-{
+static NSArray *ProtocolGetClasses(char *protocolName) {
     // Get count of number of classes definitions registered with Objective-C runtime.
     int numClasses = objc_getClassList(NULL, 0);
     Class *classes = NULL;

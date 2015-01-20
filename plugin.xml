@@ -124,6 +124,7 @@
         <framework src="Security.framework" />
         <framework src="libz.dylib" />
         <framework src="libsqlite3.0.dylib" />
+        <framework src="libicucore.dylib" />
     	
     </platform>
 

@@ -9,5 +9,4 @@
 #import "WizAnalyticsVendorModule.h"
 
 @interface ModuleGoogle : NSObject <WizAnalyticsVendorModule>
-
 @end
