@@ -1,7 +1,7 @@
 /* WizAnalyticsVendorModule - Protocol for vendor modules
  *
  * @author Chris Wynn
- * @copyright WizCorp Inc. [ Incorporated Wizards ] 2012
+ * @copyright Wizcorp Inc. [ Incorporated Wizards ] 2015
  * @file WizAnalyticsVendorModule.h for iOS
  *
  *

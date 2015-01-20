@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0ABC510B-7963-49DD-861F-41D03356460F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HelloCordova</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>35D4AC62CC49DE3A0B1AACA63C3E9DC74698C473</key>
+		<string>github.com:Wizcorp/phonegap-plugin-wizAnalytics.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>platforms/ios/HelloCordova.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>35D4AC62CC49DE3A0B1AACA63C3E9DC74698C473</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:Wizcorp/phonegap-plugin-wizAnalytics.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>35D4AC62CC49DE3A0B1AACA63C3E9DC74698C473</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>35D4AC62CC49DE3A0B1AACA63C3E9DC74698C473</string>
+			<key>IDESourceControlWCCName</key>
+			<string>phonegap-plugin-wizAnalytics</string>
+		</dict>
+	</array>
+</dict>
+</plist>

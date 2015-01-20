@@ -9,5 +9,4 @@
 #import "WizAnalyticsVendorModule.h"
 
 @interface ModuleApsalar : NSObject <WizAnalyticsVendorModule>
-
 @end

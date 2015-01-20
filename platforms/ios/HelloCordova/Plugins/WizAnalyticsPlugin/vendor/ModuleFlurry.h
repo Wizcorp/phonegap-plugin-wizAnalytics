@@ -1,7 +1,7 @@
 /* wizAnalytics - Flurry Module
  *
  * @author Ally Ogilvie
- * @copyright WizCorp Inc. [ Incorporated Wizards ] 2012
+ * @copyright Wizcorp Inc. [ Incorporated Wizards ] 2015
  * @file ModuleFlurry.h for iOS
  *
  *

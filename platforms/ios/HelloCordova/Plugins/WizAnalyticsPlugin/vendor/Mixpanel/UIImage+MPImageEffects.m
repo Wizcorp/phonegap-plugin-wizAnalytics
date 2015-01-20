@@ -97,12 +97,11 @@
 #error This file must be compiled with ARC. Either turn on ARC for the project or use -fobjc-arc flag on this file.
 #endif
 
-#import "UIImage+MPImageEffects.h"
-#import "UIColor+MPColor.h"
-
 #import <Accelerate/Accelerate.h>
 #import <float.h>
-
+#import "MPLogger.h"
+#import "UIColor+MPColor.h"
+#import "UIImage+MPImageEffects.h"
 
 @implementation UIImage (MPImageEffects)
 
@@ -152,15 +151,15 @@
 {
     // Check pre-conditions.
     if (self.size.width < 1 || self.size.height < 1) {
-        NSLog (@"*** error: invalid size: (%.2f x %.2f). Both dimensions must be >= 1: %@", self.size.width, self.size.height, self);
+        MixpanelError(@"*** error: invalid size: (%.2f x %.2f). Both dimensions must be >= 1: %@", self.size.width, self.size.height, self);
         return nil;
     }
     if (!self.CGImage) {
-        NSLog (@"*** error: image must be backed by a CGImage: %@", self);
+        MixpanelError(@"*** error: image must be backed by a CGImage: %@", self);
         return nil;
     }
     if (maskImage && !maskImage.CGImage) {
-        NSLog (@"*** error: maskImage must be backed by a CGImage: %@", maskImage);
+        MixpanelError(@"*** error: maskImage must be backed by a CGImage: %@", maskImage);
         return nil;
     }
 
@@ -204,7 +203,7 @@
             // ... if d is odd, use three box-blurs of size 'd', centered on the output pixel.
             //
             CGFloat inputRadius = blurRadius * [[UIScreen mainScreen] scale];
-            NSUInteger radius = (NSUInteger)floor(inputRadius * 3. * sqrt(2 * M_PI) / 4 + 0.5);
+            uint32_t radius = (uint32_t)floor(inputRadius * 3. * sqrt(2 * M_PI) / 4 + 0.5);
             if (radius % 2 != 1) {
                 radius += 1; // force radius to be odd so that the three box-blur methodology works.
             }
@@ -225,7 +224,7 @@
             NSUInteger matrixSize = sizeof(floatingPointSaturationMatrix)/sizeof(floatingPointSaturationMatrix[0]);
             int16_t saturationMatrix[matrixSize];
             for (NSUInteger i = 0; i < matrixSize; ++i) {
-                saturationMatrix[i] = (int16_t)roundf(floatingPointSaturationMatrix[i] * divisor);
+                saturationMatrix[i] = (int16_t)round(floatingPointSaturationMatrix[i] * divisor);
             }
             if (hasBlur) {
                 vImageMatrixMultiply_ARGB8888(&effectOutBuffer, &effectInBuffer, saturationMatrix, divisor, NULL, NULL, kvImageNoFlags);

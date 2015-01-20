@@ -1,7 +1,7 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "file": "plugins/jp.wizcorp.phonegap.plugin.wizAnalytics/www/phonegap/plugin/wizAnalyticsPlugin/wizAnalyticsPlugin.js",
+        "file": "phonegap/plugin/wizAnalyticsPlugin/wizAnalyticsPlugin.js",
         "id": "jp.wizcorp.phonegap.plugin.wizAnalytics.wizAnalyticsPlugin",
         "clobbers": [
             "window.wizAnalytics"

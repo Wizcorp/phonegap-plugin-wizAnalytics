@@ -1,9 +1,8 @@
-/* wizAnalytics - Smaato Module
+/* wizAnalytics - Mixpanel Module
  *
  * @author Ally Ogilvie
- * @copyright Wizcorp Inc. [ Incorporated Wizards ] 2013
+ * @copyright Wizcorp Inc. [ Incorporated Wizards ] 2015
  * @file ModuleMixPanel.m for iOS
- *
  *
  */
 
@@ -16,8 +15,7 @@
 
 @implementation ModuleMixPanel
 
-- (void)dealloc
-{
+- (void)dealloc {
     self.mixPanelAPIKey = nil;
     self.mixpanel = nil;
     [super dealloc];
@@ -25,22 +23,20 @@
 
 #pragma mark - Required WizAnalyticsVendorModule protocol methods
 
-- (id)initWithOptions:(NSDictionary *)options
-{
+- (id)initWithOptions:(NSDictionary *)options {
     if ((self = [super init])) {
         self.mixPanelAPIKey = [options objectForKey:@"MixPanelKey"];
     }
     return self;
 }
 
-- (void)startSession
-{
+- (void)startSession {
     self.mixpanel = [Mixpanel sharedInstanceWithToken:self.mixPanelAPIKey];
     NSLog(@"MIXPANEL START TRACKING");
 }
 
-- (void)logEvent:(NSString *)eventName withExtraMetadata:(NSDictionary *)extraMetadata
-{
+- (void)logEvent:(NSString *)eventName withExtraMetadata:(NSDictionary *)extraMetadata {
+    NSLog(@"MIXPANEL LOG EVENT");
     if (extraMetadata != nil) {
         [self.mixpanel track:eventName properties:extraMetadata];
     } else {

@@ -1,7 +1,7 @@
 /* WizAnalyticsPlugin - IOS side of the bridge to WizAnalytics JavaScript for Cordova
  *
  * @author Ally Ogilvie
- * @copyright Wizcorp Inc. [ Incorporated Wizards ] 2013
+ * @copyright Wizcorp Inc. [ Incorporated Wizards ] 2015
  * @file WizAnalyticsPlugin.m for Cordova
  *
  *
@@ -12,8 +12,7 @@
 
 @implementation WizAnalyticsPlugin
 
-- (void)logEvent:(CDVInvokedUrlCommand*)command
-{
+- (void)logEvent:(CDVInvokedUrlCommand *)command {
     NSString *eventName = [command.arguments objectAtIndex:0];
     NSDictionary *options = [command.arguments objectAtIndex:1];
     
@@ -21,8 +20,7 @@
     [sharedSingleton analyticsEvent:eventName withExtraMetadata:options];
 }
 
-- (void)logScreen:(CDVInvokedUrlCommand*)command
-{
+- (void)logScreen:(CDVInvokedUrlCommand *)command {
     NSString *eventName = [command.arguments objectAtIndex:0];
     NSDictionary *options = [command.arguments objectAtIndex:1];
     
@@ -30,8 +28,7 @@
     [sharedSingleton analyticsScreenEvent:eventName withExtraMetadata:options];
 }
 
-- (void)handleOpenURL:(CDVInvokedUrlCommand*)command
-{
+- (void)handleOpenURL:(CDVInvokedUrlCommand *)command {
     NSString *urlString = [command.arguments objectAtIndex:0];
     NSURL *url = [NSURL URLWithString:urlString];
 
