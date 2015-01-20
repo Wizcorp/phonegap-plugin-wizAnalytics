@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'exampleWizAnalytics' target in the 'exampleWizAnalytics' project
-//
-
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-#endif

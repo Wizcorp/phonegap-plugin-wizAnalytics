@@ -1,4 +1,21 @@
+# OS X
 .DS_Store
-example/www/phonegap/*
-example/ios/exampleWizAnalytics.xcodeproj/xcuserdata/*
-example/ios/exampleWizAnalytics.xcodeproj/project.xcworkspace/*
+
+# Xcode
+*.swp
+*~.nib
+build/
+*.pbxuser
+*.perspective
+*.perspectivev3
+xcuserdata
+
+# Android Studio
+.idea/
+bin/
+gen/
+*.iml
+*.iws
+out/
+local.properties
+log
